@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FF14 国服活动日历</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f2f4f8;
+            font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+            color: #333;
+        }
+
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #5865f2;
+        }
+
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+
+
+        .section {
+            margin-top: 30px;
+        }
+
+
+
+            .section h2 {
+                font-size: 20px;
+                border-left: 5px solid #5865f2;
+                padding-left: 12px;
+            }
+
+
+
+        .info {
+            line-height: 1.8;
+        }
+
+
+
+        .url-box {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            word-break: break-all;
+            font-family: Consolas, monospace;
+        }
+
+
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #5865f2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+
+
+            .btn:hover {
+                opacity: .85;
+            }
+
+
+
+        .tag {
+            display: inline-block;
+            padding: 5px 12px;
+            margin: 5px;
+            background: #eef0ff;
+            color: #5865f2;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888;
+            font-size: 13px;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <div class="card">
+
+
+            <h1>
+                🎮 FF14 国服活动日历
+            </h1>
+
+
+            <div class="subtitle">
+
+                FINAL FANTASY XIV China Event Calendar
+
+            </div>
+
+
+
+            <div class="section">
+
+
+                <h2>
+                    📅 日历订阅
+                </h2>
+
+
+                <p class="info">
+
+                    复制以下地址，添加到你的日历软件：
+
+                </p>
+
+
+                <div class="url-box">
+
+                    https://ff14-calendar.pages.dev/ff14.ics
+
+                </div>
+
+
+                <a class="btn" href="/ff14.ics">
+
+                    打开日历文件
+
+                </a>
+
+
+            </div>
+
+
+
+
+
+            <div class="section">
+
+
+                <h2>
+                    ✨ 项目特点
+                </h2>
+
+
+                <div>
+
+
+                    <span class="tag">
+                        官方API自动同步
+                    </span>
+
+
+                    <span class="tag">
+                        玩家历史数据
+                    </span>
+
+
+                    <span class="tag">
+                        自动每日更新
+                    </span>
+
+
+                    <span class="tag">
+                        iCalendar标准
+                    </span>
+
+
+                </div>
+
+
+                <p class="info">
+
+                    本项目通过自动程序获取盛趣官方活动数据，
+                    结合历史整理数据生成 FF14 国服活动日历。
+
+                    无需依赖个人玩家长期维护，降低因维护者退坑导致的数据中断。
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="section">
+
+
+                <h2>
+                    🔄 数据来源
+                </h2>
+
+
+                <ul class="info">
+
+                    <li>
+                        盛趣 FF14 官方活动 API
+                    </li>
+
+                    <li>
+                        玩家整理历史活动记录
+                    </li>
+
+                    <li>
+                        人工补充特殊活动
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="section">
+
+
+                <h2>
+                    📱 支持客户端
+                </h2>
+
+
+                <ul class="info">
+
+                    <li>
+                        Apple 日历
+                    </li>
+
+                    <li>
+                        Google Calendar
+                    </li>
+
+                    <li>
+                        Outlook
+                    </li>
+
+                    <li>
+                        手机系统日历
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="section">
+
+
+                <h2>
+                    ⏰ 自动更新
+                </h2>
+
+
+                <p class="info">
+
+                    每日北京时间 09:00 自动运行更新任务。
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="footer">
+
+                FF14 CN Calendar Project<br>
+
+                自动化活动日历服务
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+
+</html>

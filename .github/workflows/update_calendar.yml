@@ -1,0 +1,70 @@
+name: Update FF14 Calendar
+
+
+on:
+
+  schedule:
+
+    - cron: '0 1 * * *'
+
+
+  workflow_dispatch:
+
+
+
+jobs:
+
+
+  build:
+
+
+    runs-on: ubuntu-latest
+
+
+
+    steps:
+
+
+      - name: Checkout
+
+        uses: actions/checkout@v4
+
+
+
+      - name: Setup Python
+
+        uses: actions/setup-python@v5
+
+        with:
+
+          python-version: "3.10"
+
+
+
+      - name: Install
+
+        run:
+
+          pip install -r requirements.txt
+
+
+
+      - name: Generate
+
+        run:
+
+          python generate_calendar.py
+
+
+
+      - name: Commit
+
+        uses: stefanzweifel/git-auto-commit-action@v5
+
+        with:
+
+          commit_message:
+            "Auto update FF14 calendar"
+
+          file_pattern:
+            ff14.ics

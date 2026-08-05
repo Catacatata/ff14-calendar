@@ -1,66 +1,125 @@
+import os
+import json
 import requests
 import datetime
-import json
-import os
+import time
 
 from icalendar import Calendar, Event
 import pytz
 
 
-API_URL = (
-    "https://apiff14risingstones.web.sdo.com/"
-    "api/home/active/calendar/getActiveCalendarMonth"
-)
-
 TZ = pytz.timezone("Asia/Shanghai")
 
 
-YEAR = datetime.datetime.now().year
+API_CACHE = "data/api_cache.json"
 
 
-def fetch_month(year, month):
+OUTPUT = "ff14.ics"
 
-    url = API_URL
 
-    params = {
-        "month": f"{year}-{month:02d}"
-    }
+YEAR = 2026
 
-    try:
 
-        r = requests.get(
-            url,
-            params=params,
-            timeout=10
-        )
+HEADERS = {
 
-        data = r.json()
+    "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
 
-        if data.get("code") == 10000:
+    "Accept":
+        "application/json,text/plain,*/*",
 
-            return data.get("data", [])
+    "Referer":
+        "https://ff.web.sdo.com/",
 
-    except Exception as e:
+    "Origin":
+        "https://ff.web.sdo.com"
 
-        print(
-            "API错误:",
-            e
-        )
-
-    return []
+}
 
 
 
-def load_override():
+# -------------------------
+# API获取
+# -------------------------
 
-    path = "ff14_override.json"
+def fetch_api(year, month):
 
-    if not os.path.exists(path):
+    url = (
+        "https://apiff14risingstones.web.sdo.com/api/home/"
+        "active/calendar/getActiveCalendarMonth"
+        f"?month={year}-{month:02d}"
+    )
+
+
+    for retry in range(3):
+
+        try:
+
+            print(
+                f"请求API {year}-{month:02d}"
+                f" 第{retry+1}次"
+            )
+
+
+            r = requests.get(
+                url,
+                headers=HEADERS,
+                timeout=20
+            )
+
+
+            print(
+                "HTTP:",
+                r.status_code
+            )
+
+
+            if r.status_code != 200:
+
+                continue
+
+
+            data = r.json()
+
+
+            if data.get("code") == 10000:
+
+                return data.get(
+                    "data",
+                    []
+                )
+
+
+        except Exception as e:
+
+            print(
+                "API错误:",
+                e
+            )
+
+
+        time.sleep(3)
+
+
+    return None
+
+
+
+
+
+# -------------------------
+# 读取缓存
+# -------------------------
+
+def load_cache():
+
+    if not os.path.exists(API_CACHE):
 
         return {}
 
+
     with open(
-        path,
+        API_CACHE,
         "r",
         encoding="utf-8"
     ) as f:
@@ -69,72 +128,249 @@ def load_override():
 
 
 
-def timestamp_to_datetime(ts):
 
-    return datetime.datetime.fromtimestamp(
-        ts,
-        tz=TZ
+
+def save_cache(data):
+
+    os.makedirs(
+        "data",
+        exist_ok=True
     )
 
 
+    with open(
+        API_CACHE,
+        "w",
+        encoding="utf-8"
+    ) as f:
 
-def generate():
+        json.dump(
+            data,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
 
-    events = {}
 
 
-    # 获取全年API
+
+
+# -------------------------
+# 获取全年API
+# -------------------------
+
+def get_api_events():
+
+    cache = load_cache()
+
+
+    result = []
+
 
     for month in range(1,13):
 
-        print(
-            "获取月份:",
-            month
-        )
+        key=f"{YEAR}-{month:02d}"
 
-        data = fetch_month(
+
+        data = fetch_api(
             YEAR,
             month
         )
 
 
-        for item in data:
+        if data is None:
 
-            events[item["id"]] = item
+            print(
+                "API失败，使用缓存:",
+                key
+            )
 
+            data = cache.get(
+                key,
+                []
+            )
+
+
+        else:
+
+            cache[key]=data
+
+
+
+        result.extend(data)
+
+
+
+    save_cache(cache)
 
 
     print(
         "API活动数量:",
-        len(events)
+        len(result)
     )
 
 
-    override = load_override()
+    return result
 
 
 
-    cal = Calendar()
+
+
+# -------------------------
+# 人工补充
+# -------------------------
+
+def load_override():
+
+    file="ff14_override.json"
+
+
+    if not os.path.exists(file):
+
+        return []
+
+
+    with open(
+        file,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        return json.load(f)
+
+
+
+
+
+# -------------------------
+# 转换事件
+# -------------------------
+
+def make_event(item, source):
+
+
+    start=datetime.datetime.fromtimestamp(
+        item["begin_time"],
+        tz=TZ
+    )
+
+
+    end=datetime.datetime.fromtimestamp(
+        item["end_time"],
+        tz=TZ
+    )
+
+
+    return {
+
+        "id":
+            f"{source}-{item.get('id')}",
+
+
+        "summary":
+            item["name"],
+
+
+        "start":
+            start,
+
+
+        "end":
+            end,
+
+
+        "url":
+            item.get("url",""),
+
+
+        "source":
+            source
+    }
+
+
+
+
+
+# -------------------------
+# 生成ICS
+# -------------------------
+
+def generate():
+
+
+    events=[]
+
+
+    api=get_api_events()
+
+
+    for e in api:
+
+        events.append(
+            make_event(
+                e,
+                "api"
+            )
+        )
+
+
+
+    manual=load_override()
+
+
+    for e in manual:
+
+        events.append(
+            make_event(
+                e,
+                "manual"
+            )
+        )
+
+
+
+    # 去重
+
+    result={}
+
+
+    for e in events:
+
+        key=(
+
+            e["summary"],
+
+            e["start"].isoformat(),
+
+            e["end"].isoformat()
+
+        )
+
+
+        result[key]=e
+
+
+
+    cal=Calendar()
+
 
     cal.add(
         "prodid",
         "-//FF14 CN Calendar//"
     )
 
+
     cal.add(
         "version",
         "2.0"
     )
 
-    cal.add(
-        "calscale",
-        "GREGORIAN"
-    )
 
     cal.add(
         "x-wr-calname",
-        "FF14 国服活动日历"
+        "FF14国服活动日历"
     )
+
 
     cal.add(
         "x-wr-timezone",
@@ -143,55 +379,36 @@ def generate():
 
 
 
-    for eid,item in sorted(
-        events.items()
+    for e in sorted(
+        result.values(),
+        key=lambda x:x["start"]
     ):
 
 
-        event = Event()
+        event=Event()
 
 
-        info = override.get(
-            str(eid),
-            {}
-        )
-
-
-        name = info.get(
-            "summary",
-            item["name"]
+        event.add(
+            "uid",
+            e["id"]
         )
 
 
         event.add(
             "summary",
-            name
-        )
-
-
-        start = timestamp_to_datetime(
-            item["begin_time"]
-        )
-
-        end = timestamp_to_datetime(
-            item["end_time"]
+            e["summary"]
         )
 
 
         event.add(
             "dtstart",
-            start
+            e["start"]
         )
+
 
         event.add(
             "dtend",
-            end
-        )
-
-
-        event.add(
-            "uid",
-            f"sdo-{eid}@ff14-calendar"
+            e["end"]
         )
 
 
@@ -203,23 +420,17 @@ def generate():
         )
 
 
-        if item.get("url"):
+        if e["url"]:
 
             event.add(
                 "url",
-                item["url"]
+                e["url"]
             )
 
 
         event.add(
             "status",
             "CONFIRMED"
-        )
-
-
-        event.add(
-            "transp",
-            "OPAQUE"
         )
 
 
@@ -230,7 +441,7 @@ def generate():
 
 
     with open(
-        "ff14.ics",
+        OUTPUT,
         "wb"
     ) as f:
 
@@ -240,11 +451,16 @@ def generate():
 
 
     print(
-        "生成完成"
+        "完成:",
+        OUTPUT,
+        "事件:",
+        len(result)
     )
 
 
 
-if __name__ == "__main__":
+
+
+if __name__=="__main__":
 
     generate()

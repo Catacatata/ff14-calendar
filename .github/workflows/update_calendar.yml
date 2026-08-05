@@ -5,10 +5,16 @@ on:
 
   schedule:
 
-    - cron: '0 1 * * *'
+    - cron: "0 1 * * *"
 
 
   workflow_dispatch:
+
+
+
+permissions:
+
+  contents: write
 
 
 
@@ -25,46 +31,48 @@ jobs:
     steps:
 
 
-      - name: Checkout
+    - name: Checkout
 
-        uses: actions/checkout@v4
-
-
-
-      - name: Setup Python
-
-        uses: actions/setup-python@v5
-
-        with:
-
-          python-version: "3.10"
+      uses: actions/checkout@v4
 
 
 
-      - name: Install
+    - name: Python
 
-        run:
+      uses: actions/setup-python@v5
 
-          pip install -r requirements.txt
+      with:
 
-
-
-      - name: Generate
-
-        run:
-
-          python generate_calendar.py
+        python-version: "3.10"
 
 
 
-      - name: Commit
+    - name: Install
 
-        uses: stefanzweifel/git-auto-commit-action@v5
+      run:
 
-        with:
+        pip install -r requirements.txt
 
-          commit_message:
-            "Auto update FF14 calendar"
 
-          file_pattern:
+
+    - name: Generate
+
+      run:
+
+        python generate_calendar.py
+
+
+
+    - name: Commit
+
+      uses: stefanzweifel/git-auto-commit-action@v5
+
+      with:
+
+        commit_message:
+          "Auto update FF14 calendar"
+
+        file_pattern:
+          |
             ff14.ics
+            data/api_cache.json

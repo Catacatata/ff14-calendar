@@ -4,7 +4,7 @@ import requests
 import datetime
 import time
 
-from icalendar import Calendar, Event, vText
+from icalendar import Calendar, Event
 import pytz
 
 
@@ -27,15 +27,13 @@ MANUAL_FILE = "ff14_override.json"
 OUTPUT_FILE = "ff14.ics"
 
 
+
 # =====================
 # 工具
 # =====================
 
 def clean_url(url):
-    """
-    清理URL
-    防止ICS换行导致地址失效
-    """
+
     if not url:
         return ""
 
@@ -47,15 +45,18 @@ def clean_url(url):
     )
 
 
+
 def timestamp_to_datetime(ts):
+
     return datetime.datetime.fromtimestamp(
         ts,
         tz=TZ
     )
 
 
+
 # =====================
-# API
+# API请求
 # =====================
 
 def fetch_api(year, month):
@@ -63,37 +64,41 @@ def fetch_api(year, month):
     url = f"{API_PROXY}?month={year}-{month:02d}"
 
     headers = {
-        "User-Agent": "Mozilla/5.0",
-        "Accept": "application/json"
+        "User-Agent":"Mozilla/5.0",
+        "Accept":"application/json"
     }
 
-    for i in range(3):
+
+    for retry in range(3):
 
         try:
 
             print(
-                f"请求API {year}-{month:02d} 第{i+1}次"
+                f"请求API {year}-{month:02d} 第{retry+1}次"
             )
 
-            r = requests.get(
+
+            r=requests.get(
                 url,
                 headers=headers,
                 timeout=20
             )
+
 
             print(
                 "HTTP:",
                 r.status_code
             )
 
+
             if r.status_code != 200:
                 continue
 
 
-            data = r.json()
+            data=r.json()
 
 
-            if data.get("code") == 10000:
+            if data.get("code")==10000:
 
                 return data.get(
                     "data",
@@ -104,7 +109,7 @@ def fetch_api(year, month):
         except Exception as e:
 
             print(
-                "API异常:",
+                "API错误:",
                 e
             )
 
@@ -116,10 +121,17 @@ def fetch_api(year, month):
 
 
 
+
+# =====================
+# 缓存
+# =====================
+
 def load_cache():
 
     if not os.path.exists(CACHE_FILE):
+
         return {}
+
 
     try:
 
@@ -137,12 +149,14 @@ def load_cache():
 
 
 
+
 def save_cache(data):
 
     os.makedirs(
         "data",
         exist_ok=True
     )
+
 
     with open(
         CACHE_FILE,
@@ -159,18 +173,20 @@ def save_cache(data):
 
 
 
+
 def get_api_events():
 
-    cache = load_cache()
+    cache=load_cache()
 
-    result = []
+    result=[]
 
 
     for month in range(1,13):
 
-        key = f"{YEAR}-{month:02d}"
+        key=f"{YEAR}-{month:02d}"
 
-        data = fetch_api(
+
+        data=fetch_api(
             YEAR,
             month
         )
@@ -183,17 +199,18 @@ def get_api_events():
                 key
             )
 
-            data = cache.get(
+            data=cache.get(
                 key,
                 []
             )
 
         else:
 
-            cache[key] = data
+            cache[key]=data
 
 
         result.extend(data)
+
 
 
     save_cache(cache)
@@ -209,17 +226,20 @@ def get_api_events():
 
 
 
+
+
 # =====================
-# ICS基础数据
+# 基础ICS
 # =====================
 
 def load_base_ics():
 
     if not os.path.exists(BASE_ICS):
+
         return []
 
 
-    events=[]
+    result=[]
 
 
     with open(
@@ -227,19 +247,24 @@ def load_base_ics():
         "rb"
     ) as f:
 
-        cal = Calendar.from_ical(
+        cal=Calendar.from_ical(
             f.read()
         )
 
 
-    for c in cal.walk("VEVENT"):
+    for item in cal.walk("VEVENT"):
+
 
         name=str(
-            c.get("SUMMARY","")
+            item.get(
+                "SUMMARY",
+                ""
+            )
         )
 
 
-        dt=c.get("DTSTART")
+        dt=item.get("DTSTART")
+
 
         if not dt:
             continue
@@ -264,12 +289,8 @@ def load_base_ics():
             start=TZ.localize(start)
 
 
-        url=clean_url(
-            c.get("URL","")
-        )
 
-
-        events.append({
+        result.append({
 
             "id":
             "base-"+name,
@@ -284,18 +305,21 @@ def load_base_ics():
             start,
 
             "url":
-            url
+            clean_url(
+                item.get("URL","")
+            )
 
         })
 
 
     print(
         "基础ICS:",
-        len(events)
+        len(result)
     )
 
 
-    return events
+    return result
+
 
 
 
@@ -320,10 +344,7 @@ def load_manual():
             encoding="utf-8"
         ) as f:
 
-            data=json.load(f)
-
-
-        return data if isinstance(data,list) else []
+            return json.load(f)
 
 
     except Exception as e:
@@ -337,11 +358,12 @@ def load_manual():
 
 
 
+
 # =====================
 # 分类
 # =====================
 
-def category(name):
+def get_category(name):
 
     rules={
 
@@ -371,8 +393,7 @@ def category(name):
             "金碟",
             "猎蛋",
             "降神"
-        ],
-
+        ]
     }
 
 
@@ -381,6 +402,7 @@ def category(name):
         for w in words:
 
             if w in name:
+
                 return c
 
 
@@ -388,8 +410,9 @@ def category(name):
 
 
 
+
 # =====================
-# 转换API数据
+# API转换
 # =====================
 
 def convert_api(item):
@@ -421,37 +444,36 @@ def convert_api(item):
 
 
 
+
+
 # =====================
-# 生成ICS
+# 主生成
 # =====================
 
 def generate():
 
+
     events=[]
 
 
-    # 基础
     events.extend(
         load_base_ics()
     )
 
 
-    # API
-    for x in get_api_events():
+    for item in get_api_events():
 
         events.append(
-            convert_api(x)
+            convert_api(item)
         )
 
 
-    # 人工
     events.extend(
         load_manual()
     )
 
 
 
-    # 去重
     unique={}
 
 
@@ -465,8 +487,8 @@ def generate():
 
         )
 
-
         unique[key]=e
+
 
 
 
@@ -511,6 +533,7 @@ def generate():
         key=lambda x:x["start"]
     ):
 
+
         event=Event()
 
 
@@ -522,7 +545,7 @@ def generate():
 
         event.add(
             "summary",
-            f"[{category(e['name'])}] {e['name']}"
+            f"[{get_category(e['name'])}] {e['name']}"
         )
 
 
@@ -546,13 +569,17 @@ def generate():
         )
 
 
+
+        # 不使用URL字段
+        # 改用DESCRIPTION
+
         if e.get("url"):
 
             event.add(
-                "url",
-                vText(
-                    e["url"]
-                )
+                "description",
+                "官方活动地址:\n"
+                +
+                clean_url(e["url"])
             )
 
 
@@ -572,22 +599,38 @@ def generate():
 
 
 
+    # 输出
+    ics=cal.to_ical().decode(
+        "utf-8"
+    )
+
+
+    # 去除ICS折行
+    ics=ics.replace(
+        "\r\n ",
+        ""
+    )
+
+
+
     with open(
         OUTPUT_FILE,
-        "wb"
+        "w",
+        encoding="utf-8"
     ) as f:
 
-        f.write(
-            cal.to_ical()
-        )
+        f.write(ics)
+
 
 
     print(
-        "完成生成:",
+        "完成:",
         OUTPUT_FILE
     )
 
 
 
+
 if __name__=="__main__":
+
     generate()

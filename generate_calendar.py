@@ -4,72 +4,76 @@ import requests
 import datetime
 import time
 
-from icalendar import Calendar, Event
+from icalendar import Calendar, Event, vText
 import pytz
 
 
-# =========================
+# =====================
 # 配置
-# =========================
+# =====================
 
 YEAR = 2026
 
-TZ = pytz.timezone(
-    "Asia/Shanghai"
-)
+TZ = pytz.timezone("Asia/Shanghai")
+
+API_PROXY = "https://ff14-api.eternalphilip.workers.dev"
+
+CACHE_FILE = "data/api_cache.json"
+
+BASE_ICS = "ff14_base_2026.ics"
+
+MANUAL_FILE = "ff14_override.json"
+
+OUTPUT_FILE = "ff14.ics"
 
 
-# 你的 Cloudflare Worker
+# =====================
+# 工具
+# =====================
 
-API_PROXY = (
-    "https://ff14-api.eternalphilip.workers.dev"
-)
+def clean_url(url):
+    """
+    清理URL
+    防止ICS换行导致地址失效
+    """
+    if not url:
+        return ""
 
-
-CACHE_FILE = (
-    "data/api_cache.json"
-)
-
-
-OUTPUT_FILE = (
-    "ff14.ics"
-)
-
-
-# =========================
-# 请求API
-# =========================
-
-
-def fetch_api(year, month):
-
-    url = (
-        API_PROXY
-        +
-        f"?month={year}-{month:02d}"
+    return (
+        str(url)
+        .replace("\n", "")
+        .replace("\r", "")
+        .strip()
     )
 
 
+def timestamp_to_datetime(ts):
+    return datetime.datetime.fromtimestamp(
+        ts,
+        tz=TZ
+    )
+
+
+# =====================
+# API
+# =====================
+
+def fetch_api(year, month):
+
+    url = f"{API_PROXY}?month={year}-{month:02d}"
+
     headers = {
-
-        "User-Agent":
-        "Mozilla/5.0",
-
-        "Accept":
-        "application/json"
-
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "application/json"
     }
 
-
-    for retry in range(3):
+    for i in range(3):
 
         try:
 
             print(
-                f"请求API {year}-{month:02d}"
-                f" 第{retry+1}次"
+                f"请求API {year}-{month:02d} 第{i+1}次"
             )
-
 
             r = requests.get(
                 url,
@@ -77,21 +81,16 @@ def fetch_api(year, month):
                 timeout=20
             )
 
-
             print(
                 "HTTP:",
                 r.status_code
             )
 
-
             if r.status_code != 200:
-
                 continue
 
 
-
             data = r.json()
-
 
 
             if data.get("code") == 10000:
@@ -113,26 +112,14 @@ def fetch_api(year, month):
         time.sleep(3)
 
 
-
     return None
 
 
 
-
-
-# =========================
-# 缓存
-# =========================
-
-
 def load_cache():
 
-    if not os.path.exists(
-        CACHE_FILE
-    ):
-
+    if not os.path.exists(CACHE_FILE):
         return {}
-
 
     try:
 
@@ -144,12 +131,9 @@ def load_cache():
 
             return json.load(f)
 
-
     except:
 
         return {}
-
-
 
 
 
@@ -159,7 +143,6 @@ def save_cache(data):
         "data",
         exist_ok=True
     )
-
 
     with open(
         CACHE_FILE,
@@ -176,29 +159,16 @@ def save_cache(data):
 
 
 
-
-
-# =========================
-# 获取全年活动
-# =========================
-
-
 def get_api_events():
 
-
     cache = load_cache()
-
 
     result = []
 
 
     for month in range(1,13):
 
-
-        key = (
-            f"{YEAR}-{month:02d}"
-        )
-
+        key = f"{YEAR}-{month:02d}"
 
         data = fetch_api(
             YEAR,
@@ -208,35 +178,25 @@ def get_api_events():
 
         if data is None:
 
-
             print(
                 "API失败 使用缓存:",
                 key
             )
-
 
             data = cache.get(
                 key,
                 []
             )
 
-
         else:
 
-
-            cache[key]=data
-
+            cache[key] = data
 
 
-        result.extend(
-            data
-        )
+        result.extend(data)
 
 
-
-    save_cache(
-        cache
-    )
+    save_cache(cache)
 
 
     print(
@@ -249,48 +209,121 @@ def get_api_events():
 
 
 
+# =====================
+# ICS基础数据
+# =====================
+
+def load_base_ics():
+
+    if not os.path.exists(BASE_ICS):
+        return []
 
 
-# =========================
+    events=[]
+
+
+    with open(
+        BASE_ICS,
+        "rb"
+    ) as f:
+
+        cal = Calendar.from_ical(
+            f.read()
+        )
+
+
+    for c in cal.walk("VEVENT"):
+
+        name=str(
+            c.get("SUMMARY","")
+        )
+
+
+        dt=c.get("DTSTART")
+
+        if not dt:
+            continue
+
+
+        start=dt.dt
+
+
+        if isinstance(
+            start,
+            datetime.date
+        ) and not isinstance(
+            start,
+            datetime.datetime
+        ):
+
+            start=datetime.datetime.combine(
+                start,
+                datetime.time()
+            )
+
+            start=TZ.localize(start)
+
+
+        url=clean_url(
+            c.get("URL","")
+        )
+
+
+        events.append({
+
+            "id":
+            "base-"+name,
+
+            "name":
+            name,
+
+            "start":
+            start,
+
+            "end":
+            start,
+
+            "url":
+            url
+
+        })
+
+
+    print(
+        "基础ICS:",
+        len(events)
+    )
+
+
+    return events
+
+
+
+# =====================
 # 人工补充
-# =========================
-
+# =====================
 
 def load_manual():
 
-
-    file="ff14_override.json"
-
-
-
     if not os.path.exists(
-        file
+        MANUAL_FILE
     ):
 
         return []
 
 
-
     try:
 
-
         with open(
-            file,
+            MANUAL_FILE,
             "r",
             encoding="utf-8"
         ) as f:
 
-
             data=json.load(f)
 
 
-
-            if isinstance(
-                data,
-                list
-            ):
-
-                return data
+        return data if isinstance(data,list) else []
 
 
     except Exception as e:
@@ -300,186 +333,135 @@ def load_manual():
             e
         )
 
-
-    return []
-
+        return []
 
 
 
+# =====================
+# 分类
+# =====================
 
-# =========================
-# 分类标签
-# =========================
+def category(name):
 
+    rules={
 
-def get_category(name):
+        "版本":[
+            "7.",
+            "版本"
+        ],
 
+        "直播":[
+            "PLL",
+            "Fan"
+        ],
 
-    if (
-        "版本" in name
-        or "7." in name
-    ):
+        "联动":[
+            "联动"
+        ],
 
-        return "版本更新"
+        "商城":[
+            "月卡",
+            "优惠"
+        ],
 
+        "季节":[
+            "红莲",
+            "恋人",
+            "女儿",
+            "金碟",
+            "猎蛋",
+            "降神"
+        ],
 
-
-    if (
-        "PLL" in name
-        or "Fan" in name
-    ):
-
-        return "直播活动"
-
-
-
-    if (
-        "联动" in name
-    ):
-
-        return "联动活动"
-
-
-
-    if (
-        "月卡" in name
-    ):
-
-        return "商城活动"
+    }
 
 
+    for c,words in rules.items():
 
-    if (
-        "季节" in name
-        or
-        name in [
-            "红莲节",
-            "恋人节",
-            "女儿节"
-        ]
-    ):
+        for w in words:
 
-        return "季节活动"
+            if w in name:
+                return c
+
+
+    return "其他"
 
 
 
-    return "其他活动"
+# =====================
+# 转换API数据
+# =====================
 
-
-
-
-
-# =========================
-# 转换
-# =========================
-
-
-def convert(item, source):
-
-
-    start = datetime.datetime.fromtimestamp(
-        item["begin_time"],
-        tz=TZ
-    )
-
-
-    end = datetime.datetime.fromtimestamp(
-        item["end_time"],
-        tz=TZ
-    )
-
+def convert_api(item):
 
     return {
 
-        "uid":
-        f"{source}-{item.get('id')}",
-
+        "id":
+        "api-"+str(item["id"]),
 
         "name":
         item["name"],
 
-
         "start":
-        start,
-
-
-        "end":
-        end,
-
-
-        "url":
-        item.get(
-            "url",
-            ""
+        timestamp_to_datetime(
+            item["begin_time"]
         ),
 
+        "end":
+        timestamp_to_datetime(
+            item["end_time"]
+        ),
 
-        "category":
-        get_category(
-            item["name"]
+        "url":
+        clean_url(
+            item.get("url","")
         )
 
     }
 
 
 
-
-
-# =========================
+# =====================
 # 生成ICS
-# =========================
-
+# =====================
 
 def generate():
-
 
     events=[]
 
 
+    # 基础
+    events.extend(
+        load_base_ics()
+    )
+
+
     # API
-
-    for item in get_api_events():
-
+    for x in get_api_events():
 
         events.append(
-            convert(
-                item,
-                "api"
-            )
+            convert_api(x)
         )
-
 
 
     # 人工
-
-    for item in load_manual():
-
-
-        events.append(
-            convert(
-                item,
-                "manual"
-            )
-        )
+    events.extend(
+        load_manual()
+    )
 
 
 
     # 去重
-
     unique={}
 
 
-
     for e in events:
-
 
         key=(
 
             e["name"],
 
-            e["start"].isoformat(),
-
-            e["end"].isoformat()
+            e["start"].isoformat()
 
         )
 
@@ -488,35 +470,34 @@ def generate():
 
 
 
+    print(
+        "最终事件:",
+        len(unique)
+    )
 
 
-    cal = Calendar()
 
-
+    cal=Calendar()
 
     cal.add(
         "prodid",
         "-//FF14 CN Calendar//"
     )
 
-
     cal.add(
         "version",
         "2.0"
     )
-
 
     cal.add(
         "calscale",
         "GREGORIAN"
     )
 
-
     cal.add(
         "x-wr-calname",
         "FF14国服活动日历"
     )
-
 
     cal.add(
         "x-wr-timezone",
@@ -525,26 +506,23 @@ def generate():
 
 
 
-
-
     for e in sorted(
         unique.values(),
         key=lambda x:x["start"]
     ):
-
 
         event=Event()
 
 
         event.add(
             "uid",
-            e["uid"]
+            e["id"]
         )
 
 
         event.add(
             "summary",
-            f"[{e['category']}] {e['name']}"
+            f"[{category(e['name'])}] {e['name']}"
         )
 
 
@@ -568,12 +546,13 @@ def generate():
         )
 
 
-        if e["url"]:
-
+        if e.get("url"):
 
             event.add(
                 "url",
-                e["url"]
+                vText(
+                    e["url"]
+                )
             )
 
 
@@ -583,9 +562,13 @@ def generate():
         )
 
 
-        cal.add_component(
-            event
+        event.add(
+            "transp",
+            "OPAQUE"
         )
+
+
+        cal.add_component(event)
 
 
 
@@ -594,22 +577,17 @@ def generate():
         "wb"
     ) as f:
 
-
         f.write(
             cal.to_ical()
         )
 
 
     print(
-        "完成:",
-        OUTPUT_FILE,
-        "事件:",
-        len(unique)
+        "完成生成:",
+        OUTPUT_FILE
     )
 
 
 
-
 if __name__=="__main__":
-
     generate()

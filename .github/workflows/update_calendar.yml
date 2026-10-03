@@ -75,4 +75,5 @@ jobs:
         file_pattern:
           |
             ff14.ics
+            calendar.json
             data/api_cache.json

@@ -26,6 +26,8 @@ MANUAL_FILE = "ff14_override.json"
 
 OUTPUT_FILE = "ff14.ics"
 
+JSON_OUTPUT_FILE = "calendar.json"
+
 
 
 # =====================
@@ -272,6 +274,9 @@ def load_base_ics():
 
         start=dt.dt
 
+        dtend=item.get("DTEND")
+        end=dtend.dt if dtend else start
+
 
         if isinstance(
             start,
@@ -288,6 +293,11 @@ def load_base_ics():
 
             start=TZ.localize(start)
 
+        if isinstance(end, datetime.date) and not isinstance(end, datetime.datetime):
+            end=datetime.datetime.combine(end, datetime.time())
+            end=TZ.localize(end)
+        elif isinstance(end, datetime.datetime) and end.tzinfo is None:
+            end=TZ.localize(end)
 
 
         result.append({
@@ -302,7 +312,7 @@ def load_base_ics():
             start,
 
             "end":
-            start,
+            end,
 
             "url":
             clean_url(
@@ -365,48 +375,49 @@ def load_manual():
 
 def get_category(name):
 
-    rules={
+    name = str(name or "")
 
-        "版本":[
-            "7.",
-            "版本"
-        ],
+    seasonal = [
+        "降神节", "降神祭", "恋人节", "女儿节", "彩蛋狩猎",
+        "金碟嘉年华", "金碟游乐场大庆典", "红莲节", "新生庆典",
+        "守护天节", "星芒节"
+    ]
 
-        "直播":[
-            "PLL",
-            "Fan"
-        ],
+    limited_collab = [
+        "妖怪手表", "勇者斗恶龙X", "勇者斗恶龙", "星歌异闻",
+        "纵使前路狱火焰毒", "献给英雄的夜曲", "黑色恶魔", "雷光降世"
+    ]
 
-        "联动":[
-            "联动"
-        ],
+    long_collab = [
+        "牙狼", "怪物猎人 世界", "怪物猎人世界",
+        "怪物猎人 荒野", "怪物猎人荒野", "糖豆人", "魔光键影"
+    ]
 
-        "商城":[
-            "月卡",
-            "优惠"
-        ],
+    if any(word in name for word in seasonal):
+        return "季节活动"
 
-        "季节":[
-            "红莲",
-            "恋人",
-            "女儿",
-            "金碟",
-            "猎蛋",
-            "降神"
-        ]
-    }
+    if any(word in name for word in long_collab):
+        return "长效联动"
 
+    if any(word in name for word in limited_collab) or "联动" in name:
+        return "限时联动"
 
-    for c,words in rules.items():
+    if "莫古莫古" in name or "大收集" in name:
+        return "莫古莫古大收集"
 
-        for w in words:
+    if "艾欧泽亚通行证" in name or "通行证" in name:
+        return "通行证"
 
-            if w in name:
+    if any(word in name for word in ["PLL", "Fan Festival", "FANFEST", "FanFest", "官方转播", "直播"]):
+        return "直播/FanFest"
 
-                return c
+    if any(word in name for word in ["月卡", "商城", "优惠", "礼赠", "礼包"]):
+        return "月卡/商城"
 
+    if "版本" in name or name.startswith("7."):
+        return "版本更新"
 
-    return "其他"
+    return "其他活动"
 
 
 
@@ -618,15 +629,38 @@ def generate():
         "w",
         encoding="utf-8"
     ) as f:
-
         f.write(ics)
 
+    now=datetime.datetime.now(tz=TZ)
+    web_events=[]
+    for e in sorted(unique.values(), key=lambda x:x["start"]):
+        start=e["start"]
+        end=e.get("end") or start
+        if start.tzinfo is None:
+            start=TZ.localize(start)
+        if end.tzinfo is None:
+            end=TZ.localize(end)
+        web_events.append({
+            "id": str(e.get("id", "")),
+            "name": e["name"],
+            "category": get_category(e["name"]),
+            "start": start.isoformat(),
+            "end": end.isoformat(),
+            "url": clean_url(e.get("url", ""))
+        })
 
+    payload={
+        "generated_at": now.isoformat(),
+        "generated_at_text": now.strftime("%Y-%m-%d %H:%M:%S"),
+        "timezone": "Asia/Shanghai",
+        "event_count": len(web_events),
+        "events": web_events
+    }
+    with open(JSON_OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
 
-    print(
-        "完成:",
-        OUTPUT_FILE
-    )
+    print("完成:", OUTPUT_FILE)
+    print("完成:", JSON_OUTPUT_FILE, "事件:", len(web_events))
 
 
 

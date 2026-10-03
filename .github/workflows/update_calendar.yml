@@ -1,78 +1,62 @@
 name: Update FF14 Calendar
 
-
 on:
-
   schedule:
-
+    # UTC 01:00 = 北京时间 09:00
     - cron: "0 1 * * *"
-
-
   workflow_dispatch:
 
-
-
 permissions:
-
   contents: write
 
-
-
 jobs:
-
-
   build:
-
-
     runs-on: ubuntu-latest
 
-
-
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
 
-    - name: Checkout
+      - name: Install
+        run: pip install -r requirements.txt
 
-      uses: actions/checkout@v4
+      - name: Generate
+        run: python generate_calendar.py
 
+      - name: Check generated files
+        run: |
+          echo "=== Generated files ==="
+          ls -la
+          echo "=== calendar.json ==="
+          test -f calendar.json
+          ls -lh calendar.json
+          head -20 calendar.json
+          echo "=== Git status ==="
+          git status --short
 
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-    - name: Python
+          git add ff14.ics
+          git add -f calendar.json
 
-      uses: actions/setup-python@v5
+          if [ -f data/api_cache.json ]; then
+            git add -f data/api_cache.json
+          fi
 
-      with:
+          echo "=== Staged files ==="
+          git status --short
 
-        python-version: "3.10"
-
-
-
-    - name: Install
-
-      run:
-
-        pip install -r requirements.txt
-
-
-
-    - name: Generate
-
-      run:
-
-        python generate_calendar.py
-
-
-
-    - name: Commit
-
-      uses: stefanzweifel/git-auto-commit-action@v5
-
-      with:
-
-        commit_message:
-          "Auto update FF14 calendar"
-
-        file_pattern:
-          |
-            ff14.ics
-            data/api_cache.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto update FF14 calendar"
+            git push
+          fi

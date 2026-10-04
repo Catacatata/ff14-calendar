@@ -1,83 +1,612 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FF14 国服活动日历</title>
-<style>
-:root{--blue:#3478f6;--bg:#f3f6fb;--text:#182235;--muted:#748094;--line:#e8edf5;--green:#35bf73;--orange:#ff9f2e;--red:#f05d75;--purple:#8667e8}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:var(--text)}
-a{color:inherit}.hero{position:relative;isolation:isolate;color:#fff;padding:46px 0 42px;min-height:290px;background:#13274d url("images/banner-01-limsa-lominsa.webp") center/cover no-repeat;transition:background-image .35s ease}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,12,28,.88) 0%,rgba(7,19,40,.72) 34%,rgba(8,19,38,.38) 60%,rgba(5,13,29,.18) 100%)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(3,10,24,.36),transparent 45%);pointer-events:none}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.hero-row{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}.hero h1{font-size:38px;margin:0 0 10px;text-shadow:0 2px 14px rgba(0,0,0,.38)}.hero p{margin:6px 0;color:#eef5ff;text-shadow:0 1px 8px rgba(0,0,0,.45)}.actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:9px;text-decoration:none;font-weight:700;background:#fff;color:#26354e}.btn.primary{background:var(--blue);color:#fff}.update-box{min-width:260px;background:rgba(5,17,38,.68);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);padding:16px 18px;border-radius:12px;line-height:1.7;box-shadow:0 8px 28px rgba(0,0,0,.16)}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--green);margin-right:8px}.tabs{background:#fff;border-bottom:1px solid var(--line)}.tabs .wrap{display:flex;gap:10px;padding:12px 0}.tab{padding:10px 15px;border-radius:8px;font-weight:700;color:#667287}.tab.active{background:var(--blue);color:#fff}.layout{display:grid;grid-template-columns:360px 1fr;gap:20px;padding:22px 0}.panel{background:#fff;border:1px solid #edf0f5;border-radius:15px;box-shadow:0 4px 18px rgba(35,50,80,.05)}.calendar{padding:22px}.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.cal-head h2{margin:0;font-size:22px}.cal-nav{border:1px solid var(--line);background:#fff;border-radius:8px;width:36px;height:36px;cursor:pointer}.week,.days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}.week{font-size:13px;color:var(--muted);margin-bottom:8px}.day{height:50px;display:flex;align-items:center;justify-content:center;position:relative;border-radius:10px}.day.muted{color:#bdc5d1}.day.today{background:var(--blue);color:#fff;font-weight:800}.day.has-event:not(.today)::after{content:"";position:absolute;bottom:5px;width:5px;height:5px;border-radius:50%;background:var(--blue)}.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;color:var(--muted);font-size:12px}.legend i{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:5px}.content{display:flex;flex-direction:column;gap:20px}.section-panel{padding:20px 22px}.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.section-title h2{font-size:20px;margin:0}.count{background:#f2f5f9;color:#718096;padding:5px 10px;border-radius:15px;font-size:12px}.event{display:grid;grid-template-columns:1fr auto;gap:12px;padding:17px 2px;border-top:1px solid var(--line)}.event:first-of-type{border-top:0}.event-name{font-weight:800;font-size:17px;margin:6px 0}.badge{display:inline-block;padding:4px 9px;border-radius:12px;font-size:12px;color:#fff;background:var(--blue)}.badge.green{background:var(--green)}.badge.orange{background:var(--orange)}.badge.red{background:var(--red)}.event-time,.event-desc{font-size:13px;color:var(--muted);margin-top:6px}.event-link{text-decoration:none;color:#9aa5b5;font-size:24px;align-self:center}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.empty{padding:24px 4px;color:var(--muted)}.error{padding:18px;background:#fff1f1;color:#b43d4b;border-radius:10px}.footer{text-align:center;color:#929cab;padding:5px 0 28px;font-size:12px}
-@media(max-width:850px){.hero{min-height:0;padding:34px 0 30px;background-position:center}.hero::before{background:linear-gradient(90deg,rgba(4,12,28,.9),rgba(5,14,30,.58))}.hero-row{display:block}.update-box{margin-top:20px}.layout{grid-template-columns:1fr}.bottom-grid{grid-template-columns:1fr}.hero h1{font-size:28px}.tabs{overflow:auto}.tabs .wrap{width:max-content;min-width:100%;padding-left:16px;padding-right:16px}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF14 国服活动日历</title>
+    <style>
+        :root {
+            --blue: #3478f6;
+            --bg: #f3f6fb;
+            --text: #182235;
+            --muted: #748094;
+            --line: #e8edf5;
+            --green: #35bf73;
+            --orange: #ff9f2e;
+            --red: #f05d75;
+            --purple: #8667e8
+        }
 
-.event-main{display:flex;gap:12px;align-items:flex-start;min-width:0}.event-copy{min-width:0}.event-picture{width:72px;height:52px;flex-shrink:0;border-radius:8px;overflow:hidden;background:#eef3fb;display:grid;place-items:center;margin-top:6px}.event-picture img{width:100%;height:100%;object-fit:cover}.event-picture .event-icon{font-size:28px}.event-picture img[hidden],.event-picture .event-icon[hidden]{display:none}.event-summary{font-size:13px;line-height:1.65;color:#59677c;margin-top:7px;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.event-name{overflow-wrap:anywhere}.event-link{min-width:24px}.bottom-grid .event-picture{width:52px;height:42px}@media(max-width:480px){.event-picture{width:60px;height:44px}.event-main{gap:10px}}
-</style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            font-family: "Microsoft YaHei","PingFang SC",system-ui,sans-serif;
+            color: var(--text)
+        }
+
+        a {
+            color: inherit
+        }
+
+        .hero {
+            position: relative;
+            isolation: isolate;
+            color: #fff;
+            padding: 46px 0 42px;
+            min-height: 290px;
+            background: #13274d url("images/banner-01-limsa-lominsa.webp") center/cover no-repeat;
+            transition: background-image .35s ease
+        }
+
+            .hero::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                background: linear-gradient(90deg,rgba(4,12,28,.88) 0%,rgba(7,19,40,.72) 34%,rgba(8,19,38,.38) 60%,rgba(5,13,29,.18) 100%)
+            }
+
+            .hero::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                background: linear-gradient(0deg,rgba(3,10,24,.36),transparent 45%);
+                pointer-events: none
+            }
+
+        .wrap {
+            width: min(1180px,calc(100% - 32px));
+            margin: auto
+        }
+
+        .hero-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: flex-start
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin: 0 0 10px;
+            text-shadow: 0 2px 14px rgba(0,0,0,.38)
+        }
+
+        .hero p {
+            margin: 6px 0;
+            color: #eef5ff;
+            text-shadow: 0 1px 8px rgba(0,0,0,.45)
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 18px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: 700;
+            background: #fff;
+            color: #26354e
+        }
+
+            .btn.primary {
+                background: var(--blue);
+                color: #fff
+            }
+
+        .update-box {
+            min-width: 260px;
+            background: rgba(5,17,38,.68);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,.12);
+            padding: 16px 18px;
+            border-radius: 12px;
+            line-height: 1.7;
+            box-shadow: 0 8px 28px rgba(0,0,0,.16)
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--green);
+            margin-right: 8px
+        }
+
+        .tabs {
+            background: #fff;
+            border-bottom: 1px solid var(--line)
+        }
+
+            .tabs .wrap {
+                display: flex;
+                gap: 10px;
+                padding: 12px 0
+            }
+
+        .tab {
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: #667287
+        }
+
+            .tab.active {
+                background: var(--blue);
+                color: #fff
+            }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 20px;
+            padding: 22px 0
+        }
+
+        .panel {
+            background: #fff;
+            border: 1px solid #edf0f5;
+            border-radius: 15px;
+            box-shadow: 0 4px 18px rgba(35,50,80,.05)
+        }
+
+        .calendar {
+            padding: 22px
+        }
+
+        .cal-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px
+        }
+
+            .cal-head h2 {
+                margin: 0;
+                font-size: 22px
+            }
+
+        .cal-nav {
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 8px;
+            width: 36px;
+            height: 36px;
+            cursor: pointer
+        }
+
+        .week, .days {
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            text-align: center
+        }
+
+        .week {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 8px
+        }
+
+        .day {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 10px
+        }
+
+            .day.muted {
+                color: #bdc5d1
+            }
+
+            .day.today {
+                background: var(--blue);
+                color: #fff;
+                font-weight: 800
+            }
+
+            .day.has-event:not(.today)::after {
+                content: "";
+                position: absolute;
+                bottom: 5px;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: var(--blue)
+            }
+
+        .legend {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 12px
+        }
+
+            .legend i {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 5px
+            }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px
+        }
+
+        .section-panel {
+            padding: 20px 22px
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px
+        }
+
+            .section-title h2 {
+                font-size: 20px;
+                margin: 0
+            }
+
+        .count {
+            background: #f2f5f9;
+            color: #718096;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px
+        }
+
+        .event {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px;
+            padding: 17px 2px;
+            border-top: 1px solid var(--line)
+        }
+
+            .event:first-of-type {
+                border-top: 0
+            }
+
+        .event-name {
+            font-weight: 800;
+            font-size: 17px;
+            margin: 6px 0
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 9px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: #fff;
+            background: var(--blue)
+        }
+
+            .badge.green {
+                background: var(--green)
+            }
+
+            .badge.orange {
+                background: var(--orange)
+            }
+
+            .badge.red {
+                background: var(--red)
+            }
+
+        .event-time, .event-desc {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 6px
+        }
+
+        .event-link {
+            text-decoration: none;
+            color: #9aa5b5;
+            font-size: 24px;
+            align-self: center
+        }
+
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px
+        }
+
+        .empty {
+            padding: 24px 4px;
+            color: var(--muted)
+        }
+
+        .error {
+            padding: 18px;
+            background: #fff1f1;
+            color: #b43d4b;
+            border-radius: 10px
+        }
+
+        .footer {
+            text-align: center;
+            color: #929cab;
+            padding: 5px 0 28px;
+            font-size: 12px
+        }
+
+        @media(max-width:850px) {
+            .hero {
+                min-height: 0;
+                padding: 34px 0 30px;
+                background-position: center
+            }
+
+                .hero::before {
+                    background: linear-gradient(90deg,rgba(4,12,28,.9),rgba(5,14,30,.58))
+                }
+
+            .hero-row {
+                display: block
+            }
+
+            .update-box {
+                margin-top: 20px
+            }
+
+            .layout {
+                grid-template-columns: 1fr
+            }
+
+            .bottom-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero h1 {
+                font-size: 28px
+            }
+
+            .tabs {
+                overflow: auto
+            }
+
+                .tabs .wrap {
+                    width: max-content;
+                    min-width: 100%;
+                    padding-left: 16px;
+                    padding-right: 16px
+                }
+        }
+
+        /* 活动图文布局：宽卡片左图右文，窄卡片上图下文 */
+        .event {
+            grid-template-columns: minmax(0,1fr) 24px;
+            gap: 12px;
+            padding: 22px 0
+        }
+
+        .event-main {
+            display: grid;
+            grid-template-columns: 200px minmax(0,1fr);
+            gap: 20px;
+            align-items: center;
+            min-width: 0
+        }
+
+        .event-copy {
+            min-width: 0
+        }
+
+        .event-picture {
+            width: 200px;
+            aspect-ratio: 16/9;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #f5f7fb;
+            display: grid;
+            place-items: center;
+            margin: 0
+        }
+
+            .event-picture img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+                min-width: 0;
+                min-height: 0
+            }
+
+            .event-picture .event-icon {
+                font-size: 44px
+            }
+
+                .event-picture img[hidden], .event-picture .event-icon[hidden] {
+                    display: none
+                }
+
+        .event-summary {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #59677c;
+            margin-top: 8px;
+            overflow-wrap: anywhere;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden
+        }
+
+        .event-name {
+            overflow-wrap: anywhere;
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 8px 0 4px
+        }
+
+        .event-time {
+            line-height: 1.6
+        }
+
+        .event-link {
+            min-width: 24px;
+            text-align: center
+        }
+
+        .bottom-grid .event-main {
+            grid-template-columns: minmax(0,1fr);
+            gap: 14px
+        }
+
+        .bottom-grid .event-picture {
+            width: 100%;
+            aspect-ratio: 16/9
+        }
+
+        .section-title {
+            gap: 12px
+        }
+
+        .count {
+            flex-shrink: 0
+        }
+
+        @media(min-width:851px) and (max-width:1050px) {
+            .layout {
+                grid-template-columns: 300px minmax(0,1fr)
+            }
+
+            .event-main {
+                grid-template-columns: 160px minmax(0,1fr);
+                gap: 16px
+            }
+
+            .event-picture {
+                width: 160px
+            }
+        }
+
+        @media(max-width:850px) {
+            .event-main {
+                grid-template-columns: 180px minmax(0,1fr);
+                gap: 16px
+            }
+
+            .event-picture {
+                width: 180px
+            }
+        }
+
+        @media(max-width:540px) {
+            .event {
+                grid-template-columns: minmax(0,1fr) 20px;
+                gap: 8px;
+                padding: 20px 0
+            }
+
+            .event-main {
+                grid-template-columns: minmax(0,1fr);
+                gap: 14px
+            }
+
+            .event-picture {
+                width: 100%;
+                aspect-ratio: 16/9
+            }
+
+            .event-name {
+                font-size: 17px
+            }
+
+            .section-title h2 {
+                font-size: 18px
+            }
+        }
+    </style>
 </head>
 <body>
-<header class="hero"><div class="wrap hero-row"><div><h1>最终幻想14（国服）活动日历</h1><p>收录国服官方活动、联动、季节活动等重要日程</p><p>● 数据来自官方活动 API，自动更新</p><div class="actions"><a class="btn primary" href="ff14.ics">📅 订阅日历（ICS）</a><button class="btn" id="copyBtn" type="button">🔗 复制订阅地址</button></div></div><div class="update-box"><div><span class="dot"></span><b>数据已更新</b></div><div id="updated">正在读取...</div><div id="nextUpdate">每日北京时间 09:00 自动更新</div></div></div></header>
+    <header class="hero"><div class="wrap hero-row"><div><h1>最终幻想14（国服）活动日历</h1><p>收录国服官方活动、联动、季节活动等重要日程</p><p>● 数据来自官方活动 API，自动更新</p><div class="actions"><a class="btn primary" href="ff14.ics">📅 订阅日历（ICS）</a><button class="btn" id="copyBtn" type="button">🔗 复制订阅地址</button></div></div><div class="update-box"><div><span class="dot"></span><b>数据已更新</b></div><div id="updated">正在读取...</div><div id="nextUpdate">每日北京时间 09:00 自动更新</div></div></div></header>
 
-<main class="wrap layout"><aside class="panel calendar"><div class="cal-head"><button class="cal-nav" id="prev">‹</button><h2 id="monthTitle"></h2><button class="cal-nav" id="next">›</button></div><div class="week"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div><div class="days" id="days"></div><div class="legend"><span><i style="background:var(--blue)"></i>有活动</span><span><i style="background:var(--green)"></i>当前进行</span><span><i style="background:var(--orange)"></i>即将开始</span><span><i style="background:var(--red)"></i>即将结束</span></div></aside><section class="content"><div class="panel section-panel"><div class="section-title"><h2>🟢 当前正在进行的活动</h2><span class="count" id="activeCount"></span></div><div id="active"></div></div><div class="bottom-grid"><div class="panel section-panel"><div class="section-title"><h2>🟠 即将开始</h2><span class="count" id="upcomingCount"></span></div><div id="upcoming"></div></div><div class="panel section-panel"><div class="section-title"><h2>🔴 即将结束</h2><span class="count" id="endingCount"></span></div><div id="ending"></div></div></div></section></main>
-<div class="wrap footer">FF14 CN Calendar Project · 官方活动日程 / RSS 图文补充 · iCalendar 标准订阅</div>
-<script>
-const banners = [
-  "images/banner-01-limsa-lominsa.webp",
-  "images/banner-02-gridania.webp",
-  "images/banner-03-uldah.webp",
-  "images/banner-04-ishgard.webp",
-  "images/banner-05-mor-dhona.webp",
-  "images/banner-06-ala-mhigo.webp",
-  "images/banner-07-sharlayan.webp",
-  "images/banner-08-kugane.webp",
-  "images/banner-09-yanxia.webp",
-  "images/banner-10-garlemald.webp",
-  "images/banner-11-tuliyollal.webp",
-  "images/banner-12-crystarium.webp",
-  "images/banner-13-eulmore.webp",
-  "images/banner-14-solution-nine.webp"
-];
-(function setRandomBanner(){
-  const hero=document.querySelector('.hero');
-  const key='ff14-last-banner-v2';
-  let previous=null;
-  try { previous=localStorage.getItem(key); } catch {}
-  const candidates=banners.filter(path=>path!==previous);
-  const selected=candidates[Math.floor(Math.random()*candidates.length)] || banners[0];
-  const pending=[selected,...banners.filter(path=>path!==selected)];
-  function loadNext(){
-    const path=pending.shift();
-    if(!path)return;
-    const img=new Image();
-    img.onload=()=>{
-      hero.style.backgroundImage=`url("${path}")`;
-      hero.dataset.banner=path;
-      try { localStorage.setItem(key,path); } catch {}
-    };
-    img.onerror=loadNext;
-    img.src=path;
-  }
-  loadNext();
-})();
-const $=id=>document.getElementById(id);let allEvents=[],viewDate=new Date();
-const CN=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});
-function d(v){return new Date(v)}function fmt(v){return CN.format(d(v)).replaceAll('/','-')}function daysLeft(v){return Math.ceil((d(v)-new Date())/86400000)}
-function badgeClass(cat){if(cat==='季节活动')return'orange';if(cat==='限时联动')return'red';if(cat==='长效联动')return'green';if(cat==='月卡/商城')return'green';return''}
-function esc(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function safeLink(value){try{const url=new URL(value,location.href);return ['http:','https:'].includes(url.protocol)?url.href:''}catch{return''}}
-function eventIcon(category){if((category||'').includes('季节'))return '🌸';if((category||'').includes('联动'))return '🤝';if((category||'').includes('商城')||(category||'').includes('月卡'))return '🎁';if((category||'').includes('版本'))return '✨';return '📅'}
-function card(e,extra=''){
-  const url=e.url?safeLink(e.url):'';
-  const link=url?`<a class="event-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="查看${esc(e.name)}官方活动页">›</a>`:'';
-  const source=e.image?safeLink(e.image):'';
-  const picture=`<div class="event-picture">${source?`<img src="${esc(source)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:''}<span class="event-icon" aria-hidden="true" ${source?'hidden':''}>${eventIcon(e.category)}</span></div>`;
-  return `<article class="event"><div class="event-main">${picture}<div class="event-copy"><span class="badge ${badgeClass(e.category)}">${esc(e.category||'活动')}</span><div class="event-name">${esc(e.name)}</div>${e.description?`<div class="event-summary">${esc(e.description)}</div>`:''}<div class="event-time">📅 ${fmt(e.start)} ～ ${fmt(e.end)}</div>${extra?`<div class="event-desc">${esc(extra)}</div>`:''}</div></div>${link}</article>`;
-}
-document.addEventListener('error',event=>{const image=event.target;if(image.matches?.('.event-picture img')){image.hidden=true;image.parentElement.querySelector('.event-icon').hidden=false}},true);
-function renderLists(){const now=new Date(),soon=new Date(now.getTime()+30*86400000);const active=allEvents.filter(e=>d(e.start)<=now&&d(e.end)>=now).sort((a,b)=>d(a.end)-d(b.end));const upcoming=allEvents.filter(e=>d(e.start)>now&&d(e.start)<=soon).sort((a,b)=>d(a.start)-d(b.start)).slice(0,6);const ending=active.filter(e=>daysLeft(e.end)<=7).sort((a,b)=>d(a.end)-d(b.end));$('activeCount').textContent=`${active.length} 个活动`;$('upcomingCount').textContent=`${upcoming.length} 个活动`;$('endingCount').textContent=`${ending.length} 个活动`;$('active').innerHTML=active.length?active.map(e=>card(e,`距离结束约 ${Math.max(0,daysLeft(e.end))} 天`)).join(''):'<div class="empty">当前没有正在进行的活动</div>';$('upcoming').innerHTML=upcoming.length?upcoming.map(e=>card(e,`约 ${Math.max(1,daysLeft(e.start))} 天后开始`)).join(''):'<div class="empty">未来 30 天暂无新活动</div>';$('ending').innerHTML=ending.length?ending.map(e=>card(e,`即将结束，约剩 ${Math.max(0,daysLeft(e.end))} 天`)).join(''):'<div class="empty">未来 7 天暂无活动结束</div>'}
-function renderCalendar(){const y=viewDate.getFullYear(),m=viewDate.getMonth();$('monthTitle').textContent=`${y}年 ${m+1}月`;const first=new Date(y,m,1),last=new Date(y,m+1,0),start=first.getDay(),today=new Date();let html='';for(let i=0;i<42;i++){const n=i-start+1,dt=new Date(y,m,n),inMonth=n>=1&&n<=last.getDate();const dateStart=new Date(y,m,n,0,0,0),dateEnd=new Date(y,m,n,23,59,59);const has=allEvents.some(e=>d(e.start)<=dateEnd&&d(e.end)>=dateStart);const isToday=inMonth&&dt.toDateString()===today.toDateString();html+=`<div class="day ${inMonth?'':'muted'} ${has?'has-event':''} ${isToday?'today':''}">${dt.getDate()}</div>`}$('days').innerHTML=html}
-$('prev').onclick=()=>{viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()-1,1);renderCalendar()};$('next').onclick=()=>{viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()+1,1);renderCalendar()};$('copyBtn').onclick=async()=>{const url=new URL('ff14.ics',location.href).href;try{await navigator.clipboard.writeText(url);$('copyBtn').textContent='✓ 已复制订阅地址';setTimeout(()=>$('copyBtn').textContent='🔗 复制订阅地址',1800)}catch{prompt('复制订阅地址：',url)}};
-fetch('calendar.json?ts='+Date.now(),{cache:'no-store'}).then(async r=>{if(!r.ok)throw new Error('calendar.json HTTP '+r.status);const body=await r.text();if(body.trimStart().startsWith('<'))throw new Error('服务器返回了 HTML，请确认 calendar.json 已生成并部署');return JSON.parse(body)}).then(data=>{allEvents=Array.isArray(data.events)?data.events:[];$('updated').textContent='最后更新：'+(data.generated_at_text||fmt(data.generated_at));const now=new Date();viewDate=new Date(now.getFullYear(),now.getMonth(),1);renderLists();renderCalendar()}).catch(err=>{$('updated').textContent='数据读取失败';$('active').innerHTML=`<div class="error">无法读取 calendar.json：${err.message}</div>`;renderCalendar()});
-</script>
+    <main class="wrap layout"><aside class="panel calendar"><div class="cal-head"><button class="cal-nav" id="prev">‹</button><h2 id="monthTitle"></h2><button class="cal-nav" id="next">›</button></div><div class="week"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div><div class="days" id="days"></div><div class="legend"><span><i style="background:var(--blue)"></i>有活动</span><span><i style="background:var(--green)"></i>当前进行</span><span><i style="background:var(--orange)"></i>即将开始</span><span><i style="background:var(--red)"></i>即将结束</span></div></aside><section class="content"><div class="panel section-panel"><div class="section-title"><h2>🟢 当前正在进行的活动</h2><span class="count" id="activeCount"></span></div><div id="active"></div></div><div class="bottom-grid"><div class="panel section-panel"><div class="section-title"><h2>🟠 即将开始</h2><span class="count" id="upcomingCount"></span></div><div id="upcoming"></div></div><div class="panel section-panel"><div class="section-title"><h2>🔴 即将结束</h2><span class="count" id="endingCount"></span></div><div id="ending"></div></div></div></section></main>
+    <div class="wrap footer">FF14 CN Calendar Project · 官方活动日程 / RSS 图文补充 · iCalendar 标准订阅</div>
+    <script>
+        const banners = [
+        "images/banner-01-limsa-lominsa.webp",
+        "images/banner-02-gridania.webp",
+        "images/banner-03-uldah.webp",
+        "images/banner-04-ishgard.webp",
+        "images/banner-05-mor-dhona.webp",
+        "images/banner-06-ala-mhigo.webp",
+        "images/banner-07-sharlayan.webp",
+        "images/banner-08-kugane.webp",
+        "images/banner-09-yanxia.webp",
+        "images/banner-10-garlemald.webp",
+        "images/banner-11-tuliyollal.webp",
+        "images/banner-12-crystarium.webp",
+        "images/banner-13-eulmore.webp",
+        "images/banner-14-solution-nine.webp"
+        ];
+        (function setRandomBanner(){
+        const hero=document.querySelector('.hero');
+        const key='ff14-last-banner-v2';
+        let previous=null;
+        try { previous=localStorage.getItem(key); } catch {}
+        const candidates=banners.filter(path=>path!==previous);
+        const selected=candidates[Math.floor(Math.random()*candidates.length)] || banners[0];
+        const pending=[selected,...banners.filter(path=>path!==selected)];
+        function loadNext(){
+        const path=pending.shift();
+        if(!path)return;
+        const img=new Image();
+        img.onload=()=>{
+        hero.style.backgroundImage=`url("${path}")`;
+        hero.dataset.banner=path;
+        try { localStorage.setItem(key,path); } catch {}
+        };
+        img.onerror=loadNext;
+        img.src=path;
+        }
+        loadNext();
+        })();
+        const $=id=>document.getElementById(id);let allEvents=[],viewDate=new Date();
+        const CN=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});
+        function d(v){return new Date(v)}function fmt(v){return CN.format(d(v)).replaceAll('/','-')}function daysLeft(v){return Math.ceil((d(v)-new Date())/86400000)}
+        function badgeClass(cat){if(cat==='季节活动')return'orange';if(cat==='限时联动')return'red';if(cat==='长效联动')return'green';if(cat==='月卡/商城')return'green';return''}
+        function esc(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+        function safeLink(value){try{const url=new URL(value,location.href);return ['http:','https:'].includes(url.protocol)?url.href:''}catch{return''}}
+        function eventIcon(category){if((category||'').includes('季节'))return '🌸';if((category||'').includes('联动'))return '🤝';if((category||'').includes('商城')||(category||'').includes('月卡'))return '🎁';if((category||'').includes('版本'))return '✨';return '📅'}
+        function card(e,extra=''){
+        const url=e.url?safeLink(e.url):'';
+        const link=url?`<a class="event-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="查看${esc(e.name)}官方活动页">›</a>`:'';
+        const source=e.image?safeLink(e.image):'';
+        const picture=`<div class="event-picture">${source?`<img src="${esc(source)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:''}<span class="event-icon" aria-hidden="true" ${source?'hidden':''}>${eventIcon(e.category)}</span></div>`;
+        return `<article class="event"><div class="event-main">${picture}<div class="event-copy"><span class="badge ${badgeClass(e.category)}">${esc(e.category||'活动')}</span><div class="event-name">${esc(e.name)}</div>${e.description?`<div class="event-summary">${esc(e.description)}</div>`:''}<div class="event-time">📅 ${fmt(e.start)} ～ ${fmt(e.end)}</div>${extra?`<div class="event-desc">${esc(extra)}</div>`:''}</div></div>${link}</article>`;
+        }
+        document.addEventListener('error',event=>{const image=event.target;if(image.matches?.('.event-picture img')){image.hidden=true;image.parentElement.querySelector('.event-icon').hidden=false}},true);
+        function renderLists(){const now=new Date(),soon=new Date(now.getTime()+30*86400000);const active=allEvents.filter(e=>d(e.start)<=now&&d(e.end)>=now).sort((a,b)=>d(a.end)-d(b.end));const upcoming=allEvents.filter(e=>d(e.start)>now&&d(e.start)<=soon).sort((a,b)=>d(a.start)-d(b.start)).slice(0,6);const ending=active.filter(e=>daysLeft(e.end)<=7).sort((a,b)=>d(a.end)-d(b.end));$('activeCount').textContent=`${active.length} 个活动`;$('upcomingCount').textContent=`${upcoming.length} 个活动`;$('endingCount').textContent=`${ending.length} 个活动`;$('active').innerHTML=active.length?active.map(e=>card(e,`距离结束约 ${Math.max(0,daysLeft(e.end))} 天`)).join(''):'<div class="empty">当前没有正在进行的活动</div>';$('upcoming').innerHTML=upcoming.length?upcoming.map(e=>card(e,`约 ${Math.max(1,daysLeft(e.start))} 天后开始`)).join(''):'<div class="empty">未来 30 天暂无新活动</div>';$('ending').innerHTML=ending.length?ending.map(e=>card(e,`即将结束，约剩 ${Math.max(0,daysLeft(e.end))} 天`)).join(''):'<div class="empty">未来 7 天暂无活动结束</div>'}
+        function renderCalendar(){const y=viewDate.getFullYear(),m=viewDate.getMonth();$('monthTitle').textContent=`${y}年 ${m+1}月`;const first=new Date(y,m,1),last=new Date(y,m+1,0),start=first.getDay(),today=new Date();let html='';for(let i=0;i<42;i++){const n=i-start+1,dt=new Date(y,m,n),inMonth=n>=1&&n<=last.getDate();const dateStart=new Date(y,m,n,0,0,0),dateEnd=new Date(y,m,n,23,59,59);const has=allEvents.some(e=>d(e.start)<=dateEnd&&d(e.end)>=dateStart);const isToday=inMonth&&dt.toDateString()===today.toDateString();html+=`<div class="day ${inMonth?'':'muted'} ${has?'has-event':''} ${isToday?'today':''}">${dt.getDate()}</div>`}$('days').innerHTML=html}
+        $('prev').onclick=()=>{viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()-1,1);renderCalendar()};$('next').onclick=()=>{viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()+1,1);renderCalendar()};$('copyBtn').onclick=async()=>{const url=new URL('ff14.ics',location.href).href;try{await navigator.clipboard.writeText(url);$('copyBtn').textContent='✓ 已复制订阅地址';setTimeout(()=>$('copyBtn').textContent='🔗 复制订阅地址',1800)}catch{prompt('复制订阅地址：',url)}};
+        fetch('calendar.json?ts='+Date.now(),{cache:'no-store'}).then(async r=>{if(!r.ok)throw new Error('calendar.json HTTP '+r.status);const body=await r.text();if(body.trimStart().startsWith('<'))throw new Error('服务器返回了 HTML，请确认 calendar.json 已生成并部署');return JSON.parse(body)}).then(data=>{allEvents=Array.isArray(data.events)?data.events:[];$('updated').textContent='最后更新：'+(data.generated_at_text||fmt(data.generated_at));const now=new Date();viewDate=new Date(now.getFullYear(),now.getMonth(),1);renderLists();renderCalendar()}).catch(err=>{$('updated').textContent='数据读取失败';$('active').innerHTML=`<div class="error">无法读取 calendar.json：${err.message}</div>`;renderCalendar()});
+    </script>
 </body>
 </html>

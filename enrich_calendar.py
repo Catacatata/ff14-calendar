@@ -15,7 +15,9 @@ from bs4 import BeautifulSoup
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent
-RSS_URL = os.environ.get('FF14_RSS_URL', 'https://rsshub.app/ff14/zh/news')
+RSS_URL = os.environ.get('FF14_RSS_URL', 'https://rsshub.app/ff14/zh/events')
+NEWS_URL = os.environ.get('FF14_NEWS_URL', 'https://cqnews.web.sdo.com/api/news/newsList')
+NEWS_CATEGORIES = '5310,5311'  # news + events；图文补充，不创建新闻日程
 CALENDAR = ROOT / 'calendar.json'
 RSS_CACHE = ROOT / 'data/rss_cache.json'
 DETAILS_CACHE = ROOT / 'data/event_details_cache.json'
@@ -84,8 +86,10 @@ def date(value):
     try:
         result = datetime.fromisoformat(str(value).replace('Z', '+00:00'))
     except ValueError:
-        try: result = parsedate_to_datetime(str(value))
-        except (ValueError, TypeError): return None
+        try: result = datetime.strptime(str(value), '%Y/%m/%d %H:%M:%S')
+        except ValueError:
+            try: result = parsedate_to_datetime(str(value))
+            except (ValueError, TypeError): return None
     # 原脚本的无时区日期按北京时间理解。
     if result.tzinfo is None:
         result = result.replace(tzinfo=timezone(timedelta(hours=8)))
@@ -115,22 +119,77 @@ def parse_feed(body):
     return rows
 
 
+def parse_official(data):
+    records=data.get('Data') if isinstance(data,dict) else None
+    if not isinstance(records,list): raise ValueError('官方新闻返回格式不正确')
+    rows=[]
+    for entry in records:
+        if not isinstance(entry,dict) or not entry.get('Title'): continue
+        news_link=f'https://ff.web.sdo.com/web8/index.html#/newstab/newscont/{entry.get("Id")}'
+        link=safe_url(entry.get('OutLink')) or news_link
+        soup=BeautifulSoup(entry.get('Summary') or '', 'html.parser')
+        for tag in soup(['script','style']): tag.decompose()
+        published=date(entry.get('PublishDate'))
+        rows.append({'title':entry['Title'],'link':link,'links':[link,news_link],
+                     'image':safe_url(entry.get('HomeImagePath'),'https://ff.web.sdo.com/'),
+                     'description':soup.get_text(' ',strip=True)[:240],
+                     'published':published.isoformat() if published else '',
+                     'source':'official-news'})
+    return rows
+
+
+def fetch_official(session):
+    rows=[]
+    # 分页补齐历史公告，避免仅最新 50 条覆盖不到 API 活动。
+    for page in range(6):
+        try:
+            response=session.get(NEWS_URL,params={'gameCode':'ff','CategoryCode':NEWS_CATEGORIES,
+                                 'pageIndex':page,'pageSize':50},
+                                 headers={'Referer':'https://ff.web.sdo.com/web8/index.html'},
+                                 timeout=(10,25))
+            print(f'官方图文 API 第 {page+1} 页 HTTP: {response.status_code}')
+            response.raise_for_status()
+            payload=response.json()
+            current=parse_official(payload)
+            rows.extend(current)
+            page_count=payload.get('PageCount')
+            if len(current)<50 or (isinstance(page_count,int) and page+1>=page_count):break
+        except Exception as error:
+            print(f'官方图文 API 获取失败：{type(error).__name__}')
+            break
+    return rows
+
+
 def fetch_rows(session):
     cached = read_json(RSS_CACHE, {'items':[]})
     old = cached.get('items', []) if isinstance(cached, dict) else []
-    try:
-        response = session.get(RSS_URL, timeout=(10, 25))
-        response.raise_for_status()
-        fresh = parse_feed(response.content)
+    fresh=fetch_official(session)
+    source='官方图文 API'
+    if not fresh:
+        source='RSS'
+        feeds=[RSS_URL]
+        # 自定义 events 实例也沿用同一实例的 news 路由。
+        if '/ff14/zh/events' in RSS_URL:
+            feeds.append(RSS_URL.replace('/ff14/zh/events','/ff14/zh/news'))
+        elif '/ff14/zh/news' in RSS_URL:
+            feeds.append(RSS_URL.replace('/ff14/zh/news','/ff14/zh/events'))
+        for feed_url in feeds:
+            try:
+                response = session.get(feed_url, timeout=(10, 25))
+                print(f'备用 RSS {urlsplit(feed_url).path} HTTP: {response.status_code}')
+                response.raise_for_status()
+                fresh.extend(parse_feed(response.content))
+            except Exception as error:
+                print(f'RSS {urlsplit(feed_url).path} 获取失败：{type(error).__name__}')
+    if fresh:
         merged = {r.get('link') or r.get('title'):r for r in old}
         merged.update({r.get('link') or r.get('title'):r for r in fresh})
         rows = list(merged.values())[-2000:]
         write_json(RSS_CACHE, {'fetched_at':datetime.now(timezone.utc).isoformat(), 'items':rows})
-        print(f'RSS：本次 {len(fresh)} 条，缓存共 {len(rows)} 条')
+        print(f'{source}：本次 {len(fresh)} 条，缓存共 {len(rows)} 条')
         return rows
-    except Exception as error:
-        print(f'RSS 获取失败，保留缓存：{type(error).__name__}')
-        return old
+    print(f'图文源返回空列表；使用缓存 {len(old)} 条')
+    return old
 
 
 def score(event, row):
@@ -241,7 +300,7 @@ def enrich():
         if current: details[key]=current
     write_json(DETAILS_CACHE,details)
     write_json(CALENDAR,data)
-    print(f'补充完成：RSS 匹配 {matched} 个，图片 {images} 个，日程 {len(data["events"])} 个（未新增事件）')
+    print(f'补充完成：图文匹配 {matched} 个，图片 {images} 个，日程 {len(data["events"])} 个（未新增事件）')
 
 
 if __name__=='__main__': enrich()

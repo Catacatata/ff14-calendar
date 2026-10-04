@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-04T14:36:43.787129+08:00",
-  "generated_at_text": "2026-10-04 14:36:43",
+  "generated_at": "2026-10-04T16:10:30.868782+08:00",
+  "generated_at_text": "2026-10-04 16:10:30",
   "timezone": "Asia/Shanghai",
   "event_count": 19,
   "events": [
@@ -114,7 +114,10 @@
       "category": "限时联动",
       "start": "2026-08-04T16:00:00+08:00",
       "end": "2026-10-05T22:59:59+08:00",
-      "url": "https://actff1.web.sdo.com/project/20260715youkai-watch/vaz1gqm16a3h/index.html"
+      "url": "https://actff1.web.sdo.com/project/20260715youkai-watch/vaz1gqm16a3h/index.html",
+      "image": "images/events/45626c9124a421ff359b.webp",
+      "description": "「妖怪手表」的小家伙们又回到艾欧泽亚了！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/391316"
     },
     {
       "id": "api-104",
@@ -122,7 +125,10 @@
       "category": "季节活动",
       "start": "2026-08-12T16:00:00+08:00",
       "end": "2026-08-26T22:59:59+08:00",
-      "url": "https://actff1.web.sdo.com/project/20260801Moonfire_Faire/4eojmxe6rl2s/index.html"
+      "url": "https://actff1.web.sdo.com/project/20260801Moonfire_Faire/4eojmxe6rl2s/index.html",
+      "image": "images/events/840e339bb21132c8ee5b.webp",
+      "description": "今年的红莲节即将举办。",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/391661"
     },
     {
       "id": "api-105",
@@ -130,7 +136,10 @@
       "category": "季节活动",
       "start": "2026-08-27T15:00:00+08:00",
       "end": "2026-09-10T22:59:59+08:00",
-      "url": "https://actff1.web.sdo.com/project/20260817The_Rising/7rzrnb48uiw9/index.html"
+      "url": "https://actff1.web.sdo.com/project/20260817The_Rising/7rzrnb48uiw9/index.html",
+      "image": "images/events/c6cc43756ca38573b4a6.webp",
+      "description": "快去找舰尾楼的异国的诗人了解详情吧！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/392305"
     },
     {
       "id": "api-106",

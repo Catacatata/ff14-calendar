@@ -617,13 +617,6 @@
     <header class="hero"><div class="wrap hero-row"><div><h1>最终幻想14（国服）活动日历</h1><p>收录国服官方活动、联动、季节活动等重要日程</p><p>● 数据来自官方活动 API，自动更新</p><div class="actions"><a class="btn primary" href="ff14.ics">📅 订阅日历（ICS）</a><button class="btn" id="copyBtn" type="button">🔗 复制订阅地址</button></div></div><div class="update-box"><div><span class="dot"></span><b>数据已更新</b></div><div id="updated">正在读取...</div><div id="nextUpdate">每日北京时间 09:00 自动更新</div></div></div></header>
 
     <main class="wrap layout"><aside class="panel calendar"><div class="cal-head"><button class="cal-nav" id="prev">‹</button><h2 id="monthTitle"></h2><button class="cal-nav" id="next">›</button></div><div class="week"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div><div class="days" id="days"></div><div class="legend" aria-label="活动状态图例"><span><i style="background:var(--green)"></i>当前进行</span><span><i style="background:var(--orange)"></i>即将开始</span><span><i style="background:var(--red)"></i>即将结束</span></div></aside><section class="content"><div class="panel section-panel"><div class="section-title"><h2>🟢 当前正在进行的活动</h2><span class="count" id="activeCount"></span></div><div id="active"></div></div><div class="bottom-grid"><div class="panel section-panel"><div class="section-title"><h2>🟠 即将开始</h2><span class="count" id="upcomingCount"></span></div><div id="upcoming"></div></div><div class="panel section-panel"><div class="section-title"><h2>🔴 即将结束</h2><span class="count" id="endingCount"></span></div><div id="ending"></div></div></div></section></main>
-    <footer class="wrap footer">
-        <div>FF14 CN Calendar Project · 官方活动日程 / RSS 图文补充 · iCalendar 标准订阅</div>
-        <div class="visitor-stats" aria-label="网站访问统计，由不蒜子提供">
-            <span class="visitor-stat" id="busuanzi_container_site_pv" title="累计页面访问次数，刷新也会计数">累计浏览 <strong id="busuanzi_value_site_pv">加载中…</strong> 次</span>
-            <span class="visitor-stat" id="busuanzi_container_site_uv" title="统计服务提供的 UV 访客口径，不代表准确自然人数">访客 <strong id="busuanzi_value_site_uv">加载中…</strong> 人次</span>
-        </div>
-    </footer>
     <script>
         (function(){
         const pv=document.getElementById('busuanzi_value_site_pv'),uv=document.getElementById('busuanzi_value_site_uv');

@@ -620,11 +620,34 @@
     <footer class="wrap footer">
         <div>FF14 CN Calendar Project · 官方活动日程 / RSS 图文补充 · iCalendar 标准订阅</div>
         <div class="visitor-stats" aria-label="网站访问统计，由不蒜子提供">
-            <span class="visitor-stat" id="busuanzi_container_site_pv" style="display:none" title="累计页面访问次数，刷新也会计数">累计浏览 <strong id="busuanzi_value_site_pv"></strong> 次</span>
-            <span class="visitor-stat" id="busuanzi_container_site_uv" style="display:none" title="统计服务提供的 UV 访客口径，不代表准确自然人数">访客 <strong id="busuanzi_value_site_uv"></strong> 人次</span>
+            <span class="visitor-stat" id="busuanzi_container_site_pv" title="累计页面访问次数，刷新也会计数">累计浏览 <strong id="busuanzi_value_site_pv">加载中…</strong> 次</span>
+            <span class="visitor-stat" id="busuanzi_container_site_uv" title="统计服务提供的 UV 访客口径，不代表准确自然人数">访客 <strong id="busuanzi_value_site_uv">加载中…</strong> 人次</span>
         </div>
     </footer>
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script>
+        (function(){
+        const pv=document.getElementById('busuanzi_value_site_pv'),uv=document.getElementById('busuanzi_value_site_uv');
+        let attempts=0,finished=false;
+        function request(){
+        if(finished)return;
+        attempts++;
+        const name='FF14Visit_'+Date.now()+'_'+Math.floor(Math.random()*1000000);
+        const tag=document.createElement('script');let timer,settled=false;
+        function cleanup(){clearTimeout(timer);tag.remove();window[name]=function(){};setTimeout(()=>{delete window[name]},60000)}
+        function fail(){if(settled)return;settled=true;cleanup();if(attempts<2){setTimeout(request,1500)}else{pv.textContent=uv.textContent='暂不可用';}}
+        window[name]=function(data){
+        if(settled)return;
+        const a=Number(data&&data.site_pv),b=Number(data&&data.site_uv);
+        if(!data||data.site_pv==null||data.site_uv==null||!Number.isSafeInteger(a)||!Number.isSafeInteger(b)||a<0||b<0){fail();return}
+        settled=true;finished=true;cleanup();pv.textContent=a.toLocaleString('zh-CN');uv.textContent=b.toLocaleString('zh-CN');
+        };
+        tag.src='https://busuanzi.ibruce.info/busuanzi?jsonpCallback='+name;
+        tag.referrerPolicy='no-referrer-when-downgrade';tag.async=true;tag.onerror=fail;
+        timer=setTimeout(fail,12000);document.head.appendChild(tag);
+        }
+        if(location.protocol==='http:'||location.protocol==='https:'){request()}else{pv.textContent=uv.textContent='请在线查看'}
+        })();
+    </script>
     <script>
         const banners = [
         "images/banner-01-limsa-lominsa.webp",

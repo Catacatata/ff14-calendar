@@ -124,7 +124,7 @@
             margin-right: 8px;
         }
 
-        /* 上排等高，下排两栏并排 */
+        /* 上排日历与当前活动等高，下排两栏 */
         .layout {
             display: grid;
             grid-template-columns: 340px minmax(0, 1fr);
@@ -356,16 +356,30 @@
                 border-top: 0;
             }
 
+        .day-detail-link {
+            display: block;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+            .day-detail-link:hover {
+                background: #f5f8ff;
+            }
+
+            .day-detail-link:focus-visible {
+                outline: 2px solid var(--blue);
+                outline-offset: 3px;
+            }
+
         .day-detail-name {
             display: block;
             font-size: 14px;
             font-weight: 700;
             line-height: 1.6;
-            text-decoration: none;
             overflow-wrap: anywhere;
         }
 
-        a.day-detail-name:hover {
+        .day-detail-link:hover .day-detail-name {
             color: var(--blue);
         }
 
@@ -408,16 +422,37 @@
             font-size: 12px;
         }
 
+        /* 有链接时整个 a 都可点击，没有链接时使用 article */
         .event {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 24px;
-            gap: 12px;
+            display: block;
             padding: 22px 0;
             border-top: 1px solid var(--line);
+            text-decoration: none;
+            color: inherit;
         }
 
             .event:first-child {
                 border-top: 0;
+            }
+
+        a.event {
+            cursor: pointer;
+            transition: background-color .15s ease;
+        }
+
+            a.event:hover {
+                background: #f5f8ff;
+                border-radius: 10px;
+            }
+
+                a.event:hover .event-name {
+                    color: var(--blue);
+                }
+
+            a.event:focus-visible {
+                outline: 2px solid var(--blue);
+                outline-offset: -2px;
+                border-radius: 10px;
             }
 
         .event-main {
@@ -521,14 +556,6 @@
             line-height: 1.6;
         }
 
-        .event-link {
-            text-decoration: none;
-            color: #9aa5b5;
-            font-size: 24px;
-            align-self: center;
-            text-align: center;
-        }
-
         .bottom-grid .event-main {
             grid-template-columns: 170px minmax(0, 1fr);
             gap: 16px;
@@ -551,7 +578,6 @@
             overflow-wrap: anywhere;
         }
 
-        /* 页脚 */
         .footer {
             text-align: center;
             color: #929cab;
@@ -583,7 +609,7 @@
             }
         }
 
-        /* 手机单列 */
+        /* 手机 */
         @media (max-width: 850px) {
             .hero {
                 min-height: 0;
@@ -633,8 +659,6 @@
             }
 
             .event {
-                grid-template-columns: minmax(0, 1fr) 20px;
-                gap: 8px;
                 padding: 20px 0;
             }
 
@@ -763,7 +787,7 @@
     <script>
         const $ = id => document.getElementById(id);
 
-        /* 随机 Banner，尽量避免连续两次相同 */
+        /* 随机 Banner */
         const banners = [
         "images/banner-01-limsa-lominsa.webp",
         "images/banner-02-gridania.webp",
@@ -875,7 +899,7 @@
         );
         }
 
-        /* 每个活动只对应一种圆点状态 */
+        /* 三类活动状态 */
         function eventState(event, now = new Date()) {
         const start = d(event.start);
         const end = d(event.end);
@@ -944,18 +968,10 @@
         return "📅";
         }
 
-        /* 活动图片、简介、分类及倒计时 */
+        /* 整张活动卡片都是链接，不再显示右侧角标 */
         function card(event, extra = "") {
         const url = event.url ? safeLink(event.url) : "";
         const image = event.image ? safeLink(event.image) : "";
-
-        const link = url
-        ? `<a class="event-link"
-        href="${esc(url)}"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="查看${esc(event.name)}官方活动页">›</a>`
-        : "";
 
         const picture = `
         <div class="event-picture">
@@ -971,11 +987,9 @@
         ${image ? "hidden" : ""}>${eventIcon(event.category)}</span>
         </div>`;
 
-        return `
-        <article class="event">
+        const content = `
         <div class="event-main">
         ${picture}
-
         <div class="event-copy">
         <div class="event-tags">
         <span class="badge ${badgeClass(event.category)}">
@@ -996,10 +1010,20 @@
         📅 ${fmt(event.start)} ～ ${fmt(event.end)}
         </div>
         </div>
-        </div>
+        </div>`;
 
-        ${link}
-        </article>`;
+        if (url) {
+        return `
+        <a class="event"
+        href="${esc(url)}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="查看${esc(event.name)}官方活动页">
+        ${content}
+        </a>`;
+        }
+
+        return `<article class="event">${content}</article>`;
         }
 
         document.addEventListener("error", event => {
@@ -1059,7 +1083,7 @@
         : '<div class="empty">未来 7 天暂无活动结束</div>';
         }
 
-        /* 查找指定日期内存在的活动，包括已结束的历史活动 */
+        /* 指定日期的活动，包含数据中已有的历史活动 */
         function eventsOnDay(dateKey) {
         const dayStart = +new Date(dateKey + "T00:00:00+08:00");
         const dayEnd = dayStart + 86400000;
@@ -1080,7 +1104,7 @@
         .sort((a, b) => d(a.start) - d(b.start));
         }
 
-        /* 日历下方：选中日期的活动简略信息 */
+        /* 日历下方当天活动摘要 */
         function renderSelectedDay() {
         const [year, month, day] = selectedDate.split("-");
         const holiday = holidaySchedule[selectedDate];
@@ -1114,27 +1138,31 @@
         $("selectedDayEvents").innerHTML = events.map(event => {
         const url = event.url ? safeLink(event.url) : "";
 
-        const name = url
-        ? `<a class="day-detail-name"
-        href="${esc(url)}"
-        target="_blank"
-        rel="noopener noreferrer">${esc(event.name)} ↗</a>`
-        : `<span class="day-detail-name">${esc(event.name)}</span>`;
-
-        return `
-        <article class="day-detail">
-        ${name}
+        const content = `
+        <span class="day-detail-name">${esc(event.name)}</span>
         <div class="day-detail-meta day-detail-category">
         ${esc(event.category || "活动")}
         </div>
         <div class="day-detail-meta">
         ${fmt(event.start)} ～ ${fmt(event.end)}
-        </div>
+        </div>`;
+
+        return `
+        <article class="day-detail">
+        ${url
+        ? `<a class="day-detail-link"
+        href="${esc(url)}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="查看${esc(event.name)}官方活动页">
+        ${content}
+        </a>`
+        : content}
         </article>`;
         }).join("");
         }
 
-        /* 月历：活动多状态圆点、休／班、选中日期 */
+        /* 月历 */
         function renderCalendar() {
         const y = viewDate.getUTCFullYear();
         const m = viewDate.getUTCMonth();
@@ -1223,7 +1251,7 @@
         renderSelectedDay();
         }
 
-        /* 日期点击 */
+        /* 点击日期 */
         $("days").addEventListener("click", event => {
         const button = event.target.closest("button[data-date]");
 
@@ -1237,7 +1265,7 @@
         ?.focus({ preventScroll: true });
         });
 
-        /* 切换月份时默认选择该月1日，当前月份默认选择今天 */
+        /* 切换月份 */
         function changeMonth(amount) {
         viewDate = new Date(Date.UTC(
         viewDate.getUTCFullYear(),
@@ -1259,7 +1287,7 @@
         $("prev").onclick = () => changeMonth(-1);
         $("next").onclick = () => changeMonth(1);
 
-        /* 复制 ICS 固定订阅地址 */
+        /* 复制订阅地址 */
         $("copyBtn").onclick = async () => {
         const url = new URL("ff14.ics", location.href).href;
 
@@ -1328,7 +1356,7 @@
         renderSelectedDay();
         });
 
-        /* holiday-cn：由 Actions 更新，浏览器读取本站文件 */
+        /* holiday-cn：读取本站节假日数据，不标普通周末 */
         fetch("holidays.json?ts=" + Date.now(), { cache: "no-store" })
         .then(response => {
         if (!response.ok) {
@@ -1358,7 +1386,7 @@
         console.warn("节假日数据加载失败：", error);
         });
 
-        /* 每分钟更新活动状态，保留用户选中的日期 */
+        /* 每分钟刷新，保留选中日期 */
         setInterval(() => {
         renderCalendar();
         if (calendarLoaded) renderLists();

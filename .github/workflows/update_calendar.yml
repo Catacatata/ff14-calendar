@@ -2,6 +2,7 @@ name: Update FF14 Calendar
 
 on:
   schedule:
+    # UTC 01:00，即北京时间 09:00
     - cron: "0 1 * * *"
   workflow_dispatch:
 
@@ -16,39 +17,63 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: main
+
       - name: Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install
+
+      - name: Install dependencies
         run: |
           python -m pip install -r requirements.txt
           python -m pip install requests feedparser beautifulsoup4 pillow
+
       - name: Generate calendar
         run: python generate_calendar.py
-      - name: Add RSS images and descriptions
+
+      - name: Add activity images and descriptions
         run: python enrich_calendar.py
+
+      - name: Update Chinese holidays
+        run: python update_holidays.py
+
       - name: Check generated files
         run: |
           test -s ff14.ics
           test -s calendar.json
+          test -s holidays.json
           python -m json.tool calendar.json > /dev/null
+          python -m json.tool holidays.json > /dev/null
           git status --short
+
       - name: Commit generated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f ff14.ics calendar.json
+
+          git add -f ff14.ics calendar.json holidays.json
+
           for file in data/api_cache.json data/rss_cache.json data/event_details_cache.json; do
-            if [ -f "$file" ]; then git add -f "$file"; fi
+            if [ -f "$file" ]; then
+              git add -f "$file"
+            fi
           done
-          if [ -d images/events ]; then git add -f images/events; fi
+
+          if [ -d data/holiday-cn ]; then
+            git add -f data/holiday-cn
+          fi
+
+          if [ -d images/events ]; then
+            git add -f images/events
+          fi
+
           if ! git diff --cached --quiet; then
-            git commit -m "Auto update FF14 calendar and activity details"
+            git commit -m "Auto update FF14 calendar, activity details and holidays"
             git push origin HEAD:main
           fi

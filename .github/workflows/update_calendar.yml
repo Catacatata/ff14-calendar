@@ -2,8 +2,8 @@ name: Update FF14 Calendar
 
 on:
   schedule:
-    # UTC 01:00，即北京时间 09:00
-    - cron: "0 1 * * *"
+    # UTC 02:17 = 北京时间 10:17，作为备用更新
+    - cron: "17 2 * * *"
   workflow_dispatch:
 
 permissions:
@@ -19,12 +19,21 @@ jobs:
     timeout-minutes: 20
 
     steps:
-      - name: Checkout
+      - name: Show trigger and actual start time
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          CRON_EXPRESSION: ${{ github.event.schedule }}
+        run: |
+          echo "触发类型：$EVENT_NAME"
+          echo "定时表达式：$CRON_EXPRESSION"
+          TZ=Asia/Shanghai date '+实际执行时间：%Y-%m-%d %H:%M:%S 北京时间'
+
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           ref: main
 
-      - name: Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -37,7 +46,7 @@ jobs:
       - name: Generate calendar
         run: python generate_calendar.py
 
-      - name: Add activity images and descriptions
+      - name: Enrich activity details and images
         run: python enrich_calendar.py
 
       - name: Update Chinese holidays
@@ -52,28 +61,35 @@ jobs:
           python -m json.tool holidays.json > /dev/null
           git status --short
 
-      - name: Commit generated data
+      - name: Commit and push updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add -f ff14.ics calendar.json holidays.json
 
-          for file in data/api_cache.json data/rss_cache.json data/event_details_cache.json; do
+          for file in \
+            data/api_cache.json \
+            data/rss_cache.json \
+            data/event_details_cache.json
+          do
             if [ -f "$file" ]; then
               git add -f "$file"
             fi
           done
 
-          if [ -d data/holiday-cn ]; then
-            git add -f data/holiday-cn
-          fi
+          for directory in \
+            data/holiday-cn \
+            images/events
+          do
+            if [ -d "$directory" ]; then
+              git add -f "$directory"
+            fi
+          done
 
-          if [ -d images/events ]; then
-            git add -f images/events
-          fi
-
-          if ! git diff --cached --quiet; then
+          if git diff --cached --quiet; then
+            echo "数据没有变化，无需提交。"
+          else
             git commit -m "Auto update FF14 calendar, activity details and holidays"
             git push origin HEAD:main
           fi

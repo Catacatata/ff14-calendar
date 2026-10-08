@@ -231,18 +231,6 @@
       "banner_url": null
     },
     {
-      "id": 103,
-      "name": "妖怪手表联动",
-      "url": "https://actff1.web.sdo.com/project/20260715youkai-watch/vaz1gqm16a3h/index.html",
-      "begin_time": 1785830400,
-      "end_time": 1791212399,
-      "weight": 0,
-      "color": "#DD9355",
-      "type": 2,
-      "daoyu_sw": 0,
-      "banner_url": null
-    },
-    {
       "id": 100,
       "name": "月卡礼赠",
       "url": "https://actff1.web.sdo.com/20260704_CardBill/gift/index.html#/index",
@@ -275,7 +263,7 @@
       "begin_time": 1790236800,
       "end_time": 1791903599,
       "weight": 0,
-      "color": "#91B5A9",
+      "color": "#DD9355",
       "type": 2,
       "daoyu_sw": 0,
       "banner_url": null
@@ -300,18 +288,6 @@
       "end_time": 1789052399,
       "weight": 0,
       "color": "#B184B2",
-      "type": 2,
-      "daoyu_sw": 0,
-      "banner_url": null
-    },
-    {
-      "id": 103,
-      "name": "妖怪手表联动",
-      "url": "https://actff1.web.sdo.com/project/20260715youkai-watch/vaz1gqm16a3h/index.html",
-      "begin_time": 1785830400,
-      "end_time": 1791212399,
-      "weight": 0,
-      "color": "#DD9355",
       "type": 2,
       "daoyu_sw": 0,
       "banner_url": null
@@ -343,13 +319,25 @@
   ],
   "2026-10": [
     {
+      "id": 109,
+      "name": "糖豆人联动复刻",
+      "url": "https://actff1.web.sdo.com/project/20260928ff14fallguys/4kkmxknj3rno/index.html",
+      "begin_time": 1791360000,
+      "end_time": 1793113199,
+      "weight": 0,
+      "color": "#91B5A9",
+      "type": 2,
+      "daoyu_sw": 0,
+      "banner_url": null
+    },
+    {
       "id": 108,
       "name": "《最终幻想15》联动",
       "url": "https://actff1.web.sdo.com/project/20260915ffxv/index.html",
       "begin_time": 1790236800,
       "end_time": 1791903599,
       "weight": 0,
-      "color": "#91B5A9",
+      "color": "#DD9355",
       "type": 2,
       "daoyu_sw": 0,
       "banner_url": null
@@ -362,18 +350,6 @@
       "end_time": 1791557999,
       "weight": 0,
       "color": "#EDCA7F",
-      "type": 2,
-      "daoyu_sw": 0,
-      "banner_url": null
-    },
-    {
-      "id": 103,
-      "name": "妖怪手表联动",
-      "url": "https://actff1.web.sdo.com/project/20260715youkai-watch/vaz1gqm16a3h/index.html",
-      "begin_time": 1785830400,
-      "end_time": 1791212399,
-      "weight": 0,
-      "color": "#DD9355",
       "type": 2,
       "daoyu_sw": 0,
       "banner_url": null

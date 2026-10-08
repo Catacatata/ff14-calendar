@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-08T17:07:38.084662+08:00",
-  "generated_at_text": "2026-10-08 17:07:38",
+  "generated_at": "2026-10-08T19:29:09.503941+08:00",
+  "generated_at_text": "2026-10-08 19:29:09",
   "timezone": "Asia/Shanghai",
   "event_count": 19,
   "events": [
@@ -109,14 +109,6 @@
       "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/387965"
     },
     {
-      "id": "api-100",
-      "name": "月卡礼赠",
-      "category": "月卡/商城",
-      "start": "2026-07-25T18:00:00+08:00",
-      "end": "2026-11-20T23:59:59+08:00",
-      "url": "https://actff1.web.sdo.com/20260704_CardBill/gift/index.html#/index"
-    },
-    {
       "id": "api-99",
       "name": "月卡启航计划",
       "category": "月卡/商城",
@@ -173,7 +165,7 @@
     },
     {
       "id": "api-108",
-      "name": "《最终幻想15》联动",
+      "name": "《最终幻想15》联动复刻",
       "category": "限时联动",
       "start": "2026-09-24T16:00:00+08:00",
       "end": "2026-10-13T22:59:59+08:00",
@@ -185,10 +177,24 @@
     {
       "id": "api-109",
       "name": "糖豆人联动复刻",
-      "category": "长效联动",
+      "category": "限时联动",
       "start": "2026-10-07T16:00:00+08:00",
       "end": "2026-10-27T22:59:59+08:00",
-      "url": "https://actff1.web.sdo.com/project/20260928ff14fallguys/4kkmxknj3rno/index.html"
+      "url": "https://actff1.web.sdo.com/project/20260928ff14fallguys/4kkmxknj3rno/index.html",
+      "image": "images/events/97e1d132a4d120d837d2.webp",
+      "description": "在联动期间游玩联动任务，获得「金碟声誉」后即可兑换丰富专属道具奖励！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/393660"
+    },
+    {
+      "id": "api-110",
+      "name": "守护天节",
+      "category": "季节活动",
+      "start": "2026-10-15T16:00:00+08:00",
+      "end": "2026-11-02T22:59:59+08:00",
+      "url": "https://actff1.web.sdo.com/project/20261005All_Saints_Wake/hjwff6jkcti4/index.html",
+      "image": "images/events/4ac221d2ec067d28cfce.webp",
+      "description": "今年的守护天节即将来临，各个城市和冒险者居住区都使用了南瓜和蝙蝠进行装饰。",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/393960"
     },
     {
       "id": "api-102",

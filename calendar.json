@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-06T15:10:21.467986+08:00",
-  "generated_at_text": "2026-10-06 15:10:21",
+  "generated_at": "2026-10-08T17:07:38.084662+08:00",
+  "generated_at_text": "2026-10-08 17:07:38",
   "timezone": "Asia/Shanghai",
   "event_count": 19,
   "events": [
@@ -139,17 +139,6 @@
       "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/391284"
     },
     {
-      "id": "api-103",
-      "name": "妖怪手表联动",
-      "category": "限时联动",
-      "start": "2026-08-04T16:00:00+08:00",
-      "end": "2026-10-05T22:59:59+08:00",
-      "url": "https://actff1.web.sdo.com/project/20260715youkai-watch/vaz1gqm16a3h/index.html",
-      "image": "images/events/45626c9124a421ff359b.webp",
-      "description": "「妖怪手表」的小家伙们又回到艾欧泽亚了！",
-      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/391316"
-    },
-    {
       "id": "api-104",
       "name": "红莲节",
       "category": "季节活动",
@@ -192,6 +181,14 @@
       "image": "images/events/d1920447769f9d7e7705.webp",
       "description": "《最终幻想14》x 《最终幻想15》联动再启！",
       "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/393210"
+    },
+    {
+      "id": "api-109",
+      "name": "糖豆人联动复刻",
+      "category": "长效联动",
+      "start": "2026-10-07T16:00:00+08:00",
+      "end": "2026-10-27T22:59:59+08:00",
+      "url": "https://actff1.web.sdo.com/project/20260928ff14fallguys/4kkmxknj3rno/index.html"
     },
     {
       "id": "api-102",

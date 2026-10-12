@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-12T09:00:46.345151+08:00",
-  "generated_at_text": "2026-10-12 09:00:46",
+  "generated_at": "2026-10-12T17:23:04.042930+08:00",
+  "generated_at_text": "2026-10-12 17:23:04",
   "timezone": "Asia/Shanghai",
-  "event_count": 19,
+  "event_count": 20,
   "events": [
     {
       "id": "api-84",
@@ -140,6 +140,14 @@
       "image": "images/events/840e339bb21132c8ee5b.webp",
       "description": "今年的红莲节即将举办。",
       "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/391661"
+    },
+    {
+      "id": "api-107",
+      "name": "12周年庆典",
+      "category": "其他活动",
+      "start": "2026-08-18T00:00:00+08:00",
+      "end": "2026-09-06T23:59:59+08:00",
+      "url": "https://actff1.web.sdo.com/project/20260803banneranniv/a0jg3fmf4my9/"
     },
     {
       "id": "api-105",

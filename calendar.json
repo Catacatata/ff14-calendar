@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-28T09:00:58.343719+08:00",
-  "generated_at_text": "2026-10-28 09:00:58",
+  "generated_at": "2026-10-28T16:42:21.061929+08:00",
+  "generated_at_text": "2026-10-28 16:42:21",
   "timezone": "Asia/Shanghai",
-  "event_count": 20,
+  "event_count": 17,
   "events": [
     {
       "id": "api-84",
@@ -161,39 +161,6 @@
       "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/392305"
     },
     {
-      "id": "api-106",
-      "name": "莫古莫古★大收集",
-      "category": "莫古莫古大收集",
-      "start": "2026-09-09T16:00:00+08:00",
-      "end": "2026-10-09T22:59:59+08:00",
-      "url": "https://actff1.web.sdo.com/project/20260826mogmog/0by196dc8ija/index.html",
-      "image": "images/events/85ec8ce1282240549ade.webp",
-      "description": "本次的奖励内容比以往更加豪华，还将加入特别奖励“呜噜怪角笛”！",
-      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/392697"
-    },
-    {
-      "id": "api-108",
-      "name": "《最终幻想15》联动复刻",
-      "category": "限时联动",
-      "start": "2026-09-24T16:00:00+08:00",
-      "end": "2026-10-13T22:59:59+08:00",
-      "url": "https://actff1.web.sdo.com/project/20260915ffxv/index.html",
-      "image": "images/events/d1920447769f9d7e7705.webp",
-      "description": "《最终幻想14》x 《最终幻想15》联动再启！",
-      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/393210"
-    },
-    {
-      "id": "api-109",
-      "name": "糖豆人联动复刻",
-      "category": "限时联动",
-      "start": "2026-10-07T16:00:00+08:00",
-      "end": "2026-10-27T22:59:59+08:00",
-      "url": "https://actff1.web.sdo.com/project/20260928ff14fallguys/4kkmxknj3rno/index.html",
-      "image": "images/events/97e1d132a4d120d837d2.webp",
-      "description": "在联动期间游玩联动任务，获得「金碟声誉」后即可兑换丰富专属道具奖励！",
-      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/393660"
-    },
-    {
       "id": "api-110",
       "name": "守护天节",
       "category": "季节活动",
@@ -210,7 +177,7 @@
       "category": "长效联动",
       "start": "2026-10-28T16:00:00+08:00",
       "end": "2026-10-28T16:00:00+08:00",
-      "url": "https://actff1.web.sdo.com/project/20240927dawntrail/patch75/index.html",
+      "url": "https://actff1.web.sdo.com/project/20261014keybound_brawler/o48khqshmn6e/index.html",
       "image": "images/events/54713f77fb74a778ec3f.webp",
       "description": "亮出你的键盘，迎战面前的敌人！",
       "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/394486"

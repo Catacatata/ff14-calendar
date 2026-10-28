@@ -245,18 +245,6 @@
   ],
   "2026-09": [
     {
-      "id": 108,
-      "name": "《最终幻想15》联动复刻",
-      "url": "https://actff1.web.sdo.com/project/20260915ffxv/index.html",
-      "begin_time": 1790236800,
-      "end_time": 1791903599,
-      "weight": 0,
-      "color": "#DD9355",
-      "type": 2,
-      "daoyu_sw": 0,
-      "banner_url": null
-    },
-    {
       "id": 107,
       "name": "12周年庆典",
       "url": "https://actff1.web.sdo.com/project/20260803banneranniv/a0jg3fmf4my9/",
@@ -264,18 +252,6 @@
       "end_time": 1788710399,
       "weight": 0,
       "color": "#91B5A9",
-      "type": 2,
-      "daoyu_sw": 0,
-      "banner_url": null
-    },
-    {
-      "id": 106,
-      "name": "莫古莫古★大收集",
-      "url": "https://actff1.web.sdo.com/project/20260826mogmog/0by196dc8ija/index.html",
-      "begin_time": 1788940800,
-      "end_time": 1791557999,
-      "weight": 0,
-      "color": "#EDCA7F",
       "type": 2,
       "daoyu_sw": 0,
       "banner_url": null
@@ -319,45 +295,9 @@
       "banner_url": null
     },
     {
-      "id": 109,
-      "name": "糖豆人联动复刻",
-      "url": "https://actff1.web.sdo.com/project/20260928ff14fallguys/4kkmxknj3rno/index.html",
-      "begin_time": 1791360000,
-      "end_time": 1793113199,
-      "weight": 0,
-      "color": "#91B5A9",
-      "type": 2,
-      "daoyu_sw": 0,
-      "banner_url": null
-    },
-    {
-      "id": 108,
-      "name": "《最终幻想15》联动复刻",
-      "url": "https://actff1.web.sdo.com/project/20260915ffxv/index.html",
-      "begin_time": 1790236800,
-      "end_time": 1791903599,
-      "weight": 0,
-      "color": "#DD9355",
-      "type": 2,
-      "daoyu_sw": 0,
-      "banner_url": null
-    },
-    {
-      "id": 106,
-      "name": "莫古莫古★大收集",
-      "url": "https://actff1.web.sdo.com/project/20260826mogmog/0by196dc8ija/index.html",
-      "begin_time": 1788940800,
-      "end_time": 1791557999,
-      "weight": 0,
-      "color": "#EDCA7F",
-      "type": 2,
-      "daoyu_sw": 0,
-      "banner_url": null
-    },
-    {
       "id": 102,
       "name": "FF7联动-魔光键影",
-      "url": "https://actff1.web.sdo.com/project/20240927dawntrail/patch75/index.html",
+      "url": "https://actff1.web.sdo.com/project/20261014keybound_brawler/o48khqshmn6e/index.html",
       "begin_time": 1793174400,
       "end_time": 1793174400,
       "weight": 0,

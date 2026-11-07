@@ -299,10 +299,10 @@
       "name": "FF7联动-魔光键影",
       "url": "https://actff1.web.sdo.com/project/20261014keybound_brawler/o48khqshmn6e/index.html",
       "begin_time": 1793174400,
-      "end_time": 1793174400,
+      "end_time": 1803225600,
       "weight": 0,
       "color": "#8CB9C0",
-      "type": 1,
+      "type": 2,
       "daoyu_sw": 0,
       "banner_url": null
     },
@@ -333,6 +333,18 @@
       "banner_url": null
     },
     {
+      "id": 102,
+      "name": "FF7联动-魔光键影",
+      "url": "https://actff1.web.sdo.com/project/20261014keybound_brawler/o48khqshmn6e/index.html",
+      "begin_time": 1793174400,
+      "end_time": 1803225600,
+      "weight": 0,
+      "color": "#8CB9C0",
+      "type": 2,
+      "daoyu_sw": 0,
+      "banner_url": null
+    },
+    {
       "id": 99,
       "name": "月卡启航计划",
       "url": "https://actff1.web.sdo.com/20260704_CardBill/index.html#/index",
@@ -346,6 +358,18 @@
     }
   ],
   "2026-12": [
+    {
+      "id": 102,
+      "name": "FF7联动-魔光键影",
+      "url": "https://actff1.web.sdo.com/project/20261014keybound_brawler/o48khqshmn6e/index.html",
+      "begin_time": 1793174400,
+      "end_time": 1803225600,
+      "weight": 0,
+      "color": "#8CB9C0",
+      "type": 2,
+      "daoyu_sw": 0,
+      "banner_url": null
+    },
     {
       "id": 99,
       "name": "月卡启航计划",

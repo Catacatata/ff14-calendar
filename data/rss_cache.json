@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-11T01:01:15.655370+00:00",
+  "fetched_at": "2026-11-11T09:33:53.566524+00:00",
   "items": [
     {
       "title": "【季节活动】新生庆典与音乐的轨迹",
@@ -3803,6 +3803,30 @@
       "image": "https://fu5.web.sdo.com/10036/202611/17942199648704.jpg",
       "description": "7.58版本更新笔记公开",
       "published": "2026-11-10T10:56:06+08:00",
+      "source": "official-news"
+    },
+    {
+      "title": "《FF14》x《FF16》联动复刻限时开启！",
+      "link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395456",
+      "links": [
+        "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395456",
+        "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395456"
+      ],
+      "image": "https://fu5.web.sdo.com/10036/202611/17943829684950.jpg",
+      "description": "在联动活动开启期间游玩联动任务，获取防具、坐骑以及宠物等丰厚奖励！",
+      "published": "2026-11-11T16:09:47+08:00",
+      "source": "official-news"
+    },
+    {
+      "title": "「时装灵感季」第三期现已上线！穿出新意 惠享好礼！",
+      "link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395454",
+      "links": [
+        "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395454",
+        "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395454"
+      ],
+      "image": "https://fu5.web.sdo.com/10036/202611/17943826387598.jpg",
+      "description": "快来浏览流行的时装搭配吧！",
+      "published": "2026-11-11T15:38:48+08:00",
       "source": "official-news"
     }
   ]

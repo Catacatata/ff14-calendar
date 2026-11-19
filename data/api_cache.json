@@ -321,6 +321,18 @@
   ],
   "2026-11": [
     {
+      "id": 111,
+      "name": "FF16联动",
+      "url": "https://actff1.web.sdo.com/project/20261029ffxvi/uvjx9y9g2k2p/index.html",
+      "begin_time": 1794988800,
+      "end_time": 1796828399,
+      "weight": 0,
+      "color": "#DD9355",
+      "type": 2,
+      "daoyu_sw": 0,
+      "banner_url": null
+    },
+    {
       "id": 110,
       "name": "守护天节",
       "url": "https://actff1.web.sdo.com/project/20261005All_Saints_Wake/hjwff6jkcti4/index.html",
@@ -358,6 +370,18 @@
     }
   ],
   "2026-12": [
+    {
+      "id": 111,
+      "name": "FF16联动",
+      "url": "https://actff1.web.sdo.com/project/20261029ffxvi/uvjx9y9g2k2p/index.html",
+      "begin_time": 1794988800,
+      "end_time": 1796828399,
+      "weight": 0,
+      "color": "#DD9355",
+      "type": 2,
+      "daoyu_sw": 0,
+      "banner_url": null
+    },
     {
       "id": 102,
       "name": "FF7联动-魔光键影",

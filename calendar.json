@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-18T18:18:43.295052+08:00",
-  "generated_at_text": "2026-11-18 18:18:43",
+  "generated_at": "2026-11-19T09:01:07.870281+08:00",
+  "generated_at_text": "2026-11-19 09:01:07",
   "timezone": "Asia/Shanghai",
-  "event_count": 17,
+  "event_count": 18,
   "events": [
     {
       "id": "api-84",
@@ -181,6 +181,17 @@
       "image": "images/events/54713f77fb74a778ec3f.webp",
       "description": "亮出你的键盘，迎战面前的敌人！",
       "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/394486"
+    },
+    {
+      "id": "api-111",
+      "name": "FF16联动",
+      "category": "限时联动",
+      "start": "2026-11-18T16:00:00+08:00",
+      "end": "2026-12-09T22:59:59+08:00",
+      "url": "https://actff1.web.sdo.com/project/20261029ffxvi/uvjx9y9g2k2p/index.html",
+      "image": "images/events/4a21366d7e9f8c6706d8.webp",
+      "description": "在联动活动开启期间游玩联动任务，获取防具、坐骑以及宠物等丰厚奖励！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395456"
     }
   ]
 }

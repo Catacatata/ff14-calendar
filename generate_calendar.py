@@ -3,6 +3,7 @@ import json
 import requests
 import datetime
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 from icalendar import Calendar, Event
 import pytz
@@ -12,14 +13,17 @@ import pytz
 # 配置
 # =====================
 
-YEAR = 2026
-
 TZ = pytz.timezone("Asia/Shanghai")
+
+# 按北京时间获取上一年、当年和下一年，不依赖每年手动修改年份。
+# 三个并发请求控制扩展到 36 个月后的耗时；每月仍使用原有重试与缓存。
+API_FETCH_WORKERS = 3
 
 API_PROXY = "https://ff14-api.eternalphilip.workers.dev"
 
 CACHE_FILE = "data/api_cache.json"
 
+# 可选的历史基础文件；新年度活动通过 API 自动获取，无需新增基础文件。
 BASE_ICS = "ff14_base_2026.ics"
 
 MANUAL_FILE = "ff14_override.json"
@@ -133,38 +137,59 @@ def save_cache(data):
         )
 
 
-def get_api_events():
+def get_api_months(now=None):
+    if now is None:
+        now = datetime.datetime.now(tz=TZ)
+    elif now.tzinfo is None:
+        now = TZ.localize(now)
+    else:
+        now = now.astimezone(TZ)
+
+    return [
+        (year, month)
+        for year in range(now.year - 1, now.year + 2)
+        for month in range(1, 13)
+    ]
+
+
+def get_api_events(now=None):
     cache = load_cache()
-    result = []
+    months = get_api_months(now)
+    fresh = []
 
-    for month in range(1, 13):
-        key = f"{YEAR}-{month:02d}"
+    print(
+        f"API获取范围: {months[0][0]}-01 ～ {months[-1][0]}-12（北京时间）"
+    )
 
-        data = fetch_api(
-            YEAR,
-            month
-        )
+    def fetch_month(period):
+        year, month = period
+        return fetch_api(year, month)
 
-        if data is None:
-            print(
-                "API失败 使用缓存:",
-                key
-            )
-
-            data = cache.get(key, [])
-
-        else:
-            cache[key] = data
-
-        result.extend(data)
+    # 工作线程只负责请求；缓存统一在主线程更新，避免并发写入。
+    # map 按月份顺序返回，合并结果不依赖请求完成顺序。
+    with ThreadPoolExecutor(max_workers=API_FETCH_WORKERS) as executor:
+        for (year, month), data in zip(months, executor.map(fetch_month, months)):
+            key = f"{year}-{month:02d}"
+            if data is None:
+                print("API失败 使用缓存:", key)
+            else:
+                cache[key] = data
+                fresh.extend(data)
 
     save_cache(cache)
 
-    print(
-        "API活动数量:",
-        len(result)
-    )
+    # 保留窗口之外的历史缓存，避免每次跨年将已有历史事件移出订阅。
+    # 同一活动可能跨月、跨年返回，按官方 ID 合并；本次成功请求优先于旧缓存，
+    # 避免日期修订后因开始时间不同，输出多条具有相同 ICS UID 的 API 事件。
+    unique = {}
+    for key in sorted(cache):
+        for item in cache[key]:
+            unique[str(item["id"])] = item
+    for item in fresh:
+        unique[str(item["id"])] = item
 
+    result = list(unique.values())
+    print("API活动数量:", len(result))
     return result
 
 

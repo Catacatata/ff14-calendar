@@ -131,5 +131,89 @@
     "rss_title": "《FF14》x《FF16》联动复刻限时开启！",
     "image": "images/events/4a21366d7e9f8c6706d8.webp",
     "image_url": "https://fu5.web.sdo.com/10036/202611/17943829684950.jpg"
+  },
+  "api-52|2025-02-10T18:00:00+08:00": {
+    "description": "今年赞颂爱之伯爵的节日“恋人节”也终于到来。 快去向所爱之人传达爱意吧。",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/370873",
+    "rss_title": "【季节活动】恋人节——「爱」的秘诀是心形？",
+    "image": "images/events/47a04420a7ccd77fb635.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202502/17389160355185.jpg"
+  },
+  "api-56|2025-02-18T17:18:28+08:00": {
+    "description": "7.1更新笔记公开 「瓦纳·迪尔的回响」第1弹开启！",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/371127",
+    "rss_title": "7.1版本更新笔记公开 「瓦纳·迪尔的回响」第1弹开启！",
+    "image": "images/events/943b04bf79d635061823.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202502/17395249953573.png"
+  },
+  "api-54|2025-03-11T17:20:26+08:00": {
+    "description": "7.11更新笔记公开 挑战「光暗未来绝境战」！",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/371841",
+    "rss_title": "7.11版本更新笔记公开 挑战「光暗未来绝境战」！",
+    "image": "images/events/f0c2822b04cc9906be92.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202503/17412359994569.png"
+  },
+  "api-59|2025-04-22T18:00:00+08:00": {
+    "description": "7.15版本中将会追加全新24人团队战斗内容「诛灭战」等众多全新内容。",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/373338",
+    "rss_title": "7.15版本4月22日来袭！版本更新LIVE同日19点开启",
+    "image": "images/events/ddf41502a07326c849e0.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202504/17445996646877.jpg"
+  },
+  "api-63|2025-05-27T00:00:00+08:00": {
+    "description": "活动期间通过游玩各种玩法，可以获取「稀少幻想神典石」，将「稀少幻想神典石」交给旅行莫古力即可获得丰厚道具奖励。",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/374713",
+    "rss_title": "莫古莫古★大收集 ~与幻想邂逅~ 现已开启！",
+    "image": "images/events/092869451aafed74e110.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202505/17479684936516.jpg"
+  },
+  "api-67|2025-06-24T11:31:59+08:00": {
+    "description": "7.2更新笔记公开 登天斗技场中量级/宇宙探索重磅来袭！",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/375723",
+    "rss_title": "7.2版本更新笔记公开 斗技场中量级/宇宙探索重磅来袭！",
+    "image": "images/events/2468990f2e8c878bd982.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202506/17503248384068.png"
+  },
+  "api-70|2025-08-14T17:00:00+08:00": {
+    "description": "在新生庆典中，各个城市和住宅区中都将放满各式各样的装饰物。一起来庆祝十一周年吧！",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/377751",
+    "rss_title": "【季节活动】新生庆典2025Vol.1——海都绽放之花",
+    "image": "images/events/67204a77fb9d9c485903.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202508/17549800633269.jpg"
+  },
+  "api-75|2025-10-15T00:00:00+08:00": {
+    "description": "「艾欧泽亚通行证」第六期限时开放！",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/379967",
+    "rss_title": "「艾欧泽亚通行证」第六期限时开放！",
+    "image": "images/events/346b4f18af9138869843.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202510/17603257017574.jpg"
+  },
+  "api-77|2025-11-04T19:00:00+08:00": {
+    "description": "7.35更新笔记公开 全新深层迷宫「朝圣交错路」！",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/380616",
+    "rss_title": "7.35更新笔记公开 全新深层迷宫「朝圣交错路」！",
+    "image": "images/events/9f13040db78b6af6a5e7.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202510/17618845979579.png"
+  },
+  "api-79|2025-11-06T17:00:00+08:00": {
+    "description": "FF14 x 「糖豆人」联动复刻限时开启！",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/380900",
+    "rss_title": "FF14 x 「糖豆人」联动复刻限时开启！",
+    "image": "images/events/7d6e6211dda494ac4a6c.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202511/17624160826447.jpg"
+  },
+  "api-80|2025-11-13T14:00:00+08:00": {
+    "description": "金碟嘉年华即将来临，活动期间在金碟游乐场中获得的金碟币将增长到1.5倍！",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/380967",
+    "rss_title": "【季节活动】金碟嘉年华——金碟游乐场与幻卡王的传闻",
+    "image": "images/events/d7c0326d94b0e063e4e6.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202511/17625089008052.jpg"
+  },
+  "api-78|2025-12-16T20:00:00+08:00": {
+    "description": "7.4版本更新笔记公开",
+    "rss_link": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/382068",
+    "rss_title": "《最终幻想14》7.4版本更新笔记公开",
+    "image": "images/events/390c8abc0a3c84635bdc.webp",
+    "image_url": "https://fu5.web.sdo.com/10036/202512/17658012996569.png"
   }
 }

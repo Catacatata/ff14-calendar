@@ -1,9 +1,221 @@
 {
-  "generated_at": "2026-11-25T19:27:29.208694+08:00",
-  "generated_at_text": "2026-11-25 19:27:29",
+  "generated_at": "2026-11-25T22:27:09.851446+08:00",
+  "generated_at_text": "2026-11-25 22:27:09",
   "timezone": "Asia/Shanghai",
-  "event_count": 18,
+  "event_count": 40,
   "events": [
+    {
+      "id": "api-52",
+      "name": "【季节活动】恋人节",
+      "category": "季节活动",
+      "start": "2025-02-10T18:00:00+08:00",
+      "end": "2025-02-24T14:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20250210ValentionesDay/",
+      "image": "images/events/47a04420a7ccd77fb635.webp",
+      "description": "今年赞颂爱之伯爵的节日“恋人节”也终于到来。 快去向所爱之人传达爱意吧。",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/370873"
+    },
+    {
+      "id": "api-56",
+      "name": "7.1版本",
+      "category": "版本更新",
+      "start": "2025-02-18T17:18:28+08:00",
+      "end": "2025-02-18T17:18:30+08:00",
+      "url": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/371127",
+      "image": "images/events/943b04bf79d635061823.webp",
+      "description": "7.1更新笔记公开 「瓦纳·迪尔的回响」第1弹开启！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/371127"
+    },
+    {
+      "id": "api-54",
+      "name": "7.11版本",
+      "category": "版本更新",
+      "start": "2025-03-11T17:20:26+08:00",
+      "end": "2025-03-11T17:20:47+08:00",
+      "url": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/371841",
+      "image": "images/events/f0c2822b04cc9906be92.webp",
+      "description": "7.11更新笔记公开 挑战「光暗未来绝境战」！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/371841"
+    },
+    {
+      "id": "api-55",
+      "name": "【季节活动】恋人节2025",
+      "category": "季节活动",
+      "start": "2025-03-12T14:00:00+08:00",
+      "end": "2025-03-26T14:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20250312ValentionesDay/index.html"
+    },
+    {
+      "id": "api-57",
+      "name": "「艾欧泽亚通行证」第五期",
+      "category": "通行证",
+      "start": "2025-03-14T00:00:00+08:00",
+      "end": "2025-04-23T00:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/20240621_eorzea/index.html#/index"
+    },
+    {
+      "id": "api-59",
+      "name": "7.15版本",
+      "category": "版本更新",
+      "start": "2025-04-22T18:00:00+08:00",
+      "end": "2025-04-22T18:00:00+08:00",
+      "url": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/373338",
+      "image": "images/events/ddf41502a07326c849e0.webp",
+      "description": "7.15版本中将会追加全新24人团队战斗内容「诛灭战」等众多全新内容。",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/373338"
+    },
+    {
+      "id": "api-62",
+      "name": "【季节活动】金碟游乐场大庆典——河童之谜！？",
+      "category": "季节活动",
+      "start": "2025-05-20T14:00:00+08:00",
+      "end": "2025-06-03T14:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20250520thegoldsaucer/"
+    },
+    {
+      "id": "api-63",
+      "name": "莫古莫古★大收集 ~与幻想邂逅~",
+      "category": "莫古莫古大收集",
+      "start": "2025-05-27T00:00:00+08:00",
+      "end": "2025-06-23T10:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20250508mogmog/index.html",
+      "image": "images/events/092869451aafed74e110.webp",
+      "description": "活动期间通过游玩各种玩法，可以获取「稀少幻想神典石」，将「稀少幻想神典石」交给旅行莫古力即可获得丰厚道具奖励。",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/374713"
+    },
+    {
+      "id": "api-67",
+      "name": "7.2版本",
+      "category": "版本更新",
+      "start": "2025-06-24T11:31:59+08:00",
+      "end": "2025-06-24T11:32:00+08:00",
+      "url": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/375723",
+      "image": "images/events/2468990f2e8c878bd982.webp",
+      "description": "7.2更新笔记公开 登天斗技场中量级/宇宙探索重磅来袭！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/375723"
+    },
+    {
+      "id": "api-64",
+      "name": "【季节活动】红莲节2025Vol.1",
+      "category": "季节活动",
+      "start": "2025-07-10T14:00:00+08:00",
+      "end": "2025-07-24T14:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20250710MoonfireFaire/j57hwXRS8L/"
+    },
+    {
+      "id": "api-69",
+      "name": "11周年 光之战士集结！",
+      "category": "其他活动",
+      "start": "2025-08-07T00:00:00+08:00",
+      "end": "2025-08-29T00:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20250806eliveassemble/index.html#/index"
+    },
+    {
+      "id": "api-70",
+      "name": "【季节活动】新生庆典",
+      "category": "季节活动",
+      "start": "2025-08-14T17:00:00+08:00",
+      "end": "2025-08-29T14:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20250728therising/jo988iz9a8p1x5jr52cs4716471mk5/index.html",
+      "image": "images/events/67204a77fb9d9c485903.webp",
+      "description": "在新生庆典中，各个城市和住宅区中都将放满各式各样的装饰物。一起来庆祝十一周年吧！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/377751"
+    },
+    {
+      "id": "api-71",
+      "name": "【季节活动】红莲节2025Vol.2",
+      "category": "季节活动",
+      "start": "2025-09-01T14:00:00+08:00",
+      "end": "2025-09-17T14:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20250818moonfirefaire/f8h8t7cwgx4m/index.html"
+    },
+    {
+      "id": "api-72",
+      "name": "7.3版本",
+      "category": "版本更新",
+      "start": "2025-09-16T19:00:00+08:00",
+      "end": "2025-09-16T19:00:00+08:00",
+      "url": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/378911"
+    },
+    {
+      "id": "api-74",
+      "name": "【季节活动】守护天节2025Vol.1",
+      "category": "季节活动",
+      "start": "2025-10-10T14:00:00+08:00",
+      "end": "2025-10-24T14:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20250923allsaintswake/5o04q05328eg/index.html"
+    },
+    {
+      "id": "api-75",
+      "name": "艾欧泽亚通行证：第六期",
+      "category": "通行证",
+      "start": "2025-10-15T00:00:00+08:00",
+      "end": "2025-11-24T00:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/20240621_C2_eorzea/index.html#/index",
+      "image": "images/events/346b4f18af9138869843.webp",
+      "description": "「艾欧泽亚通行证」第六期限时开放！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/379967"
+    },
+    {
+      "id": "api-76",
+      "name": "【季节活动】守护天节2025Vol.2",
+      "category": "季节活动",
+      "start": "2025-10-25T14:00:00+08:00",
+      "end": "2025-11-08T14:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20251010allsaintswake/f2ea0zmn786v/index.html"
+    },
+    {
+      "id": "api-77",
+      "name": "7.35版本",
+      "category": "版本更新",
+      "start": "2025-11-04T19:00:00+08:00",
+      "end": "2025-11-04T19:00:00+08:00",
+      "url": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/380616",
+      "image": "images/events/9f13040db78b6af6a5e7.webp",
+      "description": "7.35更新笔记公开 全新深层迷宫「朝圣交错路」！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/380616"
+    },
+    {
+      "id": "api-79",
+      "name": "FF14 x 「糖豆人」联动复刻",
+      "category": "限时联动",
+      "start": "2025-11-06T17:00:00+08:00",
+      "end": "2025-11-27T22:59:59+08:00",
+      "url": "https://actff1.web.sdo.com/project/20240401ff14fallguys/index.html",
+      "image": "images/events/7d6e6211dda494ac4a6c.webp",
+      "description": "FF14 x 「糖豆人」联动复刻限时开启！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/380900"
+    },
+    {
+      "id": "api-80",
+      "name": "【季节活动】金碟嘉年华",
+      "category": "季节活动",
+      "start": "2025-11-13T14:00:00+08:00",
+      "end": "2025-11-27T14:00:00+08:00",
+      "url": "https://actff1.web.sdo.com/project/20251105themakeitraincampaign/thk8d9406nls/index.html",
+      "image": "images/events/d7c0326d94b0e063e4e6.webp",
+      "description": "金碟嘉年华即将来临，活动期间在金碟游乐场中获得的金碟币将增长到1.5倍！",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/380967"
+    },
+    {
+      "id": "api-78",
+      "name": "7.4版本",
+      "category": "版本更新",
+      "start": "2025-12-16T20:00:00+08:00",
+      "end": "2025-12-16T20:00:00+08:00",
+      "url": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/382068",
+      "image": "images/events/390c8abc0a3c84635bdc.webp",
+      "description": "7.4版本更新笔记公开",
+      "details_source": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/382068"
+    },
+    {
+      "id": "api-83",
+      "name": "【季节活动】星芒节2025Vol.2",
+      "category": "季节活动",
+      "start": "2025-12-17T16:00:00+08:00",
+      "end": "2025-12-31T22:59:59+08:00",
+      "url": "https://actff1.web.sdo.com/project/20251202starlight/4o7n8g9g627o/index.html"
+    },
     {
       "id": "api-84",
       "name": "【季节活动】降神节",

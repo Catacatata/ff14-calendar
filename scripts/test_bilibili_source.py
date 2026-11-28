@@ -1,9 +1,11 @@
 """B 站来源连通性测试：无登录凭据，不写入日历、图片或缓存。
 
-运行：python scripts/test_bilibili_source.py
-依赖：bilibili-api-python==17.4.2、aiohttp==3.13.3
+运行：python scripts/test_bilibili_source.py --client curl_cffi
+依赖：bilibili-api-python==17.4.2，以及所选客户端
+客户端版本：aiohttp==3.13.3 / curl_cffi==0.17.0
 只验证采集及固定样本，不代表已实现活动日期解析或多源合并。
 """
+import argparse
 import asyncio
 from datetime import datetime, timezone
 import importlib.metadata
@@ -12,7 +14,7 @@ import re
 import sys
 import unicodedata
 
-from bilibili_api import opus, user
+from bilibili_api import opus, user, select_client, request_settings
 
 UID = 6655514
 OPUS_ID = 1274198612158447624
@@ -41,7 +43,7 @@ def error_diagnostic(error):
     if type(code) is int:
         result["api_code"] = code
     if status == 412:
-        result["reason"] = "HTTP 412，请求被拒绝；本次不重试或绕过限制"
+        result["reason"] = "HTTP 412，请求被拒绝；本次不自动重试"
     elif status == 429:
         result["reason"] = "HTTP 429，请求受到限流；本次不重试"
     return result
@@ -124,11 +126,17 @@ async def test_opus():
         raise ProbeValidationError("样本正文不完整或内容已变更，需要检查；不生成任何活动")
 
 
-async def main():
+async def main(client="aiohttp"):
+    select_client(client)
+    # 使用上游文档支持的配置，不自行实现签名、轮换代理或读取登录凭据。
+    if client == "curl_cffi":
+        request_settings.set("impersonate", "chrome131")
     emit("environment", utc_time=datetime.now(timezone.utc).isoformat(),
          python=sys.version.split()[0],
          bilibili_api_python=importlib.metadata.version("bilibili-api-python"),
-         aiohttp=importlib.metadata.version("aiohttp"),
+         client=client,
+         client_version=importlib.metadata.version(client),
+         browser_profile="chrome131" if client == "curl_cffi" else None,
          mode="anonymous_read_only")
     failures = []
     # 列表与正文分别检查，某一项失败也继续给出另一项的结果。
@@ -145,4 +153,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    sys.exit(asyncio.run(main()))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--client", choices=("aiohttp", "curl_cffi"), default="curl_cffi")
+    args = parser.parse_args()
+    sys.exit(asyncio.run(main(args.client)))

@@ -10,6 +10,13 @@ on:
         options:
           - curl_cffi
           - aiohttp
+      auth:
+        description: Explicit authentication mode (authenticated requires BILI_SESSDATA Secret)
+        type: choice
+        default: anonymous
+        options:
+          - anonymous
+          - authenticated
 
 permissions:
   contents: read
@@ -37,12 +44,23 @@ jobs:
       - name: Install isolated test dependencies
         run: python -m pip install bilibili-api-python==17.4.2 aiohttp==3.13.3 curl_cffi==0.17.0
 
-      - name: Test anonymous dynamic feed and Opus content
+      - name: Check credential handling without network or Secrets
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -m unittest discover -s tests -p 'test_bilibili_credentials.py' -v
+
+      - name: Test dynamic feed and Opus content (read only)
         env:
           PYTHONIOENCODING: utf-8
           PYTHONDONTWRITEBYTECODE: "1"
           BILI_TEST_CLIENT: ${{ inputs.client || 'curl_cffi' }}
-        run: python scripts/test_bilibili_source.py --client "$BILI_TEST_CLIENT"
+          BILI_TEST_AUTH: ${{ inputs.auth || 'anonymous' }}
+          BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
+          BILI_JCT: ${{ secrets.BILI_JCT }}
+          BILI_DEDEUSERID: ${{ secrets.BILI_DEDEUSERID }}
+          BILI_BUVID3: ${{ secrets.BILI_BUVID3 }}
+          BILI_BUVID4: ${{ secrets.BILI_BUVID4 }}
+        run: python scripts/test_bilibili_source.py --client "$BILI_TEST_CLIENT" --auth "$BILI_TEST_AUTH"
 
       - name: Verify tracked repository files are unchanged
         if: always()

@@ -94,6 +94,7 @@ class CalendarYearTests(unittest.TestCase):
             with patch.object(generator, "get_api_events", return_value=[event]), \
                  patch.object(generator, "load_base_ics", return_value=[]), \
                  patch.object(generator, "load_manual", return_value=[]), \
+                 patch.object(generator, "SOURCES_DIR", str(output / "no_sources")), \
                  patch.object(generator, "OUTPUT_FILE", str(output / "ff14.ics")), \
                  patch.object(generator, "JSON_OUTPUT_FILE", str(output / "calendar.json")):
                 generator.generate()

@@ -8,6 +8,8 @@ from concurrent.futures import ThreadPoolExecutor
 from icalendar import Calendar, Event
 import pytz
 
+from source_collectors.collector_bridge import load_source_events
+
 
 # =====================
 # 配置
@@ -25,6 +27,10 @@ CACHE_FILE = "data/api_cache.json"
 
 # 可选的历史基础文件；新年度活动通过 API 自动获取，无需新增基础文件。
 BASE_ICS = "ff14_base_2026.ics"
+
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+SOURCES_DIR = os.path.join(ROOT_DIR, "data", "sources")
 
 MANUAL_FILE = "ff14_override.json"
 
@@ -361,7 +367,8 @@ def get_category(name):
             "FANFEST",
             "FanFest",
             "官方转播",
-            "直播"
+            "直播",
+            "来信"
         ]
     ):
         return "直播/FanFest"
@@ -378,7 +385,7 @@ def get_category(name):
     ):
         return "月卡/商城"
 
-    if "版本" in name or name.startswith("7."):
+    if "版本" in name or "维护" in name or name.startswith("7."):
         return "版本更新"
 
     return "其他活动"
@@ -423,6 +430,12 @@ def generate():
     events.extend(
         load_manual()
     )
+
+    # 4. 补充多来源官方公告（维护、游戏活动、直播）
+    if os.path.isdir(SOURCES_DIR):
+        source_supplements = load_source_events(SOURCES_DIR, events)
+        for supp in source_supplements:
+            events.append(supp)
 
     unique = {}
 
@@ -487,10 +500,11 @@ def generate():
             e["start"]
         )
 
-        event.add(
-            "dtend",
-            e["end"]
-        )
+        if not e.get("is_point"):
+            event.add(
+                "dtend",
+                e["end"]
+            )
 
         event.add(
             "dtstamp",
@@ -546,7 +560,7 @@ def generate():
         if end.tzinfo is None:
             end = TZ.localize(end)
 
-        web_events.append({
+        item_payload = {
             "id": str(e.get("id", "")),
             "name": e["name"],
             "category": get_category(e["name"]),
@@ -555,7 +569,13 @@ def generate():
             "url": clean_url(
                 e.get("url", "")
             )
-        })
+        }
+        if e.get("details_source"):
+            item_payload["details_source"] = e["details_source"]
+        if e.get("time_kind") and e.get("time_kind") != "range":
+            item_payload["time_kind"] = e["time_kind"]
+
+        web_events.append(item_payload)
 
     payload = {
         "generated_at": now.isoformat(),

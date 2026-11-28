@@ -1,0 +1,1546 @@
+{
+  "schema_version": 1,
+  "source": "bilibili",
+  "status": {
+    "outcome": "incomplete",
+    "request_outcome": "ok",
+    "last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+    "last_success_at": null,
+    "consecutive_failures": 0,
+    "used_cache": true,
+    "errors": [],
+    "unresolved_error_count": 0,
+    "content_complete": false,
+    "coverage_complete": true,
+    "pages_fetched": 4,
+    "feed_requests": 4,
+    "details_attempted": 20,
+    "seen_count": 48,
+    "new_count": 48,
+    "stop_reason": "initial_history_limit",
+    "scan_incomplete": false,
+    "scan_backlog": 0,
+    "coverage_scope": "since_initial_recent_window",
+    "initial_history_limited": true,
+    "pending_count": 13,
+    "cooldown_count": 0,
+    "deferred_details": 13
+  },
+  "items": {
+    "1265223754006396951": {
+      "id": "1265223754006396951",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-10-31T04:34:21+00:00",
+      "is_pinned": true,
+      "url": "https://t.bilibili.com/1265223754006396951",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1275361581928022049": {
+      "id": "1275361581928022049",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-27T12:14:18+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1275361581928022049",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 《最终幻想14》12月1日全区全服更新维护公告\n我们将于12月1日13:00-12月3日13:00对全区全服进行更新维护。请各位冒险者互相转告,合理安排游戏时间,提前在安全区域下线。开服时间将视维护进展情况提前或延后,详细开服时间请关注官网公告。\n维护开始前,为了维持服务器数据稳定,即日起,超域传送、跨界传送的角色离线后将会以比平时更短的时间自动返回原始服,11/30 23:00将关闭超域传送转出和角色转服功能。大国防联军后勤补给站、道具商城等一切相关活动页面于2026年12月1日12:00暂停服务,维护结束后将陆续开放。\n※受本次维护影响,已经上传到服务器上的角色设置数据备份和客户端通用设置数据备份将会被清除,用户本地的数据不受影响,建议提前在本地做好保存,待维护结束后重新上传。\n※受本次维护影响的月卡账户(12/1-12/3期间持有月卡的账户)将会统一补发2天月卡,到账时间预计在维护结束后3个工作日内。\n\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/396041 ☆\n☆预计维护时间:2026年12月1日13:00-12月3日13:00☆\n☆维护范围:全区全服☆\n☆本次维护内容☆\n-更新客户端版本至2026.11.25.0000.0000(7.59版本)\n-开放大区自由匹配功能",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/a3d4d8bffeb355257be1e47cd78eaabd6655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/396041",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "412c8a7d4561c622d27bf3b4c28ddfe42a0aaeb1db1dfe8d69fa847629823fa5",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1274198612158447624": {
+      "id": "1274198612158447624",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-24T09:01:23+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1274198612158447624",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 莫古莫古★大收集 ~天文的行路 第2阶段~ 限时开启!\n「莫古莫古★大收集」是不定期举办的特殊活动。本次的「莫古莫古★大收集」奖励比以往更加丰厚,不仅有“渡渡鸟角笛”“钻石玲龙魔笛”,还有特别奖励“呜噜怪角笛”等你来兑换!\n※本活动可能受游戏维护等情况影响,实际开启时间可能延迟,敬请谅解。\n☆活动时间:2026年12月1日16:00~2027年1月12日15:59☆\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395921☆",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/e4404a4444d61dad38580721305253226655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395921",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "1386a1318e1491dd25eca3ad108bdaa978a0e9d412ab5de471950fa1034a8002",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1273813439445204998": {
+      "id": "1273813439445204998",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-23T08:06:43+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1273813439445204998",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 第94期制作人来信转播 12月4日上演!\n第94期制作人来信将于2026年12月4日举办。届时FFXIV的制作人兼导演吉田直树将围绕《银海之天舟》中计划更新的角色创建系统,结合实机演示为大家带来最新情报,我们也将为大家带来同步转播。查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395868\n☆直播时间:2026年12月4日 19:00~☆\n☆直播地址:https://live.bilibili.com/5225☆",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/b0af58acdb36d42997c3a231d7f9231f6655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395868",
+          "https://live.bilibili.com/5225",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "5427a626a825930ad1e81c7d128ba07226d78ee8cc180398059bf519d94fbcf4",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1273409701834391558": {
+      "id": "1273409701834391558",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-22T06:00:00+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1273409701834391558",
+      "feed": {
+        "text": "#最终幻想14##FF14#《艾欧泽亚风尚·FF14纪念刊》小雪特辑!\n天转寒,地初冻,雪轻扬。花雪随风不厌看,更多还肯失林峦——愿这花雪随风的每一眼凝望,都望见冬日里最清澈的远方,和最笃定的归途。",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/34cac65f9bbf73375805fc195af41fe36655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/7016cbf2006fea09bf694ef492a1780e6655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "6b0691cf700315619f7ba105ab004159420c4397ce0a5b29c284f11ecf6c7e55",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1271609580116246536": {
+      "id": "1271609580116246536",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-17T09:34:37+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1271609580116246536",
+      "feed": {
+        "text": "#最终幻想14# #FF14# FANFESTIVAL2026第三站 Q&A节目文字版公开!\nFANFESTIVAL2026第三站中,由《最终幻想XIV》制作人兼导演吉田直树回答各类提问的两档节目【吉田P的快问快答】及【LIVE Q&A】文字版正式公开!\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395673☆",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/1e57438b55d7e6207ed8ff3fffc2e7506655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395673",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "6eff657a4577bc444661f9f5a40a66ed4d0671b5b627227e39945147596f6dce",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1271572570361036824": {
+      "id": "1271572570361036824",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-17T07:11:00+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1271572570361036824",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 新品报到🎉另类褶边连衣裙现已上架道具商城啦~\n搭配示例这就端上,轻松抄作业不踩雷。冒险者们快来发挥创意,评论区晒出你的搭配,互相种草吧!",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5fa99b9846bbec754c17f4038194b6016655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/f91ce4acc94d6c955ee19b36b6b762616655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5d8248a245ba7be9ed3b1931ced8db7c6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/0ebdbac6353671b24d54ac9160b924c36655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "9ef756677830f17861027b8cd0c2d4c941b72573455f2083c70d0da76a1ca711",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1271245147819999440": {
+      "id": "1271245147819999440",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-11-16T10:00:26+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1271245147819999440",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1271222882734702616": {
+      "id": "1271222882734702616",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-16T08:34:02+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1271222882734702616",
+      "feed": {
+        "text": "#最终幻想14# #FF14#《银海之天舟》冒险准备活动开启!《金曦冒险录·银冬将至》现已限时上架道具商城!\n若您已完成主线任务「晓月之终途」,即可借助《金曦冒险录·银冬将至》更快接上《银海之天舟》的剧情。\n一口气追上最新的7.5版本,为即将到来的《银海之天舟》大冒险做好准备吧!\n☆上架时间:2026年11月16日16:00 ~ 8.0版本更新维护开始前\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395589☆\n配合本次活动的举办,制作人兼导演吉田直树先生也公开了《制作人来信》,欢迎一并阅读!\n☆网页链接:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395598☆",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/c333b660fb282eb29784b41abf8b50a06655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395589",
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395598",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "2e15fc46d461b69225e11ae9412a85592bf5aff16ac94fb0c145f01f799787df",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1271221491128598553": {
+      "id": "1271221491128598553",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-11-16T08:28:38+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1271221491128598553",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1271215753052291081": {
+      "id": "1271215753052291081",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-16T08:06:22+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1271215753052291081",
+      "feed": {
+        "text": "#最终幻想14# #FF14#道具商城新道具现已上架:另类褶边连衣裙套装\n石之家「时装灵感季」火热进行中!前往「时装灵感季」专题页面,浏览优秀搭配,更可领取心仪搭配师专属优惠券,购买新品时装也可使用!\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395582☆",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/ee1698bb51c1f535d54609ee184a043f6655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395582",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "9487139cb9ab4ebea9870a516cf7e97867719322c8ad0e7bbe6905a298819fc9",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1269447085541818368": {
+      "id": "1269447085541818368",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-11T13:43:02+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1269447085541818368",
+      "feed": {
+        "text": "非常感谢各位一直以来对FINAL FANTASY XIV官方乐团THE PRIMALS的支持。\n\n我们在此沉痛地向各位通知,贝斯手岩井英吉先生不幸逝世。\n在之前中国粉丝节的舞台上,他为我们带来令人震撼的演出,\n\n如今却突然传来噩耗,让我们深感震惊。\n\n《最终幻想14》中国运营团队的全体成员表示深深的哀悼。\n\n我们将珍惜并铭记岩井先生所留下的一切。\n\n此刻,唯有愿他安息。\n\n《最终幻想14》中国运营团队全体成员",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "62be0b45530604eb95f7d92e7ab3c842035d3a41821680eab8a7b799f61398c5",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1269362298601865237": {
+      "id": "1269362298601865237",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-11T08:14:01+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1269362298601865237",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 《FF14》x《FF16》联动复刻限时开启!\n在联动活动开启期间游玩联动任务,获取防具、坐骑以及宠物等丰厚奖励!快前往活动专题站一探究竟吧!\n☆活动时间:2026年11月18日16:00~2026年12月9日22:59☆\n☆活动专题:https://actff1.web.sdo.com/project/20261029ffxvi/uvjx9y9g2k2p/index.html☆",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5e4d3e569e2c0b4241abcfeb4f6701ba6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/c2685494e8177d9e2df3663dbf288b9d6655514.jpg"
+        ],
+        "links": [
+          "https://actff1.web.sdo.com/project/20261029ffxvi/uvjx9y9g2k2p/index.html",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "b1a43bca646a83e0b1ec3d0c621e1faf14a73360b62fbdb7a284f682aba49636",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1268911490237202441": {
+      "id": "1268911490237202441",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-10T03:04:39+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1268911490237202441",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 《最终幻想14》7.58版本更新笔记公开\n7.58版本中将对“斗兽奇弈”进行调整,并提高“阿卡狄亚零式登天斗技场重量级”中“超越之力”的效果。\n☆更新笔记:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395351☆",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/9698d99e9cd8c9b73356c5854ba92cb76655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395351",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "9d3aa6233b9c7f07cf9822a3c73df6f3c3d2e8149b29f36ab0d5b2e3a218580f",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1268121688695898119": {
+      "id": "1268121688695898119",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-07T23:59:49+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1268121688695898119",
+      "feed": {
+        "text": "《艾欧泽亚风尚·FF14纪念刊》\n霜风起,草木归根。天水清相入,秋冬气始交——愿这清寒初冬的每一缕晨光,都照亮你旅途中未曾冷却的初心。",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/88af3544c413310039e0184e579cb6d66655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/e1cd15d69af744543ce612c5cae8b4296655514.jpg"
+        ],
+        "links": []
+      },
+      "feed_hash": "dce36d99369e34cbdc40ba0c24c55145e6da01038c432044a6b7299c03a24b98",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1267543319816175635": {
+      "id": "1267543319816175635",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-06T10:35:27+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1267543319816175635",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 《最终幻想14》11月10日全区全服更新维护公告\n我们将于11月10日10:00-18:00对全区全服进行更新维护。请各位冒险者互相转告,合理安排游戏时间,提前在安全区域下线。开服时间将视维护进展情况提前或延后,详细开服时间请关注官网公告。\n查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395256\n※大国防联军中的额外雇员购买、跨区角色转移服务、额外雇员名额跨区转移服务、神典石服务将在11/9 23:00关闭,其他页面将在11/10 09:00关闭,维护结束后将陆续开放。\n☆预计维护时间:2026年11月10日10:00-18:00☆\n☆维护范围:全区全服☆\n☆本次维护内容☆\n-更新客户端版本至2026.11.03.0000.0000(7.58版本)",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/58ff5582ab1d4b704e8e575cfbf2ddfd6655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395256",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "65672e1b52664b13d6adfdae1f0de90dd6f15fd0856f72a7c69ff74444b16969",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "pending"
+    },
+    "1267534334754029605": {
+      "id": "1267534334754029605",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-11-06T10:00:35+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1267534334754029605",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1267167544501862451": {
+      "id": "1267167544501862451",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-11-05T10:17:15+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1267167544501862451",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1267101260311429200": {
+      "id": "1267101260311429200",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-11-05T06:00:02+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1267101260311429200",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1266791846553583656": {
+      "id": "1266791846553583656",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-11-04T09:59:21+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1266791846553583656",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1266789321112813576": {
+      "id": "1266789321112813576",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-11-04T09:49:33+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1266789321112813576",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1266784034002829316": {
+      "id": "1266784034002829316",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_FORWARD",
+      "published_at": "2026-11-04T09:29:02+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1266784034002829316",
+      "feed": {
+        "text": "现已开售!",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "54a551dc4ea4a4b1b5d71e69c71f5397149f32517db645d1b40d52f3c8efa558",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1266023013023744000": {
+      "id": "1266023013023744000",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-11-02T08:15:53+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1266023013023744000",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 道具商城历届粉丝节道具优惠券大派送!\n我们为冒险者准备了4张历届粉丝节道具专属满减优惠券,快趁此机会将曾经心心念念的那个道具收入囊中吧!\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395074☆ \n☆专属优惠券派送!☆ \nK29H",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/8e21ee79f3cce63fdcde07fb0d734b066655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395074",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "323f53fe8244a9735066f5bd75bc835533cdc5053dee25531919f44d5e6b1f20",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 道具商城历届粉丝节道具优惠券大派送!\n我们为冒险者准备了4张历届粉丝节道具专属满减优惠券,快趁此机会将曾经心心念念的那个道具收入囊中吧!\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395074☆ \n☆专属优惠券派送!☆ \nK29H",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395074",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [
+          "395074"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/8e21ee79f3cce63fdcde07fb0d734b066655514.jpg"
+        ]
+      },
+      "content_hash": "55043510c68a65487bb2bc11d5b3fe375082928a3ffdce095310e753e2ffa895",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "323f53fe8244a9735066f5bd75bc835533cdc5053dee25531919f44d5e6b1f20"
+    },
+    "1265358298128842769": {
+      "id": "1265358298128842769",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T13:16:27+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265358298128842769",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|主题演讲情报汇总】\n本次主题演讲的最新情报现已整理完毕!\n一起来回顾本次公开的精彩内容吧!",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/82fb4d13ca46a3a54d19ed0ec68f8d9a6655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "913345128ed9a8a516020c0bb0b70885324ffca39724c6bfe37469bd0477f532",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|主题演讲情报汇总】\n本次主题演讲的最新情报现已整理完毕!\n一起来回顾本次公开的精彩内容吧!",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/82fb4d13ca46a3a54d19ed0ec68f8d9a6655514.jpg"
+        ]
+      },
+      "content_hash": "f98dde9df000d675f923e2751e05caca903c4bc4fe5c6b438e1c47df50c3cb98",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "913345128ed9a8a516020c0bb0b70885324ffca39724c6bfe37469bd0477f532"
+    },
+    "1265345456181870597": {
+      "id": "1265345456181870597",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-10-31T12:26:37+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265345456181870597",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1265252710678003712": {
+      "id": "1265252710678003712",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T06:26:43+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265252710678003712",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 特惠专享 畅玩无忧!月卡启航计划活动时间延长公告\n特惠专享,畅玩无忧,月卡启航计划现已开启! 月卡启航计划活动时间将延长至2027年3月1日14:00。活动期间,在活动页面首次购买月卡享限时特惠,30天月卡时长仅需4500点券!此外,拥有月卡时长的账号在此期间可以折扣价购买月卡,畅玩无忧。\n☆活动时间:2026年7月25日18:00-2027年3月1日14:00☆ \n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395032☆",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/e1e7c5032b06f16ed62412323354f16a6655514.jpg"
+        ],
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395032",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "945e03771de74d3a9bccc4a5c2c14fbe87e56785bedb08cb96567aabbb8fde81",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 特惠专享 畅玩无忧!月卡启航计划活动时间延长公告\n特惠专享,畅玩无忧,月卡启航计划现已开启! 月卡启航计划活动时间将延长至2027年3月1日14:00。活动期间,在活动页面首次购买月卡享限时特惠,30天月卡时长仅需4500点券!此外,拥有月卡时长的账号在此期间可以折扣价购买月卡,畅玩无忧。\n☆活动时间:2026年7月25日18:00-2027年3月1日14:00☆ \n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395032☆",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395032",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [
+          "395032"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/e1e7c5032b06f16ed62412323354f16a6655514.jpg"
+        ]
+      },
+      "content_hash": "243ceac3a7d4c8c622b099e9086f778a355655f817f208f09afd4b2c51113c61",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "945e03771de74d3a9bccc4a5c2c14fbe87e56785bedb08cb96567aabbb8fde81"
+    },
+    "1265221804078661636": {
+      "id": "1265221804078661636",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T04:26:47+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265221804078661636",
+      "feed": {
+        "text": "#最终幻想14##FF14# 8.0抢先体验典藏包 11月4日超5折特惠开售!\n化身\"巡天者\" ,整装畅游冰封世界!8.0抢先体验典藏包原价25800点券。自上架起至 2026年12月31日24点,将开启限时超5折特惠活动,购买典藏包CDK折扣售价仅需12800点券。\n购买典藏包CDK额外赠送8.0版本预约特典道具以及8.0版本抢先体验资格(※)!\n※8.0版本抢先体验资格:可在8.0版本维护完成后至8.0版本正式上线期间抢先体验最新大版本。\n☆典藏包CDK限时折扣时间:上架后至2026年12月31日24点☆ \n☆前往购买:https://actff1.web.sdo.com/20261030_ActivationCode/index.html#/index☆",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/d90daad0f94848350ceeec1dffacb8776655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/54f56de1c4272e1fd1387b449d027a9e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5aec887b5e19699f57bebb28cacc6a476655514.jpg"
+        ],
+        "links": [
+          "https://actff1.web.sdo.com/20261030_ActivationCode/index.html#/index",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "30df526a021f081ce9e947a9325b95adc901ed4bc7b5991e20e5f6b61a74fef1",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14# 8.0抢先体验典藏包 11月4日超5折特惠开售!\n化身\"巡天者\" ,整装畅游冰封世界!8.0抢先体验典藏包原价25800点券。自上架起至 2026年12月31日24点,将开启限时超5折特惠活动,购买典藏包CDK折扣售价仅需12800点券。\n购买典藏包CDK额外赠送8.0版本预约特典道具以及8.0版本抢先体验资格(※)!\n※8.0版本抢先体验资格:可在8.0版本维护完成后至8.0版本正式上线期间抢先体验最新大版本。\n☆典藏包CDK限时折扣时间:上架后至2026年12月31日24点☆ \n☆前往购买:https://actff1.web.sdo.com/20261030_ActivationCode/index.html#/index☆",
+        "links": [
+          "https://actff1.web.sdo.com/20261030_ActivationCode/index.html#/index",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/d90daad0f94848350ceeec1dffacb8776655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/54f56de1c4272e1fd1387b449d027a9e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5aec887b5e19699f57bebb28cacc6a476655514.jpg"
+        ]
+      },
+      "content_hash": "c11870c1dc3e6babd755a9acb867f857dc30bc77f4128e6251554c3e31035ee2",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "30df526a021f081ce9e947a9325b95adc901ed4bc7b5991e20e5f6b61a74fef1"
+    },
+    "1265219587858759696": {
+      "id": "1265219587858759696",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T04:18:11+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265219587858759696",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|团队任务系列「欲望的幽影」】\n《最终幻想14》 X 《EVANGELION》联动团队任务系列将于8.0版本上线!",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/d4fdf58ddd463a319fb2a3f55a9d15516655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "036f7c0cd716a1399022c26d2c59c0222f6418acc910e84bd55f7d6da23933dc",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|团队任务系列「欲望的幽影」】\n《最终幻想14》 X 《EVANGELION》联动团队任务系列将于8.0版本上线!",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/d4fdf58ddd463a319fb2a3f55a9d15516655514.jpg"
+        ]
+      },
+      "content_hash": "1b4367190d72722b848fe17e07104d856fabdf2823233ce71d8625a59ed1ec00",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "036f7c0cd716a1399022c26d2c59c0222f6418acc910e84bd55f7d6da23933dc"
+    },
+    "1265219274359701540": {
+      "id": "1265219274359701540",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T04:16:58+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265219274359701540",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|大型任务系列「彼岸的星命」】\n两大团队全力合作打造的大型任务《FINAL FANTASY VII Remake》系列联动内容将于8.0版本上线!",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/e6d47c0b751c80e3b14e266917b465096655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/bd6a3482274ca0eb97e47ad34873b0436655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/8fd02b4bcc821f5c86d08bf553cb25a96655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/2ee4f48b57f651ced15ecaaac570b6b66655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "9408c68c7df4b65298b294d8a2e1d02fdcb92375895e83c41872b4bc8ac20781",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|大型任务系列「彼岸的星命」】\n两大团队全力合作打造的大型任务《FINAL FANTASY VII Remake》系列联动内容将于8.0版本上线!",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/e6d47c0b751c80e3b14e266917b465096655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/bd6a3482274ca0eb97e47ad34873b0436655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/8fd02b4bcc821f5c86d08bf553cb25a96655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/2ee4f48b57f651ced15ecaaac570b6b66655514.jpg"
+        ]
+      },
+      "content_hash": "c2e908c8d2ee1d9617f068aabca632df2a2cbc3b720922500cfb11f13d2fde26",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "9408c68c7df4b65298b294d8a2e1d02fdcb92375895e83c41872b4bc8ac20781"
+    },
+    "1265218952229814277": {
+      "id": "1265218952229814277",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T04:15:43+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265218952229814277",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|房屋系统升级】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/d61efc848a38f1add5a9c17338a0dd1d6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/83495fec2cc7d13c375a9f309908e0776655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "0a6dd3f4541c086ac09843d6f3c1852c2dfe9c0587c998bed7c0d9b00728b38a",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|房屋系统升级】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/d61efc848a38f1add5a9c17338a0dd1d6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/83495fec2cc7d13c375a9f309908e0776655514.jpg"
+        ]
+      },
+      "content_hash": "2c2ddbeec2a3d50ff060e16dd7c0c16e676d3c9d89ea373b7ea40406c1cadc38",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "0a6dd3f4541c086ac09843d6f3c1852c2dfe9c0587c998bed7c0d9b00728b38a"
+    },
+    "1265218582839558149": {
+      "id": "1265218582839558149",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-10-31T04:14:17+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265218582839558149",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1265216478324457489": {
+      "id": "1265216478324457489",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T04:06:07+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265216478324457489",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|玩家对战升级】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/ff8617914409588655ea7c900dda43666655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/356f38ec38afdeebac8f192c980f23fd6655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "01fb401447cb402aff79c7f06db7c621b2f540b2cff9c1e8ba287480dfb22f95",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|玩家对战升级】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/ff8617914409588655ea7c900dda43666655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/356f38ec38afdeebac8f192c980f23fd6655514.jpg"
+        ]
+      },
+      "content_hash": "84570b0451a4d1d6b57cba13c508f3443b550b642141bf71c2872bb27df09fc4",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "01fb401447cb402aff79c7f06db7c621b2f540b2cff9c1e8ba287480dfb22f95"
+    },
+    "1265216199165214757": {
+      "id": "1265216199165214757",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T04:05:02+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265216199165214757",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|新迷宫挑战】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/a2eb6b986b4d1d3d5b3b21af7e9d3da76655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/01797a14e8b923b57d8b991423b98e656655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/f9bb7146333fd876fc77fce96af2ccae6655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "4dc07af7044f8cf9ffcd4f6c7722e3d03b6e41115a3ed789d4d790759ac18d25",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|新迷宫挑战】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/a2eb6b986b4d1d3d5b3b21af7e9d3da76655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/01797a14e8b923b57d8b991423b98e656655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/f9bb7146333fd876fc77fce96af2ccae6655514.jpg"
+        ]
+      },
+      "content_hash": "2bf6108b0ff24b029e533e17c7ab5d8f417664ba75e48c3314ce445014478358",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "4dc07af7044f8cf9ffcd4f6c7722e3d03b6e41115a3ed789d4d790759ac18d25"
+    },
+    "1265214923560976387": {
+      "id": "1265214923560976387",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T04:00:05+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265214923560976387",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|升级与改良】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/0d579d636e3dfb37b5ac00eb2d8080e06655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5b1d5a266816664595a6dfc029e118cb6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/ff86e7f1d46a7f26c8f8e5ab4edc8e526655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/733653603caadc3eb9e42eee640a69f96655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/63826732adedb5670be3b7a97de807796655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/192acc9d80ba2a512e9b909c0a7d9f236655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/37c9f3650f023c795d18513aed852df16655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/84c3e561b2c45e521f1862f5a658ba926655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "ee8043ed0408245b10896863f276c654ae2d894f213b0e8ceb13549d444f4db6",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|升级与改良】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/0d579d636e3dfb37b5ac00eb2d8080e06655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5b1d5a266816664595a6dfc029e118cb6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/ff86e7f1d46a7f26c8f8e5ab4edc8e526655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/733653603caadc3eb9e42eee640a69f96655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/63826732adedb5670be3b7a97de807796655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/192acc9d80ba2a512e9b909c0a7d9f236655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/37c9f3650f023c795d18513aed852df16655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/84c3e561b2c45e521f1862f5a658ba926655514.jpg"
+        ]
+      },
+      "content_hash": "079bb60bf60b9f736d7c8e56ceb46303eb051f9db76f4846e0c5aaae3866f9b1",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "ee8043ed0408245b10896863f276c654ae2d894f213b0e8ceb13549d444f4db6"
+    },
+    "1265213330115526661": {
+      "id": "1265213330115526661",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T03:53:54+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265213330115526661",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|“大区内自由匹配”功能实装计划】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/ed188c0779061cc23dd2771f5d73a9816655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "dca0e740c6db699ef6071b2bc79ef99171e39162e3b3f72710638ca321b34ffe",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|“大区内自由匹配”功能实装计划】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/ed188c0779061cc23dd2771f5d73a9816655514.jpg"
+        ]
+      },
+      "content_hash": "e71681049f8001a9311b4ddfa9785024c213ba0dd891eab26a2effb68a87c209",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "dca0e740c6db699ef6071b2bc79ef99171e39162e3b3f72710638ca321b34ffe"
+    },
+    "1265212831865765893": {
+      "id": "1265212831865765893",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T03:51:58+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265212831865765893",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|装备成长信息披露】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5a07010243f931bf650a9c02a4ccad066655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/4338759b99e2409a7fc998e902c331416655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/0098b2da61dee402e0ef1aa213c8889a6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/e168f5563cab1932e5966d549881c1cf6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/507ca96db9f9b1c1459bad2fb7a1103e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/b3ad2bfa0bbea389d91f5f7b4c309b9a6655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "2a7991369e76b15f0fa9278713b817a124a3e4f814903b9880e62fb4c299ef4a",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|装备成长信息披露】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5a07010243f931bf650a9c02a4ccad066655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/4338759b99e2409a7fc998e902c331416655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/0098b2da61dee402e0ef1aa213c8889a6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/e168f5563cab1932e5966d549881c1cf6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/507ca96db9f9b1c1459bad2fb7a1103e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/b3ad2bfa0bbea389d91f5f7b4c309b9a6655514.jpg"
+        ]
+      },
+      "content_hash": "1fd35ea5cfc2bd63e01cc3f406ad2fa1f9ab73b3d2222973509a3b7de842e431",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "2a7991369e76b15f0fa9278713b817a124a3e4f814903b9880e62fb4c299ef4a"
+    },
+    "1265211646448500770": {
+      "id": "1265211646448500770",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-10-31T03:47:22+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265211646448500770",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1265210929248731136": {
+      "id": "1265210929248731136",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-10-31T03:44:35+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265210929248731136",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1265210448204005393": {
+      "id": "1265210448204005393",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-10-31T03:42:43+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265210448204005393",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1265210323613253651": {
+      "id": "1265210323613253651",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_AV",
+      "published_at": "2026-10-31T03:42:14+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265210323613253651",
+      "feed": {
+        "text": "",
+        "title": "",
+        "images": [],
+        "links": []
+      },
+      "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "unsupported"
+    },
+    "1265208270604206102": {
+      "id": "1265208270604206102",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T03:34:16+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265208270604206102",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|战斗内容的进化】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/e36d356bcea44c0d42bdfe3f5f013dfb6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/6aeef735f0cbc9070d475faa9c4b4e5d6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/4bb77900b9e0025434c438723563ff8b6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/c262d1cb1041fdb756a6d79df4128a946655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/6237b50554f2f622bc8bc2e65ca520396655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "471820d151c9f99abed7c28e276a97d530d5f6e1d832181bfd4779260def86b8",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|战斗内容的进化】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/e36d356bcea44c0d42bdfe3f5f013dfb6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/6aeef735f0cbc9070d475faa9c4b4e5d6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/4bb77900b9e0025434c438723563ff8b6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/c262d1cb1041fdb756a6d79df4128a946655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/6237b50554f2f622bc8bc2e65ca520396655514.jpg"
+        ]
+      },
+      "content_hash": "c672ebaf0f7e67043182f8415eef01f8880dae7cfbee6d755d1b9e748c8be4cf",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "471820d151c9f99abed7c28e276a97d530d5f6e1d832181bfd4779260def86b8"
+    },
+    "1265207647833948161": {
+      "id": "1265207647833948161",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T03:31:51+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265207647833948161",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|提高公共区域的体验】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/4d661e5caeb3a28b412a2568b7fb65666655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/9215d376ff9f4dfcac8e66169f8ee5ad6655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "3e75c29127b195788d763e487e63f5fc446fab6273a37f66c9635c8ef5127e42",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|提高公共区域的体验】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/4d661e5caeb3a28b412a2568b7fb65666655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/9215d376ff9f4dfcac8e66169f8ee5ad6655514.jpg"
+        ]
+      },
+      "content_hash": "bb1bcae6e75a9e29a34e5aa002de932593e61c3ec8cba304fe712345250787bb",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "3e75c29127b195788d763e487e63f5fc446fab6273a37f66c9635c8ef5127e42"
+    },
+    "1265201879692869640": {
+      "id": "1265201879692869640",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T03:09:28+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265201879692869640",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|游戏设计进化】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/ed50d185697a9c46918d59bbed2ef1306655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/8ec8bdddf3be8d4a103fcc517b043a126655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/40cdac8f5af5bf84d2593c3ae60f2af26655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5e55ebf66ab920e114fa244796e3ac6e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/71f290645cc973be8bd870b0e23103956655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/905e32ea83ab759bff8d1fb82cd32fc36655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/4004a89851998d684281ea883dbfa4226655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "34abb0b81803fd5073fd3c97e7b78af53582a71d2961b5f717a0c051155a9635",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|游戏设计进化】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/ed50d185697a9c46918d59bbed2ef1306655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/8ec8bdddf3be8d4a103fcc517b043a126655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/40cdac8f5af5bf84d2593c3ae60f2af26655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5e55ebf66ab920e114fa244796e3ac6e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/71f290645cc973be8bd870b0e23103956655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/905e32ea83ab759bff8d1fb82cd32fc36655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/4004a89851998d684281ea883dbfa4226655514.jpg"
+        ]
+      },
+      "content_hash": "5db8d12270d0ceb8f333a15a40e15693ad246e30290e6ef1d50e3f21e2bb7a1d",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "34abb0b81803fd5073fd3c97e7b78af53582a71d2961b5f717a0c051155a9635"
+    },
+    "1265195909710348304": {
+      "id": "1265195909710348304",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T02:46:18+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265195909710348304",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|8.0新区域&友好部族展示】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/6b2f5c8d0a50bfa191017b847b22f95e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/39eef9cd796c984b9a4b3c213c06f6da6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/8d1d92487998a787689f69ee8cbde0006655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/fcdc7b89b99ffab797067229e7d4ec1d6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5909f8b4d636419d5384e23b48aba4016655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/adb975a0b8cbe037b19739ecd70cc3596655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/1d8a471ec22975670500232008b6c71e6655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "e1aee0fb64fc93ef0017d2709d0e93098c2d07f62d6a514a475664eea8c51311",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|8.0新区域&友好部族展示】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/6b2f5c8d0a50bfa191017b847b22f95e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/39eef9cd796c984b9a4b3c213c06f6da6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/8d1d92487998a787689f69ee8cbde0006655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/fcdc7b89b99ffab797067229e7d4ec1d6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5909f8b4d636419d5384e23b48aba4016655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/adb975a0b8cbe037b19739ecd70cc3596655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/1d8a471ec22975670500232008b6c71e6655514.jpg"
+        ]
+      },
+      "content_hash": "364ab548dfac875d979a5360953c9c21ae796815183b79e0d1f585476099401a",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "e1aee0fb64fc93ef0017d2709d0e93098c2d07f62d6a514a475664eea8c51311"
+    },
+    "1265194187412733971": {
+      "id": "1265194187412733971",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T02:39:37+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265194187412733971",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|新故事&角色】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5a6b6eea108a11fd4f1d75429fd057236655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/2445a8dbbc0d8e30f952584346843be26655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/068f7aaeffd29c88855239391cc14e856655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/359c410887a935cdcc4c3283b6f1dc1e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/ec02fd9530e2dafef1abc7bd62c16d8c6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/0c3448d66362bd6ed922f1e084a2d0b16655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "63be8763e9df145e469acce263c2788304dd339e31e21f8e9dbd3d41b3be8bcb",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|新故事&角色】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5a6b6eea108a11fd4f1d75429fd057236655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/2445a8dbbc0d8e30f952584346843be26655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/068f7aaeffd29c88855239391cc14e856655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/359c410887a935cdcc4c3283b6f1dc1e6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/ec02fd9530e2dafef1abc7bd62c16d8c6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/0c3448d66362bd6ed922f1e084a2d0b16655514.jpg"
+        ]
+      },
+      "content_hash": "b82fbf38439582b75e7868c27c879478c0fa286bf74bcb35f6746af143c8086b",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "63be8763e9df145e469acce263c2788304dd339e31e21f8e9dbd3d41b3be8bcb"
+    },
+    "1265193624826544152": {
+      "id": "1265193624826544152",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T02:37:26+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265193624826544152",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|8.0完整版预告片新要素公开】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5aab07ddefa0ddb45ccb44898cffce046655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5b0a438089d8853131acd0e7b36e6df56655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/32648c8d40ba0902c2faccc838b853fd6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/3866babb470554389b4d6d74734825376655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/b18aa4fa5f8730c208a90221156895146655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/888ddbc8fd357f40cc4221e8acfe656f6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/78dfd33b208faf2f99062dd6814ef71c6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/90dfd766eb1714fbf81e18151126978a6655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "720ad1c404d69f57e47561257947adf36ac11a32508a4402aa18d446ba8cb554",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|8.0完整版预告片新要素公开】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5aab07ddefa0ddb45ccb44898cffce046655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5b0a438089d8853131acd0e7b36e6df56655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/32648c8d40ba0902c2faccc838b853fd6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/3866babb470554389b4d6d74734825376655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/b18aa4fa5f8730c208a90221156895146655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/888ddbc8fd357f40cc4221e8acfe656f6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/78dfd33b208faf2f99062dd6814ef71c6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/90dfd766eb1714fbf81e18151126978a6655514.jpg"
+        ]
+      },
+      "content_hash": "8c08a3f7dde0478e44587b66ab4869ce6bfd57b555a16bba2b5ddd6f181f05e4",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "720ad1c404d69f57e47561257947adf36ac11a32508a4402aa18d446ba8cb554"
+    },
+    "1265190734297825303": {
+      "id": "1265190734297825303",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-31T02:26:13+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1265190734297825303",
+      "feed": {
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|新远程物理职业[迅风猎手]公开】",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/47d5cf690212c35417787465e8e1b8ed6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/280eaade167d933ae1b9b5fc18264c666655514.jpg"
+        ],
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ]
+      },
+      "feed_hash": "b678efd59e79f0fb8f3eb09a49a6461af4738ae3542312f279aefebb9d9c9bc6",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#【Fan Festival 2026 第三站|新远程物理职业[迅风猎手]公开】",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/47d5cf690212c35417787465e8e1b8ed6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/280eaade167d933ae1b9b5fc18264c666655514.jpg"
+        ]
+      },
+      "content_hash": "51942ca759712eeb54b1e8e44207f2dcc5d2d02f4af66c13218dc60c62e433b9",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "b678efd59e79f0fb8f3eb09a49a6461af4738ae3542312f279aefebb9d9c9bc6"
+    },
+    "1264885456619700246": {
+      "id": "1264885456619700246",
+      "author_uid": "6655514",
+      "dynamic_type": "DYNAMIC_TYPE_DRAW",
+      "published_at": "2026-10-30T06:41:35+00:00",
+      "is_pinned": false,
+      "url": "https://t.bilibili.com/1264885456619700246",
+      "feed": {
+        "text": "#最终幻想14# #FF14# 哔哩哔哩特别活动-光之战士激励计划!\n在活动时间内选择#FF14光战激励计划#活动标签投稿,或者在【最终幻想14】分区直播即可参与活动,满足条件之后更可瓜分15万元奖励!详细规则请查看活动专题页,机会难得,快来报名吧!\n☆活动时间:即刻起~2026年11月30日23:59☆\n☆结果公布:2026年12月15日☆ \n☆活动专题: https://live.bilibili.com/blackboard/era/DWT86Ds8qb2Z1xJM.html",
+        "title": "",
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/a2fb17a61846daa1ef0b2c74ad64ede36655514.jpg"
+        ],
+        "links": [
+          "https://live.bilibili.com/blackboard/era/DWT86Ds8qb2Z1xJM.html",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14",
+          "https://search.bilibili.com/all?keyword=FF14%E5%85%89%E6%88%98%E6%BF%80%E5%8A%B1%E8%AE%A1%E5%88%92"
+        ]
+      },
+      "feed_hash": "6573bfb967b081395f6554eb3d62e119fa21af404f0dd307c39f7f7b3c3691fd",
+      "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 哔哩哔哩特别活动-光之战士激励计划!\n在活动时间内选择#FF14光战激励计划#活动标签投稿,或者在【最终幻想14】分区直播即可参与活动,满足条件之后更可瓜分15万元奖励!详细规则请查看活动专题页,机会难得,快来报名吧!\n☆活动时间:即刻起~2026年11月30日23:59☆\n☆结果公布:2026年12月15日☆ \n☆活动专题: 网页链接",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14",
+          "https://search.bilibili.com/all?keyword=FF14%E5%85%89%E6%88%98%E6%BF%80%E5%8A%B1%E8%AE%A1%E5%88%92",
+          "https://live.bilibili.com/blackboard/era/DWT86Ds8qb2Z1xJM.html"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/a2fb17a61846daa1ef0b2c74ad64ede36655514.jpg"
+        ]
+      },
+      "content_hash": "fa0e097b8ee5202736cfb69f261936de4ae87b701b4d7f9cf441e9750a5f5c8f",
+      "last_success_at": "2026-11-28T07:53:06.685926+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "6573bfb967b081395f6554eb3d62e119fa21af404f0dd307c39f7f7b3c3691fd"
+    }
+  },
+  "scan_queue": []
+}

@@ -13,11 +13,17 @@ from datetime import datetime, timezone
 import importlib.metadata
 import json
 import os
+from pathlib import Path
 import re
 import sys
 import unicodedata
 
 from bilibili_api import Credential, opus, user, select_client, request_settings
+
+# 直接执行 scripts/ 下文件时，也能复用仓库的凭据校验模块。
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from source_collectors.bilibili_auth import credential_values
+from source_collectors.common import SourceError
 
 UID = 6655514
 OPUS_ID = 1274198612158447624
@@ -53,33 +59,12 @@ def error_diagnostic(error):
 
 
 def build_credential(auth, environ=None):
-    """显式选择登录态时才读取环境变量；不接收完整 Cookie 或刷新令牌。"""
-    if auth == "anonymous":
-        return None
-    if auth != "authenticated":
-        raise ProbeValidationError("不支持的认证模式")
-    if environ is None:
-        environ = os.environ
-    fields = {
-        "sessdata": "BILI_SESSDATA",
-        "bili_jct": "BILI_JCT",
-        "dedeuserid": "BILI_DEDEUSERID",
-        "buvid3": "BILI_BUVID3",
-        "buvid4": "BILI_BUVID4",
-    }
-    values = {}
-    for field, name in fields.items():
-        raw = environ.get(name, "")
-        if any(character in raw for character in ("\r", "\n", ";")):
-            raise ProbeValidationError("Secret 格式不正确：只填单个 Cookie 字段的值，不填整段 Cookie 或换行")
-        value = raw.strip()
-        if value:
-            values[field] = value
-    if not values.get("sessdata"):
-        raise ProbeValidationError("登录模式缺少 BILI_SESSDATA；请在仓库 Actions Secrets 中配置")
-    if values["sessdata"].lower().startswith("sessdata="):
-        raise ProbeValidationError("BILI_SESSDATA 只填值，不包含 SESSDATA= 前缀")
-    return Credential(**values)
+    """诊断与正式采集共用校验规则；不接收完整 Cookie 或刷新令牌。"""
+    try:
+        values = credential_values(auth, os.environ if environ is None else environ)
+    except SourceError as error:
+        raise ProbeValidationError(str(error)) from None
+    return Credential(**values) if values else None
 
 
 def text_fragments(value):

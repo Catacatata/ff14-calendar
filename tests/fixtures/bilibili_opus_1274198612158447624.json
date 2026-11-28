@@ -1,0 +1,232 @@
+{
+  "provenance": {
+    "source_url": "https://www.bilibili.com/opus/1274198612158447624",
+    "retrieved_at": "2026-11-28T06:26:49.578072+00:00",
+    "selection": "Only public content/title blocks, native ID and official author UID; anonymous request; no raw response"
+  },
+  "payload": {
+    "item": {
+      "id_str": "1274198612158447624",
+      "basic": {
+        "uid": "6655514"
+      },
+      "modules": [
+        {
+          "module_content": null
+        },
+        {
+          "module_title": null
+        },
+        {
+          "module_content": {
+            "paragraphs": [
+              {
+                "para_type": 1,
+                "align": 0,
+                "format": {
+                  "align": 0,
+                  "indent": null
+                },
+                "text": {
+                  "nodes": [
+                    {
+                      "type": "TEXT_NODE_TYPE_RICH",
+                      "word": null,
+                      "rich": {
+                        "text": "#最终幻想14#",
+                        "orig_text": "#最终幻想14#",
+                        "type": "RICH_TEXT_NODE_TYPE_TOPIC",
+                        "jump_url": "//search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+                        "icon_url": "",
+                        "icon_name": "",
+                        "rid": "",
+                        "emoji": null,
+                        "goods": null,
+                        "style": null,
+                        "pics": [],
+                        "video": null
+                      },
+                      "formula": null,
+                      "user": null
+                    },
+                    {
+                      "type": "TEXT_NODE_TYPE_WORD",
+                      "word": {
+                        "words": " ",
+                        "font_size": 17,
+                        "color": "",
+                        "dark_color": "",
+                        "style": {
+                          "bold": false,
+                          "italic": false,
+                          "strikethrough": false,
+                          "underline": false,
+                          "background": ""
+                        },
+                        "font_level": "regular",
+                        "translated_words": "",
+                        "bili_theme": "",
+                        "bg_style": null
+                      },
+                      "rich": null,
+                      "formula": null,
+                      "user": null
+                    },
+                    {
+                      "type": "TEXT_NODE_TYPE_RICH",
+                      "word": null,
+                      "rich": {
+                        "text": "#FF14#",
+                        "orig_text": "#FF14#",
+                        "type": "RICH_TEXT_NODE_TYPE_TOPIC",
+                        "jump_url": "//search.bilibili.com/all?keyword=FF14",
+                        "icon_url": "",
+                        "icon_name": "",
+                        "rid": "",
+                        "emoji": null,
+                        "goods": null,
+                        "style": null,
+                        "pics": [],
+                        "video": null
+                      },
+                      "formula": null,
+                      "user": null
+                    },
+                    {
+                      "type": "TEXT_NODE_TYPE_WORD",
+                      "word": {
+                        "words": " 莫古莫古★大收集 ~天文的行路 第2阶段~ 限时开启！\n「莫古莫古★大收集」是不定期举办的特殊活动。本次的「莫古莫古★大收集」奖励比以往更加丰厚，不仅有“渡渡鸟角笛”“钻石玲龙魔笛”，还有特别奖励“呜噜怪角笛”等你来兑换！\n※本活动可能受游戏维护等情况影响，实际开启时间可能延迟，敬请谅解。\n☆活动时间：2026年12月1日16:00~2027年1月12日15:59☆\n☆查看新闻：",
+                        "font_size": 17,
+                        "color": "",
+                        "dark_color": "",
+                        "style": {
+                          "bold": false,
+                          "italic": false,
+                          "strikethrough": false,
+                          "underline": false,
+                          "background": ""
+                        },
+                        "font_level": "regular",
+                        "translated_words": "",
+                        "bili_theme": "",
+                        "bg_style": null
+                      },
+                      "rich": null,
+                      "formula": null,
+                      "user": null
+                    },
+                    {
+                      "type": "TEXT_NODE_TYPE_WORD",
+                      "word": {
+                        "words": "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395921",
+                        "font_size": 17,
+                        "color": "",
+                        "dark_color": "",
+                        "style": {
+                          "bold": false,
+                          "italic": false,
+                          "strikethrough": false,
+                          "underline": false,
+                          "background": ""
+                        },
+                        "font_level": "",
+                        "translated_words": "",
+                        "bili_theme": "",
+                        "bg_style": null
+                      },
+                      "rich": {
+                        "text": "",
+                        "orig_text": "",
+                        "type": "",
+                        "jump_url": "",
+                        "icon_url": "",
+                        "icon_name": "",
+                        "rid": "",
+                        "emoji": null,
+                        "goods": null,
+                        "style": null,
+                        "pics": [],
+                        "video": null
+                      },
+                      "formula": null,
+                      "user": null
+                    },
+                    {
+                      "type": "TEXT_NODE_TYPE_WORD",
+                      "word": {
+                        "words": "☆",
+                        "font_size": 17,
+                        "color": "",
+                        "dark_color": "",
+                        "style": {
+                          "bold": false,
+                          "italic": false,
+                          "strikethrough": false,
+                          "underline": false,
+                          "background": ""
+                        },
+                        "font_level": "regular",
+                        "translated_words": "",
+                        "bili_theme": "",
+                        "bg_style": null
+                      },
+                      "rich": null,
+                      "formula": null,
+                      "user": null
+                    }
+                  ]
+                },
+                "pic": null,
+                "line": null,
+                "list": null,
+                "link_card": null,
+                "code": null,
+                "heading": null,
+                "blockquote": null
+              },
+              {
+                "para_type": 2,
+                "align": 0,
+                "format": {
+                  "align": 0,
+                  "indent": null
+                },
+                "text": null,
+                "pic": {
+                  "pics": [
+                    {
+                      "url": "http://i0.hdslb.com/bfs/new_dyn/e4404a4444d61dad38580721305253226655514.jpg",
+                      "width": 690,
+                      "height": 531,
+                      "size": 71.521484375,
+                      "live_url": "",
+                      "aigc": 0,
+                      "warning": null,
+                      "comment": ""
+                    }
+                  ],
+                  "style": 1
+                },
+                "line": null,
+                "list": null,
+                "link_card": null,
+                "code": null,
+                "heading": null,
+                "blockquote": null
+              }
+            ]
+          }
+        },
+        {
+          "module_title": null
+        },
+        {
+          "module_content": null
+        },
+        {
+          "module_title": null
+        }
+      ]
+    }
+  }
+}

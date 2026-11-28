@@ -1,0 +1,93 @@
+name: Collect Official Sources (Shadow Only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 与正式更新共用锁，避免两个自动任务同时向 main 推送。
+concurrency:
+  group: ff14-calendar-update
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONDONTWRITEBYTECODE: "1"
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install source collector dependencies
+        run: python -m pip install -r requirements-sources.txt
+
+      - name: Test collectors and credential safety without network
+        run: |
+          python -m unittest discover -s tests -p 'test_source*.py' -v
+          python -m unittest discover -s tests -p 'test_bilibili_credentials.py' -v
+
+      - name: Collect public source content only
+        id: collect
+        continue-on-error: true
+        env:
+          BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
+          BILI_JCT: ${{ secrets.BILI_JCT }}
+          BILI_DEDEUSERID: ${{ secrets.BILI_DEDEUSERID }}
+          BILI_BUVID3: ${{ secrets.BILI_BUVID3 }}
+          BILI_BUVID4: ${{ secrets.BILI_BUVID4 }}
+        # 395921 为正文结构调查样本；不是活动日期覆盖规则。
+        run: python collect_sources.py --news-id 395921
+
+      - name: Validate source caches and protect all other tracked files
+        run: |
+          python -c "from source_collectors.common import load_cache; load_cache('data/sources/bilibili.json', 'bilibili'); load_cache('data/sources/official_news.json', 'official-news')"
+          test -s data/sources/bilibili.json
+          test -s data/sources/official_news.json
+          git diff --exit-code HEAD -- . ':!data/sources/bilibili.json' ':!data/sources/official_news.json'
+          # Include untracked files in the workspace guard; only these two caches are allowed.
+          python - <<'PY'
+          import subprocess
+          allowed = {b'data/sources/bilibili.json', b'data/sources/official_news.json'}
+          paths = subprocess.check_output(['git', 'ls-files', '--others', '--exclude-standard', '-z']).split(b'\0')
+          if any(path and path not in allowed for path in paths):
+              raise SystemExit('Unexpected untracked workspace files; refusing cache commit.')
+          PY
+
+      - name: Commit only public source caches and status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/sources/bilibili.json data/sources/official_news.json
+          # Inspect the entire index, not just the two paths passed to git add.
+          python - <<'PY'
+          import subprocess
+          allowed = {b'data/sources/bilibili.json', b'data/sources/official_news.json'}
+          paths = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '--no-renames', '-z']).split(b'\0')
+          if any(path and path not in allowed for path in paths):
+              raise SystemExit('Unexpected staged paths; refusing cache commit.')
+          PY
+          if git diff --cached --quiet; then
+            echo "No source cache changes."
+          else
+            git commit -m "Cache public official source content (shadow collection)"
+            git push origin HEAD:main
+          fi
+
+      - name: Surface source degradation after preserving cache and status
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "Source collection degraded. Public cache/status were preserved; see collection logs. Calendar data was not changed."
+          exit 1

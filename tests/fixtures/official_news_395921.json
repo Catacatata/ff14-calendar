@@ -1,0 +1,23 @@
+{
+  "provenance": {
+    "source_url": "https://cqnews.web.sdo.com/api/news/newsDetail?gameCode=ff&id=395921",
+    "retrieved_at": "2026-11-28T06:16:12.211967+00:00",
+    "purpose": "Public official news parser regression sample; not an event date override"
+  },
+  "payload": {
+    "Code": "0",
+    "Message": "",
+    "Data": {
+      "Id": 395921,
+      "CategoryCode": "5310",
+      "Title": "莫古莫古★大收集 ~天文的行路 第2阶段~ 限时开启！",
+      "KeyWord": "",
+      "Summary": "莫古莫古★大收集 ~天文的行路 第2阶段~ 限时开启！",
+      "Author": "",
+      "PublishDate": "2026/11/24 16:55:29",
+      "OutLink": "",
+      "HomeImagePath": "https://fu5.web.sdo.com/10036/202611/17955101368026.jpg",
+      "Content": "<p>亲爱的冒险者：</p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp;「莫古莫古★大收集」是不定期举办的特殊活动。</p>\n\n<p data-end=\"102\" data-start=\"12\">&nbsp; &nbsp; &nbsp; &nbsp;本次的「莫古莫古★大收集」奖励比以往更加丰厚，不仅有&ldquo;渡渡鸟角笛&rdquo;&ldquo;钻石玲龙魔笛&rdquo;，还有特别奖励&ldquo;呜噜怪角笛&rdquo;等你来兑换！</p>\n\n<p data-end=\"226\" data-start=\"104\">&nbsp; &nbsp; &nbsp; &nbsp;除了以往收集稀少神典石的玩法之外，在&ldquo;莫古莫古★大收集&nbsp;~天文的行路 第2阶段~ &rdquo;中，还可以通过完成莫古莫古挑战以及每周小莫古挑战，收集用于兑换&ldquo;呜噜怪角笛&rdquo;的专用道具&ldquo;呜噜怪角笛的交换票据&rdquo;。集齐10个&ldquo;呜噜怪角笛的交换票据&rdquo;和100个&ldquo;稀少神典石：天文2章&rdquo;，即可兑换&ldquo;呜噜怪角笛&rdquo;！</p>\n\n<p data-pm-slice=\"1 1 []\">&nbsp; &nbsp; &nbsp; &nbsp;从本次第2阶段起，还可使用30个&ldquo;稀少神典石：天文2章&rdquo;兑换&ldquo;呜噜怪角笛的交换票据&rdquo;。选择适合自己的收集方式，向心仪的奖励发起挑战吧！</p>\n\n<p data-pm-slice=\"1 1 []\"><span style=\"color:#FFA07A;\">※在第1阶段中获得的交换票据也可以在本次第2阶段活动中继续使用。</span></p>\n\n<p><a href=\"https://actff1.web.sdo.com/project/20261118mogmog/59xh7egc29ya/index.html\" target=\"_blank\"><strong><span style=\"color:#FF8C00;\">前往活动专题页&gt;&gt;&gt;</span></strong></a></p>\n\n<p><strong><span style=\"color:#DAA520;\">活动时间：2026年12月1日16:00~2027年1月12日15:59</span></strong></p>\n\n<p><span style=\"color:#FFA07A;\">※本活动可能受游戏维护等情况影响，实际开启时间可能延迟，敬请谅解。</span></p>\n\n<p style=\"text-align:center\"><img alt=\"a\" height=\"394\" src=\"https://fu5.web.sdo.com/10036/202611/17955101329561.jpg\" width=\"735\" /></p>\n\n<p>&nbsp;</p>\n\n<p>如果您遇到了任何问题，欢迎您与我们联系，给您造成不便十分抱歉。</p>\n\n<p>・<a href=\"https://qryai.crm.sdo.com/?gameid=100001900\" target=\"_blank\"><span style=\"color:#FF8C00;\"><strong>盛趣游戏彩虹客服</strong></span><strong><span style=\"color:#FF8C00;\">专区&gt;&gt;&gt;</span></strong></a></p>\n\n<p>再次感谢各位冒险者对《最终幻想14》的大力支持。</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align: right;\">《最终幻想14》运营团队</p>"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# 独立来源采集工作流使用；不改变现有日历工作流依赖。
+bilibili-api-python==17.4.2
+curl_cffi==0.17.0
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5

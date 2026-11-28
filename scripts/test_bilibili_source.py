@@ -1,7 +1,8 @@
 """B 站来源只读测试：可选 Secrets 登录态，不写入日历、图片或缓存。
 
-运行：python scripts/test_bilibili_source.py --client curl_cffi --auth anonymous
-登录态：--auth authenticated（仅从环境变量读取 Cookie 字段，不自动刷新）
+运行：python scripts/test_bilibili_source.py --client curl_cffi
+默认登录态 authenticated，仅从环境变量读取 Cookie 字段，不自动刷新。
+匿名测试需显式指定：--auth anonymous
 依赖：bilibili-api-python==17.4.2，以及所选客户端
 客户端版本：aiohttp==3.13.3 / curl_cffi==0.17.0
 只验证采集及固定样本，不代表已实现活动日期解析或多源合并。
@@ -158,7 +159,7 @@ async def test_opus(credential=None):
         raise ProbeValidationError("样本正文不完整或内容已变更，需要检查；不生成任何活动")
 
 
-async def main(client="aiohttp", auth="anonymous"):
+async def main(client="aiohttp", auth="authenticated"):
     select_client(client)
     # 使用上游文档支持的配置，不自行实现签名或轮换代理。
     if client == "curl_cffi":
@@ -196,6 +197,6 @@ async def main(client="aiohttp", auth="anonymous"):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--client", choices=("aiohttp", "curl_cffi"), default="curl_cffi")
-    parser.add_argument("--auth", choices=("anonymous", "authenticated"), default="anonymous")
+    parser.add_argument("--auth", choices=("anonymous", "authenticated"), default="authenticated")
     args = parser.parse_args()
     sys.exit(asyncio.run(main(args.client, args.auth)))

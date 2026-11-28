@@ -13,7 +13,7 @@ on:
       auth:
         description: Explicit authentication mode (authenticated requires BILI_SESSDATA Secret)
         type: choice
-        default: anonymous
+        default: authenticated
         options:
           - anonymous
           - authenticated
@@ -54,7 +54,7 @@ jobs:
           PYTHONIOENCODING: utf-8
           PYTHONDONTWRITEBYTECODE: "1"
           BILI_TEST_CLIENT: ${{ inputs.client || 'curl_cffi' }}
-          BILI_TEST_AUTH: ${{ inputs.auth || 'anonymous' }}
+          BILI_TEST_AUTH: ${{ inputs.auth || 'authenticated' }}
           BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
           BILI_JCT: ${{ secrets.BILI_JCT }}
           BILI_DEDEUSERID: ${{ secrets.BILI_DEDEUSERID }}

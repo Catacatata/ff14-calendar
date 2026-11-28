@@ -2,29 +2,29 @@
   "schema_version": 1,
   "source": "bilibili",
   "status": {
-    "outcome": "incomplete",
+    "outcome": "ok",
     "request_outcome": "ok",
-    "last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
-    "last_success_at": null,
+    "last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+    "last_success_at": "2026-11-28T07:57:27.122890+00:00",
     "consecutive_failures": 0,
-    "used_cache": true,
+    "used_cache": false,
     "errors": [],
     "unresolved_error_count": 0,
-    "content_complete": false,
+    "content_complete": true,
     "coverage_complete": true,
-    "pages_fetched": 4,
-    "feed_requests": 4,
-    "details_attempted": 20,
-    "seen_count": 48,
-    "new_count": 48,
-    "stop_reason": "initial_history_limit",
+    "pages_fetched": 2,
+    "feed_requests": 2,
+    "details_attempted": 13,
+    "seen_count": 25,
+    "new_count": 0,
+    "stop_reason": "known_overlap",
     "scan_incomplete": false,
     "scan_backlog": 0,
     "coverage_scope": "since_initial_recent_window",
-    "initial_history_limited": true,
-    "pending_count": 13,
+    "initial_history_limited": false,
+    "pending_count": 0,
     "cooldown_count": 0,
-    "deferred_details": 13
+    "deferred_details": 0
   },
   "items": {
     "1265223754006396951": {
@@ -42,7 +42,7 @@
       },
       "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1275361581928022049": {
@@ -66,8 +66,29 @@
       },
       "feed_hash": "412c8a7d4561c622d27bf3b4c28ddfe42a0aaeb1db1dfe8d69fa847629823fa5",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 《最终幻想14》12月1日全区全服更新维护公告\n我们将于12月1日13:00-12月3日13:00对全区全服进行更新维护。请各位冒险者互相转告,合理安排游戏时间,提前在安全区域下线。开服时间将视维护进展情况提前或延后,详细开服时间请关注官网公告。\n维护开始前,为了维持服务器数据稳定,即日起,超域传送、跨界传送的角色离线后将会以比平时更短的时间自动返回原始服,11/30 23:00将关闭超域传送转出和角色转服功能。大国防联军后勤补给站、道具商城等一切相关活动页面于2026年12月1日12:00暂停服务,维护结束后将陆续开放。\n※受本次维护影响,已经上传到服务器上的角色设置数据备份和客户端通用设置数据备份将会被清除,用户本地的数据不受影响,建议提前在本地做好保存,待维护结束后重新上传。\n※受本次维护影响的月卡账户(12/1-12/3期间持有月卡的账户)将会统一补发2天月卡,到账时间预计在维护结束后3个工作日内。\n\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/396041 ☆\n☆预计维护时间:2026年12月1日13:00-12月3日13:00☆\n☆维护范围:全区全服☆\n☆本次维护内容☆\n-更新客户端版本至2026.11.25.0000.0000(7.59版本)\n-开放大区自由匹配功能",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/396041",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [
+          "396041"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/a3d4d8bffeb355257be1e47cd78eaabd6655514.jpg"
+        ]
+      },
+      "content_hash": "4215beafa5c062eb01e80abc10d7730978d613fd069a62bcd0a48800dbd62056",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "412c8a7d4561c622d27bf3b4c28ddfe42a0aaeb1db1dfe8d69fa847629823fa5"
     },
     "1274198612158447624": {
       "id": "1274198612158447624",
@@ -90,8 +111,29 @@
       },
       "feed_hash": "1386a1318e1491dd25eca3ad108bdaa978a0e9d412ab5de471950fa1034a8002",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 莫古莫古★大收集 ~天文的行路 第2阶段~ 限时开启!\n「莫古莫古★大收集」是不定期举办的特殊活动。本次的「莫古莫古★大收集」奖励比以往更加丰厚,不仅有“渡渡鸟角笛”“钻石玲龙魔笛”,还有特别奖励“呜噜怪角笛”等你来兑换!\n※本活动可能受游戏维护等情况影响,实际开启时间可能延迟,敬请谅解。\n☆活动时间:2026年12月1日16:00~2027年1月12日15:59☆\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395921☆",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395921",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [
+          "395921"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/e4404a4444d61dad38580721305253226655514.jpg"
+        ]
+      },
+      "content_hash": "522019b0169833db256a5f427cdcfcf119f63e0349049ad857e76bb35b9b8ab0",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "1386a1318e1491dd25eca3ad108bdaa978a0e9d412ab5de471950fa1034a8002"
     },
     "1273813439445204998": {
       "id": "1273813439445204998",
@@ -115,8 +157,30 @@
       },
       "feed_hash": "5427a626a825930ad1e81c7d128ba07226d78ee8cc180398059bf519d94fbcf4",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 第94期制作人来信转播 12月4日上演!\n第94期制作人来信将于2026年12月4日举办。届时FFXIV的制作人兼导演吉田直树将围绕《银海之天舟》中计划更新的角色创建系统,结合实机演示为大家带来最新情报,我们也将为大家带来同步转播。查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395868\n☆直播时间:2026年12月4日 19:00~☆\n☆直播地址:网页链接☆",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395868",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14",
+          "https://live.bilibili.com/5225"
+        ],
+        "official_news_ids": [
+          "395868"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/b0af58acdb36d42997c3a231d7f9231f6655514.jpg"
+        ]
+      },
+      "content_hash": "3c688427628594ed242fdfaa52315d285c6249a7707f92a9f956935e4d711d52",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "5427a626a825930ad1e81c7d128ba07226d78ee8cc180398059bf519d94fbcf4"
     },
     "1273409701834391558": {
       "id": "1273409701834391558",
@@ -139,8 +203,27 @@
       },
       "feed_hash": "6b0691cf700315619f7ba105ab004159420c4397ce0a5b29c284f11ecf6c7e55",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14##FF14#《艾欧泽亚风尚·FF14纪念刊》小雪特辑!\n天转寒,地初冻,雪轻扬。花雪随风不厌看,更多还肯失林峦——愿这花雪随风的每一眼凝望,都望见冬日里最清澈的远方,和最笃定的归途。",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/34cac65f9bbf73375805fc195af41fe36655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/7016cbf2006fea09bf694ef492a1780e6655514.jpg"
+        ]
+      },
+      "content_hash": "e37e493bc2826ca1ce3069fc035de48b38c511c3cebc9bed713fdc3e44312918",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "6b0691cf700315619f7ba105ab004159420c4397ce0a5b29c284f11ecf6c7e55"
     },
     "1271609580116246536": {
       "id": "1271609580116246536",
@@ -163,8 +246,29 @@
       },
       "feed_hash": "6eff657a4577bc444661f9f5a40a66ed4d0671b5b627227e39945147596f6dce",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# FANFESTIVAL2026第三站 Q&A节目文字版公开!\nFANFESTIVAL2026第三站中,由《最终幻想XIV》制作人兼导演吉田直树回答各类提问的两档节目【吉田P的快问快答】及【LIVE Q&A】文字版正式公开!\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395673☆",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395673",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [
+          "395673"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/1e57438b55d7e6207ed8ff3fffc2e7506655514.jpg"
+        ]
+      },
+      "content_hash": "33164d27e0976172da9696d748821cf1816f0e3600ea8286f31f9f7d91d1b995",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "6eff657a4577bc444661f9f5a40a66ed4d0671b5b627227e39945147596f6dce"
     },
     "1271572570361036824": {
       "id": "1271572570361036824",
@@ -189,8 +293,29 @@
       },
       "feed_hash": "9ef756677830f17861027b8cd0c2d4c941b72573455f2083c70d0da76a1ca711",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 新品报到🎉另类褶边连衣裙现已上架道具商城啦~\n搭配示例这就端上,轻松抄作业不踩雷。冒险者们快来发挥创意,评论区晒出你的搭配,互相种草吧!",
+        "links": [
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5fa99b9846bbec754c17f4038194b6016655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/f91ce4acc94d6c955ee19b36b6b762616655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/5d8248a245ba7be9ed3b1931ced8db7c6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/0ebdbac6353671b24d54ac9160b924c36655514.jpg"
+        ]
+      },
+      "content_hash": "b5edada5581a7ee8f364ca3aca85b43347a603b1eb94c1826f317786174d2c2e",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "9ef756677830f17861027b8cd0c2d4c941b72573455f2083c70d0da76a1ca711"
     },
     "1271245147819999440": {
       "id": "1271245147819999440",
@@ -207,7 +332,7 @@
       },
       "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1271222882734702616": {
@@ -232,8 +357,31 @@
       },
       "feed_hash": "2e15fc46d461b69225e11ae9412a85592bf5aff16ac94fb0c145f01f799787df",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14#《银海之天舟》冒险准备活动开启!《金曦冒险录·银冬将至》现已限时上架道具商城!\n若您已完成主线任务「晓月之终途」,即可借助《金曦冒险录·银冬将至》更快接上《银海之天舟》的剧情。\n一口气追上最新的7.5版本,为即将到来的《银海之天舟》大冒险做好准备吧!\n☆上架时间:2026年11月16日16:00 ~ 8.0版本更新维护开始前\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395589☆\n配合本次活动的举办,制作人兼导演吉田直树先生也公开了《制作人来信》,欢迎一并阅读!\n☆网页链接:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395598☆",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395589",
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395598",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [
+          "395589",
+          "395598"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/c333b660fb282eb29784b41abf8b50a06655514.jpg"
+        ]
+      },
+      "content_hash": "061908c7eff6f8d2cfba7e2709cb34a7865b52947f65e088edc42335e888710c",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "2e15fc46d461b69225e11ae9412a85592bf5aff16ac94fb0c145f01f799787df"
     },
     "1271221491128598553": {
       "id": "1271221491128598553",
@@ -250,7 +398,7 @@
       },
       "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1271215753052291081": {
@@ -274,8 +422,29 @@
       },
       "feed_hash": "9487139cb9ab4ebea9870a516cf7e97867719322c8ad0e7bbe6905a298819fc9",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14#道具商城新道具现已上架:另类褶边连衣裙套装\n石之家「时装灵感季」火热进行中!前往「时装灵感季」专题页面,浏览优秀搭配,更可领取心仪搭配师专属优惠券,购买新品时装也可使用!\n☆查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395582☆",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395582",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [
+          "395582"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/ee1698bb51c1f535d54609ee184a043f6655514.jpg"
+        ]
+      },
+      "content_hash": "774a342529fe5814e167f003bc4983e267e8dd18edf0891996fd7f9b5b4c73e8",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "9487139cb9ab4ebea9870a516cf7e97867719322c8ad0e7bbe6905a298819fc9"
     },
     "1269447085541818368": {
       "id": "1269447085541818368",
@@ -292,8 +461,21 @@
       },
       "feed_hash": "62be0b45530604eb95f7d92e7ab3c842035d3a41821680eab8a7b799f61398c5",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "非常感谢各位一直以来对FINAL FANTASY XIV官方乐团THE PRIMALS的支持。\n\n我们在此沉痛地向各位通知,贝斯手岩井英吉先生不幸逝世。\n在之前中国粉丝节的舞台上,他为我们带来令人震撼的演出,\n\n如今却突然传来噩耗,让我们深感震惊。\n\n《最终幻想14》中国运营团队的全体成员表示深深的哀悼。\n\n我们将珍惜并铭记岩井先生所留下的一切。\n\n此刻,唯有愿他安息。\n\n《最终幻想14》中国运营团队全体成员",
+        "links": [],
+        "official_news_ids": [],
+        "images": []
+      },
+      "content_hash": "9163a98392e976cef2a1835723bd089d9f12607a25a51aa6e566865b2c277e8c",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "62be0b45530604eb95f7d92e7ab3c842035d3a41821680eab8a7b799f61398c5"
     },
     "1269362298601865237": {
       "id": "1269362298601865237",
@@ -317,8 +499,28 @@
       },
       "feed_hash": "b1a43bca646a83e0b1ec3d0c621e1faf14a73360b62fbdb7a284f682aba49636",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 《FF14》x《FF16》联动复刻限时开启!\n在联动活动开启期间游玩联动任务,获取防具、坐骑以及宠物等丰厚奖励!快前往活动专题站一探究竟吧!\n☆活动时间:2026年11月18日16:00~2026年12月9日22:59☆\n☆活动专题:https://actff1.web.sdo.com/project/20261029ffxvi/uvjx9y9g2k2p/index.html☆",
+        "links": [
+          "https://actff1.web.sdo.com/project/20261029ffxvi/uvjx9y9g2k2p/index.html",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/5e4d3e569e2c0b4241abcfeb4f6701ba6655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/c2685494e8177d9e2df3663dbf288b9d6655514.jpg"
+        ]
+      },
+      "content_hash": "9b493424c302b1d2bfe72265ee2a600363918670e6f9d949ee96c6d857cf4788",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "b1a43bca646a83e0b1ec3d0c621e1faf14a73360b62fbdb7a284f682aba49636"
     },
     "1268911490237202441": {
       "id": "1268911490237202441",
@@ -341,8 +543,29 @@
       },
       "feed_hash": "9d3aa6233b9c7f07cf9822a3c73df6f3c3d2e8149b29f36ab0d5b2e3a218580f",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 《最终幻想14》7.58版本更新笔记公开\n7.58版本中将对“斗兽奇弈”进行调整,并提高“阿卡狄亚零式登天斗技场重量级”中“超越之力”的效果。\n☆更新笔记:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395351☆",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395351",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [
+          "395351"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/9698d99e9cd8c9b73356c5854ba92cb76655514.jpg"
+        ]
+      },
+      "content_hash": "6e5fa6a25788180fec3eb3492c9c55150a0a737418eb5465aaef3dfe676d421f",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "9d3aa6233b9c7f07cf9822a3c73df6f3c3d2e8149b29f36ab0d5b2e3a218580f"
     },
     "1268121688695898119": {
       "id": "1268121688695898119",
@@ -362,8 +585,24 @@
       },
       "feed_hash": "dce36d99369e34cbdc40ba0c24c55145e6da01038c432044a6b7299c03a24b98",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "《艾欧泽亚风尚·FF14纪念刊》\n霜风起,草木归根。天水清相入,秋冬气始交——愿这清寒初冬的每一缕晨光,都照亮你旅途中未曾冷却的初心。",
+        "links": [],
+        "official_news_ids": [],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/88af3544c413310039e0184e579cb6d66655514.jpg",
+          "http://i0.hdslb.com/bfs/new_dyn/e1cd15d69af744543ce612c5cae8b4296655514.jpg"
+        ]
+      },
+      "content_hash": "3d7953cc9be4cd77f07b509715168df14bc16a64de24d38a7e4b42c1a8c656b0",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "dce36d99369e34cbdc40ba0c24c55145e6da01038c432044a6b7299c03a24b98"
     },
     "1267543319816175635": {
       "id": "1267543319816175635",
@@ -386,8 +625,29 @@
       },
       "feed_hash": "65672e1b52664b13d6adfdae1f0de90dd6f15fd0856f72a7c69ff74444b16969",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "content_state": "pending"
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
+      "content_state": "complete",
+      "detail_last_attempt_at": "2026-11-28T07:57:27.122890+00:00",
+      "content": {
+        "title": "",
+        "text": "#最终幻想14# #FF14# 《最终幻想14》11月10日全区全服更新维护公告\n我们将于11月10日10:00-18:00对全区全服进行更新维护。请各位冒险者互相转告,合理安排游戏时间,提前在安全区域下线。开服时间将视维护进展情况提前或延后,详细开服时间请关注官网公告。\n查看新闻:https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395256\n※大国防联军中的额外雇员购买、跨区角色转移服务、额外雇员名额跨区转移服务、神典石服务将在11/9 23:00关闭,其他页面将在11/10 09:00关闭,维护结束后将陆续开放。\n☆预计维护时间:2026年11月10日10:00-18:00☆\n☆维护范围:全区全服☆\n☆本次维护内容☆\n-更新客户端版本至2026.11.03.0000.0000(7.58版本)",
+        "links": [
+          "https://ff.web.sdo.com/web8/index.html#/newstab/newscont/395256",
+          "https://search.bilibili.com/all?keyword=%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B314",
+          "https://search.bilibili.com/all?keyword=FF14"
+        ],
+        "official_news_ids": [
+          "395256"
+        ],
+        "images": [
+          "http://i0.hdslb.com/bfs/new_dyn/58ff5582ab1d4b704e8e575cfbf2ddfd6655514.jpg"
+        ]
+      },
+      "content_hash": "a8c949270dfee7d644e79d7c071a353dcf4c231a6eeb09107318cdfa7d0bdb53",
+      "last_success_at": "2026-11-28T07:57:27.122890+00:00",
+      "detail_error": null,
+      "revision_count": 0,
+      "detail_feed_hash": "65672e1b52664b13d6adfdae1f0de90dd6f15fd0856f72a7c69ff74444b16969"
     },
     "1267534334754029605": {
       "id": "1267534334754029605",
@@ -404,7 +664,7 @@
       },
       "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1267167544501862451": {
@@ -422,7 +682,7 @@
       },
       "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1267101260311429200": {
@@ -440,7 +700,7 @@
       },
       "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1266791846553583656": {
@@ -458,7 +718,7 @@
       },
       "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1266789321112813576": {
@@ -476,7 +736,7 @@
       },
       "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1266784034002829316": {
@@ -494,7 +754,7 @@
       },
       "feed_hash": "54a551dc4ea4a4b1b5d71e69c71f5397149f32517db645d1b40d52f3c8efa558",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1266023013023744000": {
@@ -518,7 +778,7 @@
       },
       "feed_hash": "323f53fe8244a9735066f5bd75bc835533cdc5053dee25531919f44d5e6b1f20",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "complete",
       "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
       "content": {
@@ -562,7 +822,7 @@
       },
       "feed_hash": "913345128ed9a8a516020c0bb0b70885324ffca39724c6bfe37469bd0477f532",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "complete",
       "detail_last_attempt_at": "2026-11-28T07:53:06.685926+00:00",
       "content": {
@@ -598,7 +858,7 @@
       },
       "feed_hash": "779a645597cd262d67b7fd66405ae982e18f94d7100ee907e41e69feed73eeeb",
       "first_seen_at": "2026-11-28T07:53:06.685926+00:00",
-      "last_seen_at": "2026-11-28T07:53:06.685926+00:00",
+      "last_seen_at": "2026-11-28T07:57:27.122890+00:00",
       "content_state": "unsupported"
     },
     "1265252710678003712": {

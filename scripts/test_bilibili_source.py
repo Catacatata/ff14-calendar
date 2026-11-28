@@ -27,6 +27,26 @@ def emit(name, **fields):
     print(json.dumps({"check": name, **fields}, ensure_ascii=False), flush=True)
 
 
+def error_diagnostic(error):
+    """仅保留固定提示和数值错误码，绝不输出网络异常的原始正文。"""
+    if isinstance(error, ProbeValidationError):
+        return {"reason": str(error)}
+    if isinstance(error, TimeoutError):
+        return {"reason": "请求超时", "timeout_seconds": TIMEOUT_SECONDS}
+    result = {}
+    status = getattr(error, "status", None)
+    code = getattr(error, "code", None)
+    if type(status) is int:
+        result["http_status"] = status
+    if type(code) is int:
+        result["api_code"] = code
+    if status == 412:
+        result["reason"] = "HTTP 412，请求被拒绝；本次不重试或绕过限制"
+    elif status == 429:
+        result["reason"] = "HTTP 429，请求受到限流；本次不重试"
+    return result
+
+
 def text_fragments(value):
     """只抽取 Opus 文本节点中的文字，不把链接、样式等元数据当正文。"""
     if isinstance(value, dict):
@@ -117,9 +137,8 @@ async def main():
             await operation()
         except Exception as error:
             failures.append(name)
-            # 只输出错误类型；不打印请求头、响应正文或可能包含凭据的异常文本。
-            diagnostic = {"reason": str(error)} if isinstance(error, ProbeValidationError) else {}
-            emit(name, status="failed", error_type=type(error).__name__, **diagnostic)
+            # 不打印请求头、响应正文或可能包含凭据的异常文本。
+            emit(name, status="failed", error_type=type(error).__name__, **error_diagnostic(error))
     emit("result", status="failed" if failures else "ok", failed_checks=failures,
          calendar_files_modified=False)
     return 1 if failures else 0
